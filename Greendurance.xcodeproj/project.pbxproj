@@ -25,6 +25,10 @@
 		9FF977901E77B41C0038ABEE /* medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF9778F1E77B41C0038ABEE /* medal.png */; };
 		9FF977921E77B4260038ABEE /* open-book-top-view.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF977911E77B4260038ABEE /* open-book-top-view.png */; };
 		9FF977941E77B42C0038ABEE /* trash-container-for-recycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF977931E77B42C0038ABEE /* trash-container-for-recycle.png */; };
+		9FF977961E77B95C0038ABEE /* spider.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF977951E77B95C0038ABEE /* spider.png */; };
+		9FF977981E77C1C90038ABEE /* TransportationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF977971E77C1C90038ABEE /* TransportationPageViewController.swift */; };
+		9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF977991E77D0A50038ABEE /* TranspModalViewController.swift */; };
+		9FF9779C1E78637C0038ABEE /* help-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF9779B1E78637C0038ABEE /* help-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		9FF9778F1E77B41C0038ABEE /* medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medal.png; sourceTree = "<group>"; };
 		9FF977911E77B4260038ABEE /* open-book-top-view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open-book-top-view.png"; sourceTree = "<group>"; };
 		9FF977931E77B42C0038ABEE /* trash-container-for-recycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trash-container-for-recycle.png"; sourceTree = "<group>"; };
+		9FF977951E77B95C0038ABEE /* spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spider.png; sourceTree = "<group>"; };
+		9FF977971E77C1C90038ABEE /* TransportationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationPageViewController.swift; sourceTree = "<group>"; };
+		9FF977991E77D0A50038ABEE /* TranspModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranspModalViewController.swift; sourceTree = "<group>"; };
+		9FF9779B1E78637C0038ABEE /* help-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-button.png"; sourceTree = "<group>"; };
 		E46534246C177040FE3445B5 /* Pods_Greendurance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greendurance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,7 +95,9 @@
 			children = (
 				9FF977891E77B34C0038ABEE /* groceriesBtn.png */,
 				9FF9778B1E77B4120038ABEE /* bicycle-rider.png */,
+				9FF977951E77B95C0038ABEE /* spider.png */,
 				9FF9778F1E77B41C0038ABEE /* medal.png */,
+				9FF9779B1E78637C0038ABEE /* help-button.png */,
 				9FF9778D1E77B4170038ABEE /* icon.png */,
 				9FF977931E77B42C0038ABEE /* trash-container-for-recycle.png */,
 				9FF977911E77B4260038ABEE /* open-book-top-view.png */,
@@ -111,6 +121,8 @@
 				9FF9777B1E775B880038ABEE /* FactsPageViewController.swift */,
 				9FF9777F1E778AD10038ABEE /* FactDescViewController.swift */,
 				9FF977811E779C100038ABEE /* FactModalViewController.swift */,
+				9FF977971E77C1C90038ABEE /* TransportationPageViewController.swift */,
+				9FF977991E77D0A50038ABEE /* TranspModalViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
 				9FF9778C1E77B4120038ABEE /* bicycle-rider.png in Resources */,
 				9FF9778E1E77B4170038ABEE /* icon.png in Resources */,
 				9F06722D1E7727A100286C6F /* Main.storyboard in Resources */,
@@ -212,6 +225,7 @@
 				9FF9778A1E77B34C0038ABEE /* groceriesBtn.png in Resources */,
 				9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */,
 				9F06722F1E772A0E00286C6F /* GoogleService-Info.plist in Resources */,
+				9FF977961E77B95C0038ABEE /* spider.png in Resources */,
 				9FF977901E77B41C0038ABEE /* medal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +288,10 @@
 				9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */,
 				9FF9777C1E775B880038ABEE /* FactsPageViewController.swift in Sources */,
 				9FF977821E779C100038ABEE /* FactModalViewController.swift in Sources */,
+				9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */,
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
 				9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */,
+				9FF977981E77C1C90038ABEE /* TransportationPageViewController.swift in Sources */,
 				9FF9777A1E7737E80038ABEE /* HomePageViewController.swift in Sources */,
 				9FF977801E778AD10038ABEE /* FactDescViewController.swift in Sources */,
 			);
