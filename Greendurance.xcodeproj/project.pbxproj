@@ -20,12 +20,16 @@
 		9F019E201E8B7E270073F556 /* GroceriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */; };
 		9F019E221E8B7E4A0073F556 /* DisposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */; };
 		9F019E241E8B7E6D0073F556 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */; };
+		9F019E261E8C310A0073F556 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E251E8C310A0073F556 /* Constants.swift */; };
 		9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0672171E771DD600286C6F /* AppDelegate.swift */; };
 		9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0672191E771DD600286C6F /* SignInViewController.swift */; };
 		9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F06721E1E771DD600286C6F /* Assets.xcassets */; };
 		9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0672201E771DD600286C6F /* LaunchScreen.storyboard */; };
 		9F06722D1E7727A100286C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F06722B1E7727A100286C6F /* Main.storyboard */; };
 		9F06722F1E772A0E00286C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F06722E1E772A0E00286C6F /* GoogleService-Info.plist */; };
+		9F7022121E8C3F7600EF8E62 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7022111E8C3F7600EF8E62 /* DataService.swift */; };
+		9FA23F6B1E8C479800D5CAB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23F6A1E8C479800D5CAB9 /* Product.swift */; };
+		9FCF16BC1E8C358300062177 /* BarcodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF16BB1E8C358300062177 /* BarcodeReaderViewController.swift */; };
 		9FF9777A1E7737E80038ABEE /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF977791E7737E80038ABEE /* HomePageViewController.swift */; };
 		9FF9777C1E775B880038ABEE /* FactsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF9777B1E775B880038ABEE /* FactsPageViewController.swift */; };
 		9FF9777E1E7767050038ABEE /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF9777D1E7767050038ABEE /* Fact.swift */; };
@@ -58,6 +62,7 @@
 		9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
 		9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalViewController.swift; sourceTree = "<group>"; };
 		9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
+		9F019E251E8C310A0073F556 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F0672141E771DD600286C6F /* Greendurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greendurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0672171E771DD600286C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0672191E771DD600286C6F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		9F0672231E771DD600286C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F06722C1E7727A100286C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F06722E1E772A0E00286C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F7022111E8C3F7600EF8E62 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		9FA23F6A1E8C479800D5CAB9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9FCF16BB1E8C358300062177 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
 		9FF977791E7737E80038ABEE /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		9FF9777B1E775B880038ABEE /* FactsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsPageViewController.swift; sourceTree = "<group>"; };
 		9FF9777D1E7767050038ABEE /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 				9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */,
 				9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */,
 				9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */,
+				9FCF16BB1E8C358300062177 /* BarcodeReaderViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +176,9 @@
 			children = (
 				9FF9777D1E7767050038ABEE /* Fact.swift */,
 				9F019E011E88838F0073F556 /* IconCollectionViewCell.swift */,
+				9F019E251E8C310A0073F556 /* Constants.swift */,
+				9F7022111E8C3F7600EF8E62 /* DataService.swift */,
+				9FA23F6A1E8C479800D5CAB9 /* Product.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -338,10 +350,14 @@
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
 				9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */,
 				9F019E1C1E8B7DB60073F556 /* ChallengesViewController.swift in Sources */,
+				9FCF16BC1E8C358300062177 /* BarcodeReaderViewController.swift in Sources */,
 				9FF977981E77C1C90038ABEE /* TransportationPageViewController.swift in Sources */,
 				9FF9777A1E7737E80038ABEE /* HomePageViewController.swift in Sources */,
 				9FF977801E778AD10038ABEE /* FactDescViewController.swift in Sources */,
 				9F019E1A1E8B7D900073F556 /* RankingViewController.swift in Sources */,
+				9F019E261E8C310A0073F556 /* Constants.swift in Sources */,
+				9F7022121E8C3F7600EF8E62 /* DataService.swift in Sources */,
+				9FA23F6B1E8C479800D5CAB9 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
