@@ -16,6 +16,7 @@ class TransportationPageViewController: UIViewController, UITableViewDataSource,
     var searchText = ""
     var transportTask : [String] = ["Walk to work", "Take the metro", "Carpool with friends", "Use bikesharing today", "Take the bus"]
     var points : [String] = ["10", "7", "5", "10", "7"]
+    //var testValue = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class TransportationPageViewController: UIViewController, UITableViewDataSource,
         let task = transportTask[indexPath.row]
 
         cell.textLabel!.text = task
+        //cell.textLabel!.text = testValue
         cell.detailTextLabel?.text = "Earnable points: \(points[indexPath.row])"
         //cell.imageView?.image = UIImage(data: "icon.png" as! Data)
         

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6770D454018869F40379D243 /* Pods_Greendurance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46534246C177040FE3445B5 /* Pods_Greendurance.framework */; };
 		9F019E021E88838F0073F556 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E011E88838F0073F556 /* IconCollectionViewCell.swift */; };
+		9F019E081E8AAE550073F556 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E071E8AAE550073F556 /* menu.png */; };
+		9F019E121E8B21D40073F556 /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E111E8B21D40073F556 /* shield.png */; };
+		9F019E141E8B260F0073F556 /* ecology.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E131E8B260F0073F556 /* ecology.png */; };
+		9F019E161E8B261A0073F556 /* winner.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E151E8B261A0073F556 /* winner.png */; };
 		9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0672171E771DD600286C6F /* AppDelegate.swift */; };
 		9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0672191E771DD600286C6F /* SignInViewController.swift */; };
 		9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F06721E1E771DD600286C6F /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 		5AAB2D3E6DEFC11172F00420 /* Pods-Greendurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greendurance.release.xcconfig"; path = "Pods/Target Support Files/Pods-Greendurance/Pods-Greendurance.release.xcconfig"; sourceTree = "<group>"; };
 		8279C3FD38C994E111BC13D3 /* Pods-Greendurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greendurance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Greendurance/Pods-Greendurance.debug.xcconfig"; sourceTree = "<group>"; };
 		9F019E011E88838F0073F556 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconCollectionViewCell.swift; path = ../IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F019E071E8AAE550073F556 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../../../Downloads/menu.png; sourceTree = "<group>"; };
+		9F019E111E8B21D40073F556 /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
+		9F019E131E8B260F0073F556 /* ecology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecology.png; sourceTree = "<group>"; };
+		9F019E151E8B261A0073F556 /* winner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winner.png; sourceTree = "<group>"; };
 		9F0672141E771DD600286C6F /* Greendurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greendurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0672171E771DD600286C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0672191E771DD600286C6F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 		9F0672161E771DD600286C6F /* Greendurance */ = {
 			isa = PBXGroup;
 			children = (
+				9F019E131E8B260F0073F556 /* ecology.png */,
+				9F019E111E8B21D40073F556 /* shield.png */,
+				9F019E151E8B261A0073F556 /* winner.png */,
+				9F019E071E8AAE550073F556 /* menu.png */,
 				9FF977891E77B34C0038ABEE /* groceriesBtn.png */,
 				9FF9778B1E77B4120038ABEE /* bicycle-rider.png */,
 				9FF977951E77B95C0038ABEE /* spider.png */,
@@ -218,11 +230,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F019E161E8B261A0073F556 /* winner.png in Resources */,
 				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
 				9FF9778C1E77B4120038ABEE /* bicycle-rider.png in Resources */,
 				9FF9778E1E77B4170038ABEE /* icon.png in Resources */,
 				9F06722D1E7727A100286C6F /* Main.storyboard in Resources */,
+				9F019E081E8AAE550073F556 /* menu.png in Resources */,
+				9F019E121E8B21D40073F556 /* shield.png in Resources */,
 				9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */,
+				9F019E141E8B260F0073F556 /* ecology.png in Resources */,
 				9FF977941E77B42C0038ABEE /* trash-container-for-recycle.png in Resources */,
 				9FF977921E77B4260038ABEE /* open-book-top-view.png in Resources */,
 				9FF9778A1E77B34C0038ABEE /* groceriesBtn.png in Resources */,

@@ -14,6 +14,7 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var newUser = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class SignInViewController: UIViewController {
 
     @IBAction func signInTapped(_ sender: Any) {
         FIRAuth.auth()?.signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
-            print("We tried to sign in")
+            
             if error != nil {
                 print("Hey we have an error:\(error)")
                 FIRAuth.auth()?.createUser(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
@@ -31,19 +32,30 @@ class SignInViewController: UIViewController {
                         print("Hey we have an error:\(error)")
                     } else {
                         print("User created successfully")
-                        
+                        self.newUser = "true"
                         FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                         
-                        self.performSegue(withIdentifier: "SignInSegue", sender: nil)
+                        self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser)
                     }
                 })
             } else {
+                self.newUser = "false"
                 print("Signed in successfully")
-                self.performSegue(withIdentifier: "SignInSegue", sender: nil)
+                self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser)
             }
         })
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "SignInSegue" {
+            let nextVC = segue.destination as! UINavigationController
+            //let homeVC = nextVC.topViewController as! HomePageViewController
+            let homeVC = nextVC.viewControllers.first as! HomePageViewController
+            homeVC.newUser = newUser
+            print("Preparing Segue : \(homeVC.newUser)")
+        }
+    }
 }
 
