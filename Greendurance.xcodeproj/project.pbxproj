@@ -13,6 +13,13 @@
 		9F019E121E8B21D40073F556 /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E111E8B21D40073F556 /* shield.png */; };
 		9F019E141E8B260F0073F556 /* ecology.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E131E8B260F0073F556 /* ecology.png */; };
 		9F019E161E8B261A0073F556 /* winner.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F019E151E8B261A0073F556 /* winner.png */; };
+		9F019E181E8B7CD60073F556 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E171E8B7CD60073F556 /* ActivitiesViewController.swift */; };
+		9F019E1A1E8B7D900073F556 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E191E8B7D900073F556 /* RankingViewController.swift */; };
+		9F019E1C1E8B7DB60073F556 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E1B1E8B7DB60073F556 /* ChallengesViewController.swift */; };
+		9F019E1E1E8B7DE10073F556 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E1D1E8B7DE10073F556 /* FriendsViewController.swift */; };
+		9F019E201E8B7E270073F556 /* GroceriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */; };
+		9F019E221E8B7E4A0073F556 /* DisposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */; };
+		9F019E241E8B7E6D0073F556 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */; };
 		9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0672171E771DD600286C6F /* AppDelegate.swift */; };
 		9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0672191E771DD600286C6F /* SignInViewController.swift */; };
 		9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F06721E1E771DD600286C6F /* Assets.xcassets */; };
@@ -44,6 +51,13 @@
 		9F019E111E8B21D40073F556 /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
 		9F019E131E8B260F0073F556 /* ecology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecology.png; sourceTree = "<group>"; };
 		9F019E151E8B261A0073F556 /* winner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winner.png; sourceTree = "<group>"; };
+		9F019E171E8B7CD60073F556 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		9F019E191E8B7D900073F556 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		9F019E1B1E8B7DB60073F556 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
+		9F019E1D1E8B7DE10073F556 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
+		9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalViewController.swift; sourceTree = "<group>"; };
+		9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
 		9F0672141E771DD600286C6F /* Greendurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greendurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0672171E771DD600286C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0672191E771DD600286C6F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +151,13 @@
 				9FF977811E779C100038ABEE /* FactModalViewController.swift */,
 				9FF977971E77C1C90038ABEE /* TransportationPageViewController.swift */,
 				9FF977991E77D0A50038ABEE /* TranspModalViewController.swift */,
+				9F019E171E8B7CD60073F556 /* ActivitiesViewController.swift */,
+				9F019E191E8B7D900073F556 /* RankingViewController.swift */,
+				9F019E1B1E8B7DB60073F556 /* ChallengesViewController.swift */,
+				9F019E1D1E8B7DE10073F556 /* FriendsViewController.swift */,
+				9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */,
+				9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */,
+				9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,13 +328,20 @@
 				9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */,
 				9F019E021E88838F0073F556 /* IconCollectionViewCell.swift in Sources */,
 				9FF9777C1E775B880038ABEE /* FactsPageViewController.swift in Sources */,
+				9F019E181E8B7CD60073F556 /* ActivitiesViewController.swift in Sources */,
+				9F019E1E1E8B7DE10073F556 /* FriendsViewController.swift in Sources */,
+				9F019E241E8B7E6D0073F556 /* BadgesViewController.swift in Sources */,
+				9F019E221E8B7E4A0073F556 /* DisposalViewController.swift in Sources */,
 				9FF977821E779C100038ABEE /* FactModalViewController.swift in Sources */,
+				9F019E201E8B7E270073F556 /* GroceriesViewController.swift in Sources */,
 				9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */,
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
 				9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */,
+				9F019E1C1E8B7DB60073F556 /* ChallengesViewController.swift in Sources */,
 				9FF977981E77C1C90038ABEE /* TransportationPageViewController.swift in Sources */,
 				9FF9777A1E7737E80038ABEE /* HomePageViewController.swift in Sources */,
 				9FF977801E778AD10038ABEE /* FactDescViewController.swift in Sources */,
+				9F019E1A1E8B7D900073F556 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

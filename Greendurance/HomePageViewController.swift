@@ -14,11 +14,12 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var welcomeDescLabel: UILabel!
     @IBOutlet weak var spiderImageView: UIImageView!
-    @IBOutlet weak var rankingImageView: UIImageView!
+    
+    @IBOutlet weak var rankingButton: UIButton!
     @IBOutlet weak var rankingLabel: UILabel!
-    @IBOutlet weak var activityImageView: UIImageView!
+    @IBOutlet weak var activityButton: UIButton!
     @IBOutlet weak var activityLabel: UILabel!
-    @IBOutlet weak var challengeImageView: UIImageView!
+    @IBOutlet weak var challengeButton: UIButton!
     @IBOutlet weak var challengeLabel: UILabel!
     
     let resuseIdentifier = "cell"
@@ -38,9 +39,9 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         print("Sender = \(newUser)")
         if (newUser == "false") {
             
-            rankingImageView.image = UIImage(named: "winner.png")
-            activityImageView.image = UIImage(named: "ecology.png")
-            challengeImageView.image = UIImage(named: "shield.png")
+            rankingButton.isHidden = false
+            activityButton.isHidden = false
+            challengeButton.isHidden = false
             
             rankingLabel.text = "Ranking"
             activityLabel.text = "Activities"
@@ -52,9 +53,9 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
             
         } else {
             
-            rankingImageView.isHidden = true
-            activityImageView.isHidden = true
-            challengeImageView.isHidden = true
+            rankingButton.isHidden = true
+            activityButton.isHidden = true
+            challengeButton.isHidden = true
             
             rankingLabel.isHidden = true
             activityLabel.isHidden = true
@@ -98,7 +99,10 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.iconButton.setImage(btnImage, for: UIControlState.normal)
         cell.iconLabel.text = self.titles[indexPath.item]
         
-
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.25
+        cell.layer.cornerRadius = 8
+        
         //cell.iconButton.tag = indexPath.row;
         
         return cell
@@ -110,7 +114,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         let testValue = "Test"
         if (indexPath.item == 0) {
             
-            self.performSegue(withIdentifier: "TransportPageSegue", sender: nil)
+            self.performSegue(withIdentifier: "GroceryPageSegue", sender: nil)
             
         } else if (indexPath.item == 1) {
             
@@ -118,11 +122,11 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
             
         } else if (indexPath.item == 2) {
             
-            self.performSegue(withIdentifier: "TransportPageSegue", sender: nil)
+            self.performSegue(withIdentifier: "DisposalPageSegue", sender: nil)
             
         } else if (indexPath.item == 3) {
             
-            self.performSegue(withIdentifier: "TransportPageSegue", sender: nil)
+            self.performSegue(withIdentifier: "BadgesPageSegue", sender: nil)
             
         } else if (indexPath.item == 4) {
             
@@ -130,7 +134,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
             
         } else if (indexPath.item == 5) {
             
-            self.performSegue(withIdentifier: "TransportPageSegue", sender: nil)
+            self.performSegue(withIdentifier: "FriendsPageSegue", sender: nil)
             
         }
     }
@@ -151,4 +155,15 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         }
     }*/
     
+    @IBAction func rankingButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func activityButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func challengeButtonTapped(_ sender: Any) {
+        
+    }
 }
