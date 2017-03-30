@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var newUser = ""
@@ -19,6 +20,13 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        menuButton.isEnabled = false
     }
 
     @IBAction func signInTapped(_ sender: Any) {

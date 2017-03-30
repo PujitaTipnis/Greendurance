@@ -15,6 +15,9 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var welcomeDescLabel: UILabel!
     @IBOutlet weak var spiderImageView: UIImageView!
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
+    
     @IBOutlet weak var rankingButton: UIButton!
     @IBOutlet weak var rankingLabel: UILabel!
     @IBOutlet weak var activityButton: UIButton!
@@ -35,6 +38,12 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         
         //print("User = \(currUser)")
         //welcomeLabel.text = "Welcome \(FIRAuth.auth()!.currentUser!.email!)"
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         print("Sender = \(newUser)")
         if (newUser == "false") {

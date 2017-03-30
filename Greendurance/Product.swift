@@ -10,14 +10,8 @@ import Foundation
 
 class Product {
     
-    private(set) var prodName: String!
-    private(set) var prodPackaging: String!
-    
-    init(prodName: String, prodPackaging: String) {
-        
-        // Add a little extra text to the album information
-        self.prodName = "Product Name: \n\(prodName)"
-        self.prodPackaging = "Packaging Info: \(prodPackaging)"
-    }
+    var productName = ""
+    var productImage = ""
+    var productPackaging = ""
     
 }

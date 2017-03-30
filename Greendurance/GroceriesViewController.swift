@@ -9,19 +9,18 @@
 import UIKit
 
 class GroceriesViewController: UIViewController {
-
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
+    
+    @IBOutlet weak var productTableView: UITableView!
+    @IBOutlet weak var searchBox: UISearchBar!
+    @IBOutlet weak var barcodeScanningButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        artistAlbumLabel.text = "Let's scan an album!"
-        yearLabel.text = ""
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(setLabels(_:)), name: "AlbumNotification", object: nil)
+
     }
 
+    @IBAction func barcodeScannerTapped(_ sender: Any) {
+    }
 }
