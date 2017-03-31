@@ -39,14 +39,27 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         //print("User = \(currUser)")
         //welcomeLabel.text = "Welcome \(FIRAuth.auth()!.currentUser!.email!)"
         
+        // Slider Menu code
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
+        // Decide what needs to be displayed for logout button
+      /*  let currUser = FIRAuth.auth()?.currentUser
+        if currUser != nil {
+            // Customer is signed-in
+            
+        } */
+        
+        // Changeeeeee
+        //logoutButton.isEnabled = false
+        
+        let currUser = FIRAuth.auth()?.currentUser
         print("Sender = \(newUser)")
-        if (newUser == "false") {
+        //if (newUser == "false") {
+        if currUser == nil {
             
             rankingButton.isHidden = false
             activityButton.isHidden = false
@@ -88,9 +101,17 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         do {
             try FIRAuth.auth()?.signOut()
             print("Signed out successfully")
+            
+            //let controllerId = (FIRAuth.auth()?.currentUser != nil) ? "Menu" : "SignIn"
+            let controllerId = "Menu"
+            //let controllerId = LoginService.sharedInstance.isLoggedIn() ? "Welcome" : "SignIn";
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
+            self.present(initViewController, animated: true, completion: nil)
+            
         } catch {}
         
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

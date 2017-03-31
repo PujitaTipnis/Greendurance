@@ -10,8 +10,14 @@ import Foundation
 
 class Product {
     
+    var code = ""
+    var countriesEn = ""
+    var genericName = ""
+    var imageURL = ""
+    var packaging = ""
+    var packagingTags = ""
     var productName = ""
-    var productImage = ""
-    var productPackaging = ""
+    var url = ""
+    var green: UInt32 = 0
     
 }

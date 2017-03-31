@@ -13,7 +13,7 @@
         <!--Greendurance-->
         <scene sceneID="kz8-cA-YMV">
             <objects>
-                <viewController id="dWG-8c-JCI" customClass="HomePageViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" id="dWG-8c-JCI" customClass="HomePageViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L3e-H6-O9Q"/>
                         <viewControllerLayoutGuide type="bottom" id="Zyq-Po-HTg"/>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell2" id="gEY-YO-4OR" customClass="IconCollectionViewCell" customModule="Greendurance" customModuleProvider="target">
-                                        <rect key="frame" x="91" y="0.0" width="69" height="69"/>
+                                        <rect key="frame" x="90.5" y="0.0" width="69" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
@@ -188,7 +188,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell5" id="u24-UH-0Ia" customClass="IconCollectionViewCell" customModule="Greendurance" customModuleProvider="target">
-                                        <rect key="frame" x="91" y="79" width="69" height="69"/>
+                                        <rect key="frame" x="90.5" y="79" width="69" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
@@ -339,7 +339,7 @@
                     <navigationItem key="navigationItem" title="Greendurance" id="Zp7-U6-JmI">
                         <barButtonItem key="backBarButtonItem" title="Back" id="tQo-oA-nOZ"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="0p0-zF-Hum"/>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="2sJ-yi-5bs">
+                        <barButtonItem key="rightBarButtonItem" title=" " id="2sJ-yi-5bs">
                             <connections>
                                 <action selector="logoutTapped:" destination="dWG-8c-JCI" id="Nyc-dB-1Lt"/>
                             </connections>
@@ -413,13 +413,36 @@
                                 <rect key="frame" x="0.0" y="108" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vkl-Gj-7YK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="productID" textLabel="Duu-df-6vi" detailTextLabel="ZUH-EV-yHc" imageView="PA1-JS-zDw" style="IBUITableViewCellStyleSubtitle" id="vkl-Gj-7YK">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vkl-Gj-7YK" id="buY-DX-Skh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Duu-df-6vi">
+                                                    <rect key="frame" x="54" y="4" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZUH-EV-yHc">
+                                                    <rect key="frame" x="54" y="25" width="44" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="medal.png" id="PA1-JS-zDw">
+                                                    <rect key="frame" x="15" y="9" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="J8S-XO-ByF" kind="presentation" identifier="productModalSegue" modalPresentationStyle="overCurrentContext" id="wCY-3Y-FpL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -442,8 +465,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barcodeScanningButton" destination="cAK-25-z7o" id="C6D-vf-OJQ"/>
-                        <outlet property="productTableView" destination="GNf-ss-hbo" id="8J7-SP-MPL"/>
                         <outlet property="searchBox" destination="FJH-7Y-Nhq" id="yeY-0Z-Rq8"/>
+                        <outlet property="tableView" destination="GNf-ss-hbo" id="tzc-XB-yBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0V-0O-Blz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,6 +632,62 @@
             </objects>
             <point key="canvasLocation" x="4668" y="858"/>
         </scene>
+        <!--Groceries Modal View Controller-->
+        <scene sceneID="9hW-fY-BgM">
+            <objects>
+                <viewController id="J8S-XO-ByF" userLabel="Groceries Modal View Controller" customClass="GroceriesModalViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xiX-qK-nrb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ern-sf-Xdr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8C6-gn-QCe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-c0-BaK">
+                                <rect key="frame" x="30" y="170" width="315" height="327"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ue-8n-qpY">
+                                        <rect key="frame" x="275" y="10" width="30" height="30"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="closeTapped:" destination="J8S-XO-ByF" eventType="touchUpInside" id="XPs-uQ-gbY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDG-7g-qDY">
+                                        <rect key="frame" x="10" y="55" width="295" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91580366150000003" green="0.91580366150000003" blue="0.91580366150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rDG-7g-qDY" secondAttribute="trailing" constant="10" id="LOF-jV-0cP"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ue-8n-qpY" secondAttribute="trailing" constant="10" id="Wt6-C5-5YU"/>
+                                    <constraint firstItem="0ue-8n-qpY" firstAttribute="top" secondItem="unQ-c0-BaK" secondAttribute="top" constant="10" id="gVS-ZZ-Bot"/>
+                                    <constraint firstItem="rDG-7g-qDY" firstAttribute="leading" secondItem="unQ-c0-BaK" secondAttribute="leading" constant="10" id="lGc-EE-22d"/>
+                                    <constraint firstItem="rDG-7g-qDY" firstAttribute="top" secondItem="unQ-c0-BaK" secondAttribute="top" constant="55" id="vw7-Rd-5nj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="unQ-c0-BaK" firstAttribute="centerX" secondItem="8C6-gn-QCe" secondAttribute="centerX" id="2mP-ns-dTd"/>
+                            <constraint firstItem="unQ-c0-BaK" firstAttribute="top" secondItem="xiX-qK-nrb" secondAttribute="bottom" constant="150" id="Qwu-ra-g1M"/>
+                            <constraint firstItem="unQ-c0-BaK" firstAttribute="leading" secondItem="8C6-gn-QCe" secondAttribute="leading" constant="30" id="XKA-M4-b5K"/>
+                            <constraint firstItem="unQ-c0-BaK" firstAttribute="centerY" secondItem="8C6-gn-QCe" secondAttribute="centerY" id="Ybn-wo-Vkg"/>
+                            <constraint firstAttribute="trailing" secondItem="unQ-c0-BaK" secondAttribute="trailing" constant="30" id="gP5-IL-5uV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="rDG-7g-qDY" id="UHs-zK-A7j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNs-oA-2rD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="1560"/>
+        </scene>
         <!--Transp Modal View Controller-->
         <scene sceneID="pnu-SS-fa7">
             <objects>
@@ -643,15 +722,16 @@
                                     <constraint firstAttribute="trailing" secondItem="Zbb-1h-Oo4" secondAttribute="trailing" constant="10" id="7UJ-Di-61Q"/>
                                     <constraint firstAttribute="trailing" secondItem="Eit-tq-lhP" secondAttribute="trailing" constant="10" id="9gc-RQ-foS"/>
                                     <constraint firstItem="Eit-tq-lhP" firstAttribute="top" secondItem="Aas-Zn-zhc" secondAttribute="top" constant="10" id="LbQ-eP-BQL"/>
-                                    <constraint firstAttribute="width" constant="315" id="Mf6-EV-mfS"/>
                                     <constraint firstItem="Zbb-1h-Oo4" firstAttribute="leading" secondItem="Aas-Zn-zhc" secondAttribute="leading" constant="10" id="MrH-8S-qxu"/>
-                                    <constraint firstAttribute="height" constant="327" id="OsF-OD-0j6"/>
                                     <constraint firstItem="Zbb-1h-Oo4" firstAttribute="top" secondItem="Aas-Zn-zhc" secondAttribute="top" constant="55" id="xoj-g3-TJ1"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Aas-Zn-zhc" firstAttribute="centerX" secondItem="NCy-jN-8fC" secondAttribute="centerX" id="WtP-ID-gni"/>
+                            <constraint firstItem="Aas-Zn-zhc" firstAttribute="centerY" secondItem="NCy-jN-8fC" secondAttribute="centerY" id="hcz-Oc-Iv7"/>
+                            <constraint firstItem="Aas-Zn-zhc" firstAttribute="leading" secondItem="NCy-jN-8fC" secondAttribute="leading" constant="30" id="k4o-Lo-PNu"/>
+                            <constraint firstAttribute="trailing" secondItem="Aas-Zn-zhc" secondAttribute="trailing" constant="30" id="mul-3I-G1H"/>
                             <constraint firstItem="Aas-Zn-zhc" firstAttribute="top" secondItem="fai-2E-1YC" secondAttribute="bottom" constant="150" id="xbS-Vo-Wnc"/>
                         </constraints>
                     </view>
@@ -776,7 +856,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="Eq7-BW-zMj">
             <objects>
-                <viewController id="67m-v2-m6m" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" id="67m-v2-m6m" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tba-u2-RAQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ItJ-m6-2DG"/>
@@ -795,10 +875,10 @@
             </objects>
             <point key="canvasLocation" x="551" y="-756"/>
         </scene>
-        <!--Title-->
+        <!--Sign In View Controller-->
         <scene sceneID="EZy-CS-zCZ">
             <objects>
-                <viewController id="IeM-xV-FWA" customClass="SignInViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" id="IeM-xV-FWA" customClass="SignInViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L3W-qM-rqe"/>
                         <viewControllerLayoutGuide type="bottom" id="dK1-H0-89J"/>
@@ -862,10 +942,6 @@
                                     <segue destination="NQk-n9-UMW" kind="presentation" identifier="SignInSegue" id="5AT-p5-Q8A"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDn-EI-zxs">
-                                <rect key="frame" x="0.0" y="-4" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -885,13 +961,9 @@
                             <constraint firstItem="8x4-sa-r4G" firstAttribute="leading" secondItem="jEk-nB-4bn" secondAttribute="leadingMargin" constant="30" id="wTg-PH-XDv"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title=" " id="a7q-o4-SD0"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="Dgt-wr-qRA"/>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="menuButton" destination="a7q-o4-SD0" id="gDK-Cp-zYd"/>
                         <outlet property="passwordTextField" destination="mAq-fS-Biq" id="lsn-4Z-sIK"/>
                         <outlet property="userNameTextField" destination="8x4-sa-r4G" id="yjs-VC-U8e"/>
                     </connections>
@@ -1066,6 +1138,7 @@
         <image name="ecology.png" width="64" height="64"/>
         <image name="help-button.png" width="24" height="24"/>
         <image name="home.png" width="16" height="16"/>
+        <image name="medal.png" width="24" height="24"/>
         <image name="menu.png" width="24" height="24"/>
         <image name="shield.png" width="64" height="64"/>
         <image name="spider.png" width="128" height="128"/>

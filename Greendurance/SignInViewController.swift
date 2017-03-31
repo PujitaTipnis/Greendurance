@@ -12,7 +12,6 @@ import FirebaseDatabase
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var newUser = ""
@@ -20,20 +19,13 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-        menuButton.isEnabled = false
     }
 
     @IBAction func signInTapped(_ sender: Any) {
         FIRAuth.auth()?.signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             
             if error != nil {
-                print("Hey we have an error:\(error)")
+                /*print("Hey we have an error:\(error)")
                 FIRAuth.auth()?.createUser(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
                     print("We tried to create a user")
                     if error != nil {
@@ -45,16 +37,34 @@ class SignInViewController: UIViewController {
                         
                         self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser)
                     }
+                }) */
+                DispatchQueue.main.async(execute: { () -> Void in
+                    var alert = UIAlertController(title: "Why are you doing this to me?!?", message: error as! String?, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 })
+                
             } else {
-                self.newUser = "false"
+                /*self.newUser = "false"
                 print("Signed in successfully")
-                self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser)
+                self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser) */
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    //let controllerId = (FIRAuth.auth()?.currentUser != nil) ? "Welcome" : "Menu"
+                    let controllerId = "Menu"
+                    //let controllerId = LoginService.sharedInstance.isLoggedIn() ? "Welcome" : "SignIn";
+                    
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
+                    self.present(initViewController, animated: true, completion: nil)
+                })
+                
             }
         })
         
     }
-    
+   
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "SignInSegue" {
@@ -64,6 +74,6 @@ class SignInViewController: UIViewController {
             homeVC.newUser = newUser
             print("Preparing Segue : \(homeVC.newUser)")
         }
-    }
+    } */
 }
 
