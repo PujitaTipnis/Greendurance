@@ -26,6 +26,12 @@
 		9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0672201E771DD600286C6F /* LaunchScreen.storyboard */; };
 		9F06722D1E7727A100286C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F06722B1E7727A100286C6F /* Main.storyboard */; };
 		9F06722F1E772A0E00286C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F06722E1E772A0E00286C6F /* GoogleService-Info.plist */; };
+		9F23CA4B1E8F072300E7650A /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA4A1E8F072200E7650A /* bus.png */; };
+		9F23CA4D1E8F073100E7650A /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA4C1E8F073100E7650A /* car.png */; };
+		9F23CA4F1E8F073A00E7650A /* cycling.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA4E1E8F073A00E7650A /* cycling.png */; };
+		9F23CA511E8F074200E7650A /* running.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA501E8F074200E7650A /* running.png */; };
+		9F23CA531E8F074800E7650A /* train.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA521E8F074800E7650A /* train.png */; };
+		9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */; };
 		9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830B71E8C88800030E696 /* SWRevealViewController.m */; };
 		9F5830BC1E8CC4430030E696 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5830BB1E8CC4430030E696 /* home.png */; };
 		9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */; };
@@ -72,6 +78,12 @@
 		9F0672231E771DD600286C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F06722C1E7727A100286C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F06722E1E772A0E00286C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F23CA4A1E8F072200E7650A /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus.png; path = ../../../../Downloads/bus.png; sourceTree = "<group>"; };
+		9F23CA4C1E8F073100E7650A /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car.png; path = ../../../../Downloads/car.png; sourceTree = "<group>"; };
+		9F23CA4E1E8F073A00E7650A /* cycling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cycling.png; path = ../../../../Downloads/cycling.png; sourceTree = "<group>"; };
+		9F23CA501E8F074200E7650A /* running.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = running.png; path = ../../../../Downloads/running.png; sourceTree = "<group>"; };
+		9F23CA521E8F074800E7650A /* train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = train.png; path = ../../../../Downloads/train.png; sourceTree = "<group>"; };
+		9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F5830B51E8C887F0030E696 /* Greendurance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greendurance-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F5830B61E8C88800030E696 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		9F5830B71E8C88800030E696 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
@@ -133,6 +145,11 @@
 			children = (
 				9F5830B41E8C88730030E696 /* SWRevealViewController */,
 				9F019E131E8B260F0073F556 /* ecology.png */,
+				9F23CA4A1E8F072200E7650A /* bus.png */,
+				9F23CA4C1E8F073100E7650A /* car.png */,
+				9F23CA4E1E8F073A00E7650A /* cycling.png */,
+				9F23CA501E8F074200E7650A /* running.png */,
+				9F23CA521E8F074800E7650A /* train.png */,
 				9F019E111E8B21D40073F556 /* shield.png */,
 				9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */,
 				9F5830BB1E8CC4430030E696 /* home.png */,
@@ -197,6 +214,7 @@
 				9FF9777D1E7767050038ABEE /* Fact.swift */,
 				9F019E011E88838F0073F556 /* IconCollectionViewCell.swift */,
 				9FA23F701E8C562000D5CAB9 /* Product.swift */,
+				9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -282,6 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F23CA4D1E8F073100E7650A /* car.png in Resources */,
+				9F23CA4B1E8F072300E7650A /* bus.png in Resources */,
+				9F23CA531E8F074800E7650A /* train.png in Resources */,
 				9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */,
 				9F019E161E8B261A0073F556 /* winner.png in Resources */,
 				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
@@ -293,7 +314,9 @@
 				9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */,
 				9F019E141E8B260F0073F556 /* ecology.png in Resources */,
 				9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */,
+				9F23CA4F1E8F073A00E7650A /* cycling.png in Resources */,
 				9FF977941E77B42C0038ABEE /* trash-container-for-recycle.png in Resources */,
+				9F23CA511E8F074200E7650A /* running.png in Resources */,
 				9F5830BC1E8CC4430030E696 /* home.png in Resources */,
 				9FF977921E77B4260038ABEE /* open-book-top-view.png in Resources */,
 				9FF9778A1E77B34C0038ABEE /* groceriesBtn.png in Resources */,
@@ -372,6 +395,7 @@
 				9F019E201E8B7E270073F556 /* GroceriesViewController.swift in Sources */,
 				9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */,
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
+				9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */,
 				9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */,
 				9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */,
 				9F019E1C1E8B7DB60073F556 /* ChallengesViewController.swift in Sources */,

@@ -33,37 +33,109 @@
   },
   "users" : {
     "0iJpywnVcwUrwl7V58zQ3V8mII22" : {
-      "email" : "wassup@gmail.com"
+      "email" : "wassup@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "9x2Mo934j8gRtbyH1iiStuzSku43" : {
-      "email" : "pujita.tipnis@gmail.com"
+      "email" : "pujita.tipnis@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "BM4lsGjWSbUFInZyZEF63vzSRo53" : {
-      "email" : "akshayd@gmail.com"
+      "email" : "akshayd@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "Cc25T1byQlSSEWOYbCmEXZwf7L62" : {
-      "email" : "hello@gmail.com"
+      "email" : "hello@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "FGaiul0lyRbAM3vtbFpqCpzP1fD2" : {
-      "email" : "ptipnis@gmail.com"
+      "email" : "ptipnis@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "VbmlYTcymEgmKsxDQmeDY9BX3663" : {
-      "email" : "bill.kules@gmail.com"
+      "email" : "bill.kules@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "Vg7D8QddxedLkSAGOzIpgQiXxNl1" : {
-      "email" : "abcdef@gmail.com"
+      "email" : "abcdef@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "efhJzf5sLehfPbdqjWtffieWjR52" : {
-      "email" : "anushka.kher@gmail.com"
+      "email" : "anushka.kher@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "lXk8oqQNNGZ1MHB1PZcTJCfERqr2" : {
-      "email" : "akshaydeshpande07@gmail.com"
+      "email" : "akshaydeshpande07@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "qPq2ywVDj3fq3OPhAdj7jOe6Drx2" : {
-      "email" : "asmita.kumar@gmail.com"
+      "email" : "asmita.kumar@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
     },
     "upT8s0JojuPqjieit2dAcvYjdat1" : {
-      "email" : "karishma.ghiya@gmail.com"
+      "email" : "karishma.ghiya@gmail.com",
+      "walk" : 0,
+      "train" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "bus" : 0
+    }
+  },
+  "transportation" : {
+    "walk" : {
+      "earnable" : 15
+    },
+    "train" : {
+      "earnable" : 10
+    },
+    "carpool" : {
+      "earnable" : 5
+    },
+    "cycle" : {
+      "earnable" : 15
+    },
+    "bus" : {
+      "earnable" : 10
     }
   },
   "products" : [

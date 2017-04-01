@@ -14,11 +14,11 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var factsButton: UIBarButtonItem!
     
-    //var facts : [Fact] = []
-    var facts : [String] = ["Air", "Plastic", "Local Food", "Water", "Wildlife", "Meat"]
-    var imageURL = ""
-    var desc = ""
-    var category = ""
+    var facts : [Fact] = []
+    //var facts : [String] = ["Air", "Plastic", "Local Food", "Water", "Wildlife", "Meat"]
+    //var imageURL = ""
+    //var desc = ""
+    //var category = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,27 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         
+        let ref = FIRDatabase.database().reference().child("facts")
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            //print(snapshot.childrenCount)
+            let enumerator = snapshot.children
+            while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+                //print(rest.value!)
+                
+                let fact = Fact()
+                fact.imageURL = (rest.value! as AnyObject)["image"] as! String
+                fact.category = (rest.value! as AnyObject)["category"] as! String
+                fact.desc = (rest.value! as AnyObject)["desc"] as! String
+                
+                self.facts.append(fact)
+                
+                self.tableView.reloadData()
+                
+            }
+        })
+
         
-        
-        /* FIRDatabase.database().reference().child("facts").child.observe(FIRDataEventType.childAdded, with: {(snapshot) in
+        /*FIRDatabase.database().reference().child("facts").child.observe(FIRDataEventType.childAdded, with: {(snapshot) in
             print(snapshot)
             
             //let fact = Fact()
@@ -42,27 +60,58 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
             fact.category = snapshot.key
             fact.imageURL = (snapshot.value! as AnyObject)["image"] as! String
             
-            self.facts.append(fact) */
+            self.facts.append(fact)
             
             self.tableView.reloadData()
-        //})
+        }) */
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return facts.count
+        if facts.count == 0 {
+            return 1
+        } else {
+            return facts.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let fact = facts[indexPath.row]
+        //let cell = UITableViewCell()
+        //let fact = facts[indexPath.row]
         
-        cell.textLabel?.text = fact.description
+        //cell.textLabel?.text = fact.description
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "factID", for: indexPath)
+        
+        cell = UITableViewCell(style: .value1, reuseIdentifier: "factID")
+        
+        if facts.count == 0 {
+            cell.textLabel?.text = " "
+        } else {
+            
+            let fact = facts[indexPath.row]
+            
+            cell.textLabel?.text = fact.category
+            //cell.detailTextLabel?.text = ">"
+            //print(product.imageURL)
+            cell.imageView?.image = UIImage(named: fact.imageURL)
+        }
+
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let fact = facts[indexPath.row]
+        //let fact = facts[indexPath.row]
+        
+        //performSegue(withIdentifier: "factDescSegue", sender: fact)
+        
+        var fact = Fact()
+        fact = facts[indexPath.row]
         
         performSegue(withIdentifier: "factDescSegue", sender: fact)
     }
@@ -71,8 +120,9 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         
         if segue.identifier == "factDescSegue" {
             let nextVC = segue.destination as! FactDescViewController
-            nextVC.fact = sender as! String
+            nextVC.fact = sender as! Fact
         }
+
     }
 
     @IBAction func helpTapped(_ sender: Any?) {

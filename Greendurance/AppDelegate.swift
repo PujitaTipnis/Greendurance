@@ -13,7 +13,8 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    //let themeColor = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
+    let themeColor = UIColor(red: 87/255, green: 183/255, blue: 58/255, alpha: 1.0)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId)
         self.window?.rootViewController = initViewController
         //
+        
+        window?.tintColor = themeColor
         
         return true
     }

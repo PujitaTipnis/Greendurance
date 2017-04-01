@@ -28,7 +28,7 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let ref = FIRDatabase.database().reference().child("products")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
-            print(snapshot.childrenCount) // I got the expected number of items
+            //print(snapshot.childrenCount)
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? FIRDataSnapshot {
                 //print(rest.value!)

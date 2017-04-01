@@ -129,9 +129,12 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.iconButton.setImage(btnImage, for: UIControlState.normal)
         cell.iconLabel.text = self.titles[indexPath.item]
         
+        cell.iconLabel.backgroundColor = UIColor.init(red: 87/255, green: 183/255, blue: 58/255, alpha: 255/255)
+        cell.iconLabel.textColor = UIColor.white
+        
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.25
-        cell.layer.cornerRadius = 8
+        //cell.layer.cornerRadius = 8
         
         //cell.iconButton.tag = indexPath.row;
         
