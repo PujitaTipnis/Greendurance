@@ -35,6 +35,29 @@ class FactDescViewController: UIViewController {
         imageView.sd_setImage(with: URL(string: fact.imageURL))
         imageView.backgroundColor = UIColor.clear
         descLabel.text = fact.desc
+        
+        /*
+         let ref = FIRDatabase.database().reference().child("facts")
+         ref.observeSingleEvent(of: .value, with: {(snapshot) in
+         //print(snapshot.childrenCount)
+         let enumerator = snapshot.children
+         while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+         //print(rest.value!)
+         
+         let fact = Fact()
+         fact.imageURL = (rest.value! as AnyObject)["image"] as! String
+         fact.category = (rest.value! as AnyObject)["category"] as! String
+         fact.desc = (rest.value! as AnyObject)["desc"] as! String
+         
+         print(fact.category)
+         
+         self.facts.append(fact)
+         
+         self.tableView.reloadData()
+         
+         }
+         })
+         */
     }
     
 }

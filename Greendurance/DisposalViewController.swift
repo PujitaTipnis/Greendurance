@@ -111,7 +111,10 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //var points = Points()
+        
         if indexPath.section == 0 {
             print("Delete: \(trashDisposal[indexPath.row].productName) has key \(trashDisposal[indexPath.row].key)")
             
@@ -137,9 +140,9 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
 
         //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().child(disposals[indexPath.row].productName) .removeValue()
         
-    }*/
+    }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if indexPath.section == 0 {
                 print("Delete: \(trashDisposal[indexPath.row].productName) has key \(trashDisposal[indexPath.row].key)")
@@ -165,6 +168,6 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             }
             tableView.reloadData()
         }
-    }
+    }*/
     
 }

@@ -37,6 +37,13 @@
 		9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */; };
 		9F5A7AED1E91829300C6B097 /* TranspPointsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7AEC1E91829300C6B097 /* TranspPointsModalViewController.swift */; };
 		9F5A7AEF1E918FBC00C6B097 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7AEE1E918FBC00C6B097 /* Points.swift */; };
+		9F5A7AF11E9197FC00C6B097 /* DisposalModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7AF01E9197FC00C6B097 /* DisposalModalViewController.swift */; };
+		9F5A7AFF1E91A64100C6B097 /* air.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A7AFE1E91A64100C6B097 /* air.png */; };
+		9F5A7B011E91A64700C6B097 /* lettuce.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A7B001E91A64700C6B097 /* lettuce.png */; };
+		9F5A7B061E91A65200C6B097 /* meat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A7B021E91A65200C6B097 /* meat.png */; };
+		9F5A7B071E91A65200C6B097 /* water-drop.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A7B031E91A65200C6B097 /* water-drop.png */; };
+		9F5A7B081E91A65200C6B097 /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A7B041E91A65200C6B097 /* water.png */; };
+		9F5A7B091E91A65200C6B097 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A7B051E91A65200C6B097 /* zebra.png */; };
 		9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7169991E906BEB00F2B2BB /* Disposal.swift */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
@@ -94,6 +101,13 @@
 		9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesModalViewController.swift; sourceTree = "<group>"; };
 		9F5A7AEC1E91829300C6B097 /* TranspPointsModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranspPointsModalViewController.swift; sourceTree = "<group>"; };
 		9F5A7AEE1E918FBC00C6B097 /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		9F5A7AF01E9197FC00C6B097 /* DisposalModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalModalViewController.swift; sourceTree = "<group>"; };
+		9F5A7AFE1E91A64100C6B097 /* air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = air.png; path = ../../../../Downloads/air.png; sourceTree = "<group>"; };
+		9F5A7B001E91A64700C6B097 /* lettuce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lettuce.png; path = ../../../../Downloads/lettuce.png; sourceTree = "<group>"; };
+		9F5A7B021E91A65200C6B097 /* meat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meat.png; path = ../../../../Downloads/meat.png; sourceTree = "<group>"; };
+		9F5A7B031E91A65200C6B097 /* water-drop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water-drop.png"; path = "../../../../Downloads/water-drop.png"; sourceTree = "<group>"; };
+		9F5A7B041E91A65200C6B097 /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water.png; path = ../../../../Downloads/water.png; sourceTree = "<group>"; };
+		9F5A7B051E91A65200C6B097 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zebra.png; path = ../../../../Downloads/zebra.png; sourceTree = "<group>"; };
 		9F7169991E906BEB00F2B2BB /* Disposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposal.swift; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
@@ -176,6 +190,12 @@
 		9F5A7AEB1E91753200C6B097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9F5A7AFE1E91A64100C6B097 /* air.png */,
+				9F5A7B001E91A64700C6B097 /* lettuce.png */,
+				9F5A7B021E91A65200C6B097 /* meat.png */,
+				9F5A7B031E91A65200C6B097 /* water-drop.png */,
+				9F5A7B041E91A65200C6B097 /* water.png */,
+				9F5A7B051E91A65200C6B097 /* zebra.png */,
 				9F019E131E8B260F0073F556 /* ecology.png */,
 				9F23CA4A1E8F072200E7650A /* bus.png */,
 				9F23CA4C1E8F073100E7650A /* car.png */,
@@ -218,6 +238,7 @@
 				9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */,
 				9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */,
 				9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */,
+				9F5A7AF01E9197FC00C6B097 /* DisposalModalViewController.swift */,
 				9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */,
 			);
 			name = ViewControllers;
@@ -319,19 +340,24 @@
 			files = (
 				9F23CA4D1E8F073100E7650A /* car.png in Resources */,
 				9F23CA4B1E8F072300E7650A /* bus.png in Resources */,
+				9F5A7B071E91A65200C6B097 /* water-drop.png in Resources */,
+				9F5A7B061E91A65200C6B097 /* meat.png in Resources */,
 				9F23CA531E8F074800E7650A /* train.png in Resources */,
 				9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */,
 				9F019E161E8B261A0073F556 /* winner.png in Resources */,
+				9F5A7B081E91A65200C6B097 /* water.png in Resources */,
 				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
 				9FF9778C1E77B4120038ABEE /* bicycle-rider.png in Resources */,
 				9FF9778E1E77B4170038ABEE /* icon.png in Resources */,
 				9F06722D1E7727A100286C6F /* Main.storyboard in Resources */,
+				9F5A7AFF1E91A64100C6B097 /* air.png in Resources */,
 				9F019E081E8AAE550073F556 /* menu.png in Resources */,
 				9F019E121E8B21D40073F556 /* shield.png in Resources */,
 				9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */,
 				9F019E141E8B260F0073F556 /* ecology.png in Resources */,
 				9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */,
 				9F23CA4F1E8F073A00E7650A /* cycling.png in Resources */,
+				9F5A7B011E91A64700C6B097 /* lettuce.png in Resources */,
 				9FF977941E77B42C0038ABEE /* trash-container-for-recycle.png in Resources */,
 				9F23CA511E8F074200E7650A /* running.png in Resources */,
 				9F5830BC1E8CC4430030E696 /* home.png in Resources */,
@@ -340,6 +366,7 @@
 				9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */,
 				9F06722F1E772A0E00286C6F /* GoogleService-Info.plist in Resources */,
 				9FF977961E77B95C0038ABEE /* spider.png in Resources */,
+				9F5A7B091E91A65200C6B097 /* zebra.png in Resources */,
 				9FF977901E77B41C0038ABEE /* medal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +442,7 @@
 				9F5A7AED1E91829300C6B097 /* TranspPointsModalViewController.swift in Sources */,
 				9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */,
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
+				9F5A7AF11E9197FC00C6B097 /* DisposalModalViewController.swift in Sources */,
 				9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */,
 				9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */,
 				9F0672181E771DD600286C6F /* AppDelegate.swift in Sources */,

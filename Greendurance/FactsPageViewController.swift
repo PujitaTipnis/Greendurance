@@ -14,8 +14,9 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var factsButton: UIBarButtonItem!
     
-    var facts : [Fact] = []
-    //var facts : [String] = ["Air", "Plastic", "Local Food", "Water", "Wildlife", "Meat"]
+    //var facts : [Fact] = []
+    var factImage : [String] = ["air.png", "water.png", "lettuce.png", "water-drop.png", "zebra.png", "meat.png"]
+    var facts : [String] = ["Air", "Plastic", "Local Food", "Water", "Wildlife", "Meat"]
     //var imageURL = ""
     //var desc = ""
     //var category = ""
@@ -26,26 +27,6 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-        
-        let ref = FIRDatabase.database().reference().child("facts")
-        ref.observeSingleEvent(of: .value, with: {(snapshot) in
-            //print(snapshot.childrenCount)
-            let enumerator = snapshot.children
-            while let rest = enumerator.nextObject() as? FIRDataSnapshot {
-                //print(rest.value!)
-                
-                let fact = Fact()
-                fact.imageURL = (rest.value! as AnyObject)["image"] as! String
-                fact.category = (rest.value! as AnyObject)["category"] as! String
-                fact.desc = (rest.value! as AnyObject)["desc"] as! String
-                
-                self.facts.append(fact)
-                
-                self.tableView.reloadData()
-                
-            }
-        })
-
         
         /*FIRDatabase.database().reference().child("facts").child.observe(FIRDataEventType.childAdded, with: {(snapshot) in
             print(snapshot)
@@ -80,16 +61,21 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = UITableViewCell()
+        let cell = UITableViewCell()
         //let fact = facts[indexPath.row]
         
-        //cell.textLabel?.text = fact.description
+        cell.textLabel?.text = facts[indexPath.row]
+        cell.imageView?.sizeThatFits(CGSize(width: 32, height: 32))
+        cell.imageView?.image = UIImage(named: factImage[indexPath.row])
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "factID", for: indexPath)
+        //var cell = tableView.dequeueReusableCell(withIdentifier: "factID", for: indexPath)
         
-        cell = UITableViewCell(style: .value1, reuseIdentifier: "factID")
+        //cell = UITableViewCell(style: .value1, reuseIdentifier: "factID")
         
-        if facts.count == 0 {
+        //cell.textLabel?.text = "Test"
+        //cell.imageView?.image = UIImage(named: <#T##String#>)
+        
+        /*if facts.count == 0 {
             cell.textLabel?.text = " "
         } else {
             
@@ -99,8 +85,7 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
             //cell.detailTextLabel?.text = ">"
             //print(product.imageURL)
             cell.imageView?.image = UIImage(named: fact.imageURL)
-        }
-
+        }*/
         
         return cell
     }
@@ -110,8 +95,9 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         
         //performSegue(withIdentifier: "factDescSegue", sender: fact)
         
-        var fact = Fact()
-        fact = facts[indexPath.row]
+        let fact = Fact()
+        //fact = facts[indexPath.row]
+        fact.category = facts[indexPath.row]
         
         performSegue(withIdentifier: "factDescSegue", sender: fact)
     }
