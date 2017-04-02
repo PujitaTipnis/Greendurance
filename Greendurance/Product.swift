@@ -19,5 +19,6 @@ class Product {
     var productName = ""
     var url = ""
     var green: UInt32 = 0
+    var disposalCategory = ""
     
 }

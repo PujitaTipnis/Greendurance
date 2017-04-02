@@ -95,7 +95,13 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.textLabel?.text = product.productName
             cell.detailTextLabel?.text = "Earnable points: \(product.green) points"
             //print(product.imageURL)
-            cell.imageView?.image = UIImage(named: "medal.png")
+            //cell.imageView?.sd_setImage(with: URL(string: product.imageURL))
+            if let url = NSURL(string: product.imageURL) {
+                if let data = NSData(contentsOf: url as URL) {
+                    cell.imageView?.image = UIImage(data: data as Data)
+                }
+            }
+            //cell.imageView?.image = UIImage(named: "medal.png")
         }
         
         return cell
@@ -104,6 +110,37 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var product = Product()
         product = products[indexPath.row]
+        
+        
+        
+        if (product.packaging.contains("vegetable")) {
+            product.green += 15
+            product.disposalCategory = "compost"
+        } else if (product.packaging.contains("glass")) {
+            product.green += 10
+            product.disposalCategory = "trash"
+        } else if (product.packaging.contains("paper")) {
+            product.green += 15
+            product.disposalCategory = "recycle"
+        } else if (product.packaging.contains("plastic")) {
+            product.green += 5
+            product.disposalCategory = "recycle"
+        } else if (product.packaging.contains("can")) {
+            product.green += 5
+            product.disposalCategory = "recycle"
+        }
+        
+        let productSelected = ["productName" : product.productName,
+                               "packaging" : product.packaging,
+                               "disposalCategory" : product.disposalCategory]
+        
+        //print(productSelected)
+        
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().setValue(productSelected)
+        
+        //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().setValue(product.disposalCategory, forKey: "disposalCategory")
+        
+        print(product.disposalCategory)
         
         performSegue(withIdentifier: "productModalSegue", sender: product)
     }

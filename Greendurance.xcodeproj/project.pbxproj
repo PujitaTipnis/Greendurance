@@ -35,6 +35,7 @@
 		9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830B71E8C88800030E696 /* SWRevealViewController.m */; };
 		9F5830BC1E8CC4430030E696 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5830BB1E8CC4430030E696 /* home.png */; };
 		9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */; };
+		9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7169991E906BEB00F2B2BB /* Disposal.swift */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
 		9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23F701E8C562000D5CAB9 /* Product.swift */; };
@@ -89,6 +90,7 @@
 		9F5830B71E8C88800030E696 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		9F5830BB1E8CC4430030E696 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../Downloads/home.png; sourceTree = "<group>"; };
 		9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesModalViewController.swift; sourceTree = "<group>"; };
+		9F7169991E906BEB00F2B2BB /* Disposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposal.swift; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
 		9FA23F701E8C562000D5CAB9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				9F019E011E88838F0073F556 /* IconCollectionViewCell.swift */,
 				9FA23F701E8C562000D5CAB9 /* Product.swift */,
 				9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */,
+				9F7169991E906BEB00F2B2BB /* Disposal.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */,
 				9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */,
+				9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */,
 				9F019E021E88838F0073F556 /* IconCollectionViewCell.swift in Sources */,
 				9FF9777C1E775B880038ABEE /* FactsPageViewController.swift in Sources */,
 				9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */,
