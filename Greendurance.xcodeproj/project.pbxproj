@@ -35,6 +35,8 @@
 		9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830B71E8C88800030E696 /* SWRevealViewController.m */; };
 		9F5830BC1E8CC4430030E696 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5830BB1E8CC4430030E696 /* home.png */; };
 		9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */; };
+		9F5A7AED1E91829300C6B097 /* TranspPointsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7AEC1E91829300C6B097 /* TranspPointsModalViewController.swift */; };
+		9F5A7AEF1E918FBC00C6B097 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7AEE1E918FBC00C6B097 /* Points.swift */; };
 		9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7169991E906BEB00F2B2BB /* Disposal.swift */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
@@ -90,6 +92,8 @@
 		9F5830B71E8C88800030E696 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		9F5830BB1E8CC4430030E696 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../Downloads/home.png; sourceTree = "<group>"; };
 		9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesModalViewController.swift; sourceTree = "<group>"; };
+		9F5A7AEC1E91829300C6B097 /* TranspPointsModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranspPointsModalViewController.swift; sourceTree = "<group>"; };
+		9F5A7AEE1E918FBC00C6B097 /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		9F7169991E906BEB00F2B2BB /* Disposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposal.swift; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
@@ -145,27 +149,8 @@
 		9F0672161E771DD600286C6F /* Greendurance */ = {
 			isa = PBXGroup;
 			children = (
+				9F5A7AEB1E91753200C6B097 /* images */,
 				9F5830B41E8C88730030E696 /* SWRevealViewController */,
-				9F019E131E8B260F0073F556 /* ecology.png */,
-				9F23CA4A1E8F072200E7650A /* bus.png */,
-				9F23CA4C1E8F073100E7650A /* car.png */,
-				9F23CA4E1E8F073A00E7650A /* cycling.png */,
-				9F23CA501E8F074200E7650A /* running.png */,
-				9F23CA521E8F074800E7650A /* train.png */,
-				9F019E111E8B21D40073F556 /* shield.png */,
-				9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */,
-				9F5830BB1E8CC4430030E696 /* home.png */,
-				9F019E151E8B261A0073F556 /* winner.png */,
-				9F019E071E8AAE550073F556 /* menu.png */,
-				9FF977891E77B34C0038ABEE /* groceriesBtn.png */,
-				9FF9778B1E77B4120038ABEE /* bicycle-rider.png */,
-				9FF977951E77B95C0038ABEE /* spider.png */,
-				9FF9778F1E77B41C0038ABEE /* medal.png */,
-				9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */,
-				9FF9779B1E78637C0038ABEE /* help-button.png */,
-				9FF9778D1E77B4170038ABEE /* icon.png */,
-				9FF977931E77B42C0038ABEE /* trash-container-for-recycle.png */,
-				9FF977911E77B4260038ABEE /* open-book-top-view.png */,
 				9FF977781E772BFE0038ABEE /* Models */,
 				9FF977771E772BC90038ABEE /* ViewControllers */,
 				9F0672171E771DD600286C6F /* AppDelegate.swift */,
@@ -188,6 +173,33 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		9F5A7AEB1E91753200C6B097 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9F019E131E8B260F0073F556 /* ecology.png */,
+				9F23CA4A1E8F072200E7650A /* bus.png */,
+				9F23CA4C1E8F073100E7650A /* car.png */,
+				9F23CA4E1E8F073A00E7650A /* cycling.png */,
+				9F23CA501E8F074200E7650A /* running.png */,
+				9F23CA521E8F074800E7650A /* train.png */,
+				9F019E111E8B21D40073F556 /* shield.png */,
+				9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */,
+				9F5830BB1E8CC4430030E696 /* home.png */,
+				9F019E151E8B261A0073F556 /* winner.png */,
+				9F019E071E8AAE550073F556 /* menu.png */,
+				9FF977891E77B34C0038ABEE /* groceriesBtn.png */,
+				9FF9778B1E77B4120038ABEE /* bicycle-rider.png */,
+				9FF977951E77B95C0038ABEE /* spider.png */,
+				9FF9778F1E77B41C0038ABEE /* medal.png */,
+				9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */,
+				9FF9779B1E78637C0038ABEE /* help-button.png */,
+				9FF9778D1E77B4170038ABEE /* icon.png */,
+				9FF977931E77B42C0038ABEE /* trash-container-for-recycle.png */,
+				9FF977911E77B4260038ABEE /* open-book-top-view.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		9FF977771E772BC90038ABEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +210,7 @@
 				9FF977811E779C100038ABEE /* FactModalViewController.swift */,
 				9FF977971E77C1C90038ABEE /* TransportationPageViewController.swift */,
 				9FF977991E77D0A50038ABEE /* TranspModalViewController.swift */,
+				9F5A7AEC1E91829300C6B097 /* TranspPointsModalViewController.swift */,
 				9F019E171E8B7CD60073F556 /* ActivitiesViewController.swift */,
 				9F019E191E8B7D900073F556 /* RankingViewController.swift */,
 				9F019E1B1E8B7DB60073F556 /* ChallengesViewController.swift */,
@@ -218,6 +231,7 @@
 				9FA23F701E8C562000D5CAB9 /* Product.swift */,
 				9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */,
 				9F7169991E906BEB00F2B2BB /* Disposal.swift */,
+				9F5A7AEE1E918FBC00C6B097 /* Points.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -389,6 +403,7 @@
 				9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */,
 				9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */,
 				9F019E021E88838F0073F556 /* IconCollectionViewCell.swift in Sources */,
+				9F5A7AEF1E918FBC00C6B097 /* Points.swift in Sources */,
 				9FF9777C1E775B880038ABEE /* FactsPageViewController.swift in Sources */,
 				9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */,
 				9F019E181E8B7CD60073F556 /* ActivitiesViewController.swift in Sources */,
@@ -397,6 +412,7 @@
 				9F019E221E8B7E4A0073F556 /* DisposalViewController.swift in Sources */,
 				9FF977821E779C100038ABEE /* FactModalViewController.swift in Sources */,
 				9F019E201E8B7E270073F556 /* GroceriesViewController.swift in Sources */,
+				9F5A7AED1E91829300C6B097 /* TranspPointsModalViewController.swift in Sources */,
 				9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */,
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
 				9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */,

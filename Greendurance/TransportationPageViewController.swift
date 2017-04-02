@@ -41,6 +41,8 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
         
         let btnImage = UIImage(named:self.items[indexPath.item])
         cell.transIconButton.setImage(btnImage, for: UIControlState.normal)
+        cell.transIconButton.isEnabled = false
+        
         cell.transIconLabel.text = self.titles[indexPath.item]
         cell.transPointsLabel.text = "Points earnable: \(self.points[indexPath.item])"
         //cell.transEarnedLabel.text = "Points earned so far: \(self.earned[indexPath.item])"
@@ -60,8 +62,9 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.item)!")
-        //let testValue = "Test"
+
         var total : Int = 0
+        let points = Points()
         let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid)
         
         if (indexPath.item == 0) {
@@ -69,40 +72,97 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
             print("cell \(indexPath.item) tapped")
             
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                //print(snapshot.value)
-                //var total = snapshot.value.objectForKey("total")
+
                 total = (snapshot.value! as AnyObject)["total"] as! Int
-                total += 5
+                total += 15
                 print ("Total: \(total)")
                 
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                ref.updateChildValues(childUpdates)
+                
+                points.total = total
+                self.performSegue(withIdentifier: "transPointsSegue", sender: points)
             })
-            
-            //var total : Int = ref.value(forKey: "total") as! Int
-            
-            //total += 1
-            
-            //ref.setValue(total)
-            //print("Total: \(total)")
             
         } else if (indexPath.item == 1) {
             
             print("cell \(indexPath.item) tapped")
             
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 10
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                ref.updateChildValues(childUpdates)
+                
+                points.total = total
+                self.performSegue(withIdentifier: "transPointsSegue", sender: points)
+                
+            })
+            
         } else if (indexPath.item == 2) {
             
             print("cell \(indexPath.item) tapped")
+            
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 5
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                ref.updateChildValues(childUpdates)
+                
+                points.total = total
+                self.performSegue(withIdentifier: "transPointsSegue", sender: points)
+                
+            })
             
         } else if (indexPath.item == 3) {
             
             print("cell \(indexPath.item) tapped")
             
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 15
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                ref.updateChildValues(childUpdates)
+                
+                points.total = total
+                self.performSegue(withIdentifier: "transPointsSegue", sender: points)
+                
+            })
+            
         } else if (indexPath.item == 4) {
             
             print("cell \(indexPath.item) tapped")
             
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 10
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                ref.updateChildValues(childUpdates)
+                
+                points.total = total
+                self.performSegue(withIdentifier: "transPointsSegue", sender: points)
+                
+            })
+            
         }
-        ref.child("total").setValue(total)
-        //print(ref.child("total"))
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -142,6 +202,13 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
         return cell
     } */
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "transPointsSegue" {
+            let nextVC = segue.destination as! TranspPointsModalViewController
+            nextVC.points = sender as! Points
+        }
+    }
     
     @IBAction func helpTapped(_ sender: Any) {
         print("Help tapped")

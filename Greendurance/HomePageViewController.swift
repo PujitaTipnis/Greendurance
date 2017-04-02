@@ -127,6 +127,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         
         let btnImage = UIImage(named:self.items[indexPath.item])
         cell.iconButton.setImage(btnImage, for: UIControlState.normal)
+        cell.iconButton.isEnabled = false
         cell.iconLabel.text = self.titles[indexPath.item]
         
         cell.iconLabel.backgroundColor = UIColor.init(red: 87/255, green: 183/255, blue: 58/255, alpha: 255/255)
@@ -151,7 +152,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
             
         } else if (indexPath.item == 1) {
             
-            self.performSegue(withIdentifier: "TransportPageSegue", sender: testValue)
+            self.performSegue(withIdentifier: "TransportPageSegue", sender: nil)
             
         } else if (indexPath.item == 2) {
             
@@ -174,10 +175,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2;
-    }
-    
-    @IBAction func groceriesButtonTapped(_ sender: Any) {
-        //print("Groceries button tapped")
     }
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
