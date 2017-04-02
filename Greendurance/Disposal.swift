@@ -12,6 +12,7 @@ class Disposal {
     
     var productName = ""
     var disposalCategory = ""
+    var key = ""
     var disposed: Bool = false
     
 }

@@ -111,8 +111,6 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         var product = Product()
         product = products[indexPath.row]
         
-        
-        
         if (product.packaging.contains("vegetable")) {
             product.green += 15
             product.disposalCategory = "compost"
@@ -130,13 +128,18 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
             product.disposalCategory = "recycle"
         }
         
-        let productSelected = ["productName" : product.productName,
-                               "packaging" : product.packaging,
-                               "disposalCategory" : product.disposalCategory]
+        
         
         //print(productSelected)
         
-        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().setValue(productSelected)
+        let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId()
+        
+        let productSelected = ["productName" : product.productName,
+                               "packaging" : product.packaging,
+                               "disposalCategory" : product.disposalCategory,
+                               "key" : ref.key]
+        
+        ref.setValue(productSelected)
         
         //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().setValue(product.disposalCategory, forKey: "disposalCategory")
         

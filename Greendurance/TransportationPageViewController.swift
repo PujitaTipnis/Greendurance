@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class TransportationPageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -59,9 +61,28 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.item)!")
         //let testValue = "Test"
+        var total : Int = 0
+        let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid)
+        
         if (indexPath.item == 0) {
             
             print("cell \(indexPath.item) tapped")
+            
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                //print(snapshot.value)
+                //var total = snapshot.value.objectForKey("total")
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 5
+                print ("Total: \(total)")
+                
+            })
+            
+            //var total : Int = ref.value(forKey: "total") as! Int
+            
+            //total += 1
+            
+            //ref.setValue(total)
+            //print("Total: \(total)")
             
         } else if (indexPath.item == 1) {
             
@@ -80,6 +101,8 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
             print("cell \(indexPath.item) tapped")
             
         }
+        ref.child("total").setValue(total)
+        //print(ref.child("total"))
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -118,6 +141,7 @@ class TransportationPageViewController: UIViewController, UICollectionViewDataSo
         
         return cell
     } */
+    
     
     @IBAction func helpTapped(_ sender: Any) {
         print("Help tapped")

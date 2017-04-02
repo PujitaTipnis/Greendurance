@@ -41,6 +41,8 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
                 let disposal = Disposal()
                 disposal.productName = (rest.value! as AnyObject)["productName"] as! String
                 disposal.disposalCategory = (rest.value! as AnyObject)["disposalCategory"] as! String
+                disposal.key = (rest.value! as AnyObject)["key"] as! String
+                print("Trash key: \(disposal.key)")
                 
                 if (disposal.disposalCategory == "trash") {
                     
@@ -105,48 +107,64 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let cell = UITableViewCell()
         cell.textLabel?.text = disp.productName
-        //cell.imageView?.image = UIImage(named: pokemon.imageName!)
         
         return cell
-        
-        /*var cell = tableView.dequeueReusableCell(withIdentifier: "disposeID", for: indexPath)
-        
-        cell = UITableViewCell(style: .subtitle, reuseIdentifier: "disposeID")
-        
-        /*if products.count == 0 {
-            cell.textLabel?.text = " "
-        } else {
-            
-            let product = products[indexPath.row] */
-            
-            cell.textLabel?.text = "Test"
-            cell.detailTextLabel?.text = "+"
-        //cell.imageView?.image = UIImage(named: pokemon.imageName!)
-        
-        return cell */
     }
     
-    func getAllTrashValues() -> Int {
-        
-        var trashCount = 0
-        
-        let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products")
-        ref.observeSingleEvent(of: .value, with: {(snapshot) in
-            print("Disposal items count: \(snapshot.childrenCount)")
-            let enumerator = snapshot.children
-            while let rest = enumerator.nextObject() as? FIRDataSnapshot {
-                //print(rest.value!)
-                
-                let disposal = Disposal()
-                disposal.disposalCategory = (rest.value! as AnyObject)["disposalCategory"] as! String
-                
-                if disposal.disposalCategory == "trash" {
-                    trashCount += 1
-                }
-            }
-        })
-        print ("Trash count = \(trashCount)")
-        return trashCount
-    }
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            print("Delete: \(trashDisposal[indexPath.row].productName) has key \(trashDisposal[indexPath.row].key)")
+            
+            let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(trashDisposal[indexPath.row].key)
+            
+            ref.removeValue()
+            
+        } else if indexPath.section == 1 {
+            print("Delete: \(recycleDisposal[indexPath.row].productName) has key \(recycleDisposal[indexPath.row].key)")
+            
+            let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
+            
+            ref.removeValue()
+            
+        } else {
+            print("Delete: \(compostDisposal[indexPath.row].productName) has key \(compostDisposal[indexPath.row].key)")
+            
+            let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(compostDisposal[indexPath.row].key)
+            
+            ref.removeValue()
+            
+        }
 
+        //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().child(disposals[indexPath.row].productName) .removeValue()
+        
+    }*/
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if indexPath.section == 0 {
+                print("Delete: \(trashDisposal[indexPath.row].productName) has key \(trashDisposal[indexPath.row].key)")
+                
+                let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(trashDisposal[indexPath.row].key)
+                
+                ref.removeValue()
+                
+            } else if indexPath.section == 1 {
+                print("Delete: \(recycleDisposal[indexPath.row].productName) has key \(recycleDisposal[indexPath.row].key)")
+                
+                let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
+                
+                ref.removeValue()
+                
+            } else {
+                print("Delete: \(compostDisposal[indexPath.row].productName) has key \(compostDisposal[indexPath.row].key)")
+                
+                let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(compostDisposal[indexPath.row].key)
+                
+                ref.removeValue()
+                
+            }
+            tableView.reloadData()
+        }
+    }
+    
 }

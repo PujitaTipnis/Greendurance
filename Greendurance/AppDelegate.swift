@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.tintColor = themeColor
         
+        UINavigationBar.appearance().backgroundColor = themeColor
+        
         return true
     }
 
