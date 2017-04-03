@@ -7,7 +7,7 @@
     },
     "fact2" : {
       "category" : "LocalFood",
-      "desc" : "According to the Council on the Environment of New York City (CENYC), “Transporting food long distances uses tremendous energy: it takes 435 fossil-fuel calories to fly a 5 calorie strawberry from California to New York.”",
+      "desc" : "According to the Council on the Environment of New York City (CENYC), 'Transporting food long distances uses tremendous energy: it takes 435 fossil-fuel calories to fly a 5 calorie strawberry from California to New York.'",
       "image" : "Ecologically_grown_vegetables.jpg"
     },
     "fact3" : {
@@ -29,6 +29,38 @@
       "category" : "Wildlife",
       "desc" : "Between 35,000 – 50,000 African Elephants are Poached a Year",
       "image" : "Working_Elephant_Vietnam.jpg"
+    }
+  },
+  "badges" : {
+    "badge1" : {
+      "name" : "Green Newbie",
+      "desc" : "Your very first badge!",
+      "image" : "sprout.png"
+    },
+    "badge2" : {
+      "category" : "Shopping Green",
+      "desc" : "An awesome streak of buying green products",
+      "image" : "groceries.png"
+    },
+    "badge3" : {
+      "category" : "Going Pro",
+      "desc" : "A worthy badge on receiving 500 points",
+      "image" : "shield2.png"
+    },
+    "badge4" : {
+      "category" : "Travel Clean",
+      "desc" : "An achievement on travelling green",
+      "image" : "electric-car.png"
+    },
+    "badge5" : {
+      "category" : "Disposing Right",
+      "desc" : "A good samaritan, on your way to disposing the right way",
+      "image" : "recycle.png"
+    },
+    "badge6" : {
+      "category" : "A Complete Expert",
+      "desc" : "A commendable achievement on earning 2500 points",
+      "image" : "winner.png"
     }
   },
   "users" : {
