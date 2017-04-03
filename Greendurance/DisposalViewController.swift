@@ -42,7 +42,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
                 disposal.productName = (rest.value! as AnyObject)["productName"] as! String
                 disposal.disposalCategory = (rest.value! as AnyObject)["disposalCategory"] as! String
                 disposal.key = (rest.value! as AnyObject)["key"] as! String
-                print("Trash key: \(disposal.key)")
+                //print("Trash key: \(disposal.key)")
                 
                 if (disposal.disposalCategory == "trash") {
                     
@@ -113,16 +113,51 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //var points = Points()
+        var total : Int = 0
+        let points = Points()
+        let pointsRef = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid)
         
         if indexPath.section == 0 {
+            
+            pointsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 5
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                pointsRef.updateChildValues(childUpdates)
+                
+                points.total = total
+                print("points sent: \(points.total)")
+                self.performSegue(withIdentifier: "disposalModalSegue", sender: points)
+            })
+            
             print("Delete: \(trashDisposal[indexPath.row].productName) has key \(trashDisposal[indexPath.row].key)")
             
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(trashDisposal[indexPath.row].key)
             
             ref.removeValue()
             
+            
         } else if indexPath.section == 1 {
+            
+            pointsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 5
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                pointsRef.updateChildValues(childUpdates)
+                
+                points.total = total
+                print("points sent: \(points.total)")
+                self.performSegue(withIdentifier: "disposalModalSegue", sender: points)
+            })
+            
             print("Delete: \(recycleDisposal[indexPath.row].productName) has key \(recycleDisposal[indexPath.row].key)")
             
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
@@ -130,6 +165,22 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             ref.removeValue()
             
         } else {
+            
+            pointsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                total = (snapshot.value! as AnyObject)["total"] as! Int
+                total += 5
+                print ("Total: \(total)")
+                
+                let childUpdates = ["/total" : total]
+                print("Child Update: \(childUpdates)")
+                pointsRef.updateChildValues(childUpdates)
+                
+                points.total = total
+                print("points sent: \(points.total)")
+                self.performSegue(withIdentifier: "disposalModalSegue", sender: points)
+            })
+            
             print("Delete: \(compostDisposal[indexPath.row].productName) has key \(compostDisposal[indexPath.row].key)")
             
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(compostDisposal[indexPath.row].key)
@@ -140,6 +191,14 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
 
         //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().child(disposals[indexPath.row].productName) .removeValue()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "disposalModalSegue" {
+            let nextVC = segue.destination as! DisposalModalViewController
+            nextVC.points = sender as! Points
+        }
     }
     
     /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

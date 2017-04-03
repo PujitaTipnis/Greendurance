@@ -8,6 +8,9 @@
 
 import UIKit
 import SDWebImage
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class FactDescViewController: UIViewController {
     
@@ -21,6 +24,8 @@ class FactDescViewController: UIViewController {
     
     //var fact = ""
     var fact = Fact()
+    var facts : [Fact] = []
+    var factExists : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,34 +35,37 @@ class FactDescViewController: UIViewController {
         //imageView.sd_setImage(with: URL(string: imageURL[fact]!))
         //imageView.backgroundColor = UIColor.clear
         //descLabel.text = desc[fact]!
-        
-        categoryLabel.text = fact.category
-        imageView.sd_setImage(with: URL(string: fact.imageURL))
-        imageView.backgroundColor = UIColor.clear
-        descLabel.text = fact.desc
-        
         /*
-         let ref = FIRDatabase.database().reference().child("facts")
-         ref.observeSingleEvent(of: .value, with: {(snapshot) in
-         //print(snapshot.childrenCount)
-         let enumerator = snapshot.children
-         while let rest = enumerator.nextObject() as? FIRDataSnapshot {
-         //print(rest.value!)
-         
-         let fact = Fact()
-         fact.imageURL = (rest.value! as AnyObject)["image"] as! String
-         fact.category = (rest.value! as AnyObject)["category"] as! String
-         fact.desc = (rest.value! as AnyObject)["desc"] as! String
-         
-         print(fact.category)
-         
-         self.facts.append(fact)
-         
-         self.tableView.reloadData()
-         
-         }
-         })
-         */
+         categoryLabel.text = fact.category
+         imageView.sd_setImage(with: URL(string: fact.imageURL))
+         imageView.backgroundColor = UIColor.clear
+         descLabel.text = fact.desc */
+        
+        let ref = FIRDatabase.database().reference().child("facts")
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            //print(snapshot.childrenCount)
+            let enumerator = snapshot.children
+            while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+                //print(rest.value!)
+                if (rest.value! as AnyObject)["category"] as! String == self.fact.category || (self.fact.category == "Local Food" && (rest.value! as AnyObject)["category"] as! String == "LocalFood") {
+                    
+                    self.categoryLabel?.text = (rest.value! as AnyObject)["category"] as? String
+                    //print((rest.value! as AnyObject)["image"] as! String)
+                    //self.imageView?.sd_setImage(with: URL(string: (rest.value! as AnyObject)["image"] as! String))
+                    let imageFireBaseURL1 : String = FIRStorage.storage().reference().child("images").fullPath as! String + "/"
+                    let imageFireBaseURL2 : String = (rest.value! as AnyObject)["image"] as! String
+                    let finalURL = imageFireBaseURL1 + imageFireBaseURL2
+                    print(imageFireBaseURL1 + imageFireBaseURL2)
+                    self.imageView?.sd_setImage(with: URL(string: finalURL as! String))
+                    //self.imageView?.sd_setImage(with: URL(string: "gs://greendurance.appspot.com/images/chimney-324561_960_720.jpg"))
+                    //self.imageView?.backgroundColor = UIColor.clear
+                    self.descLabel?.text = (rest.value! as AnyObject)["desc"] as? String
+                }
+                //print("Number of facts = \(self.facts.count)")
+                
+            }
+        })
+        
     }
     
 }

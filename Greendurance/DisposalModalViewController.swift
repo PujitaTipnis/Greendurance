@@ -13,13 +13,14 @@ class DisposalModalViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     
     var info = ""
-    var points = 0
+    var points = Points()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        info = "Congrats ! You just earned \(points) points !"
+        print("received total: \(points.total)")
+        info = "Congrats ! You just earned a total of \(points.total) points !"
         textLabel.text = info
     }
 
