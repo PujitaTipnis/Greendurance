@@ -22,6 +22,8 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
     var recycleDisposal : [Disposal] = []
     var compostDisposal : [Disposal] = []
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,6 +69,8 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }
         })
+        
+        tableView.allowsMultipleSelectionDuringEditing = true
         
     }
     
@@ -139,6 +143,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(trashDisposal[indexPath.row].key)
             
             ref.removeValue()
+            self.attemptReloadOfTableView()
             
             
         } else if indexPath.section == 1 {
@@ -163,6 +168,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
             
             ref.removeValue()
+            self.attemptReloadOfTableView()
             
         } else {
             
@@ -186,10 +192,28 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(compostDisposal[indexPath.row].key)
             
             ref.removeValue()
+            self.attemptReloadOfTableView()
             
         }
 
         //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().child(disposals[indexPath.row].productName) .removeValue()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    private func attemptReloadOfTableView() {
+        self.timer?.invalidate()
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector (self.handleReloadTable), userInfo: nil, repeats: false)
+    }
+    
+    func handleReloadTable() {
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+        })
         
     }
     
@@ -200,33 +224,5 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             nextVC.points = sender as! Points
         }
     }
-    
-    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            if indexPath.section == 0 {
-                print("Delete: \(trashDisposal[indexPath.row].productName) has key \(trashDisposal[indexPath.row].key)")
-                
-                let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(trashDisposal[indexPath.row].key)
-                
-                ref.removeValue()
-                
-            } else if indexPath.section == 1 {
-                print("Delete: \(recycleDisposal[indexPath.row].productName) has key \(recycleDisposal[indexPath.row].key)")
-                
-                let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
-                
-                ref.removeValue()
-                
-            } else {
-                print("Delete: \(compostDisposal[indexPath.row].productName) has key \(compostDisposal[indexPath.row].key)")
-                
-                let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(compostDisposal[indexPath.row].key)
-                
-                ref.removeValue()
-                
-            }
-            tableView.reloadData()
-        }
-    }*/
     
 }

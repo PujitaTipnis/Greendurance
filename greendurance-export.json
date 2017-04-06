@@ -71,6 +71,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "9x2Mo934j8gRtbyH1iiStuzSku43" : {
@@ -80,6 +88,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "BM4lsGjWSbUFInZyZEF63vzSRo53" : {
@@ -89,6 +105,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "Cc25T1byQlSSEWOYbCmEXZwf7L62" : {
@@ -98,6 +122,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "FGaiul0lyRbAM3vtbFpqCpzP1fD2" : {
@@ -107,6 +139,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "VbmlYTcymEgmKsxDQmeDY9BX3663" : {
@@ -116,6 +156,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "Vg7D8QddxedLkSAGOzIpgQiXxNl1" : {
@@ -125,6 +173,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "efhJzf5sLehfPbdqjWtffieWjR52" : {
@@ -134,6 +190,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "lXk8oqQNNGZ1MHB1PZcTJCfERqr2" : {
@@ -143,6 +207,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "qPq2ywVDj3fq3OPhAdj7jOe6Drx2" : {
@@ -152,6 +224,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     },
     "upT8s0JojuPqjieit2dAcvYjdat1" : {
@@ -161,6 +241,14 @@
       "carpool" : 0,
       "cycle" : 0,
       "bus" : 0,
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
       "total": 0
     }
   },
@@ -205,7 +293,7 @@
     "main_category_en": "fr:Filet-de-boeuf",
     "image_url": "http://en.openfoodfacts.org/images/products/000/000/002/4600/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/000/002/4600/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 1071894,
@@ -230,7 +318,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/000/000/107/1894/front.7.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/000/107/1894/front.7.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 5200016,
@@ -255,7 +343,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/000/000/520/0016/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/000/520/0016/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 7730009,
@@ -280,7 +368,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/000/000/773/0009/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/000/773/0009/front.6.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 10090206,
@@ -305,7 +393,7 @@
     "main_category_en": "Beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/000/001/009/0206/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/001/009/0206/front.5.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 10127735,
@@ -330,7 +418,7 @@
     "main_category_en": "Syrups",
     "image_url": "http://en.openfoodfacts.org/images/products/000/001/012/7735/front.7.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/001/012/7735/front.7.200.jpg",
-    "green": 0
+    "green": 10
   },
   {
     "code": 12345878,
@@ -355,7 +443,7 @@
     "main_category_en": "Chicken-feet",
     "image_url": "http://en.openfoodfacts.org/images/products/000/001/234/5878/front.9.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/001/234/5878/front.9.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 27533024,
@@ -380,7 +468,7 @@
     "main_category_en": "Desserts",
     "image_url": "http://en.openfoodfacts.org/images/products/000/002/753/3024/front.9.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/002/753/3024/front.9.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 27533048,
@@ -405,7 +493,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/000/002/753/3048/front.7.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/002/753/3048/front.7.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 30053014,
@@ -430,7 +518,7 @@
     "main_category_en": "",
     "image_url": "http://en.openfoodfacts.org/images/products/000/003/005/3014/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/003/005/3014/front.3.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 40608754,
@@ -455,7 +543,7 @@
     "main_category_en": "Beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/000/004/060/8754/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/004/060/8754/front.5.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 758,
@@ -480,7 +568,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00000758/front.9.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00000758/front.9.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 84154071,
@@ -505,7 +593,7 @@
     "main_category_en": "Groceries",
     "image_url": "http://en.openfoodfacts.org/images/products/000/008/415/4071/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/008/415/4071/front.5.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 87177756,
@@ -530,7 +618,7 @@
     "main_category_en": "Beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/000/008/717/7756/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/008/717/7756/front.5.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 1373,
@@ -555,7 +643,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00001373/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00001373/front.6.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 2929,
@@ -580,7 +668,7 @@
     "main_category_en": "Groceries",
     "image_url": "http://en.openfoodfacts.org/images/products/00002929/front.4.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00002929/front.4.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 3100,
@@ -605,7 +693,7 @@
     "main_category_en": "Meats",
     "image_url": "http://en.openfoodfacts.org/images/products/00003100/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00003100/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 790310044,
@@ -630,7 +718,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/000/079/031/0044/front.9.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/079/031/0044/front.9.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 886100252,
@@ -655,7 +743,7 @@
     "main_category_en": "Beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/000/088/610/0252/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/088/610/0252/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 104,
@@ -680,7 +768,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/000104/front.8.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000104/front.8.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 11021096,
@@ -705,7 +793,7 @@
     "main_category_en": "Fish and meat and eggs",
     "image_url": "http://en.openfoodfacts.org/images/products/000/110/210/96/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/110/210/96/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 1109205,
@@ -730,7 +818,7 @@
     "main_category_en": "",
     "image_url": "http://en.openfoodfacts.org/images/products/000/110/920/5/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/110/920/5/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 11201096,
@@ -755,7 +843,7 @@
     "main_category_en": "Fish and meat and eggs",
     "image_url": "http://en.openfoodfacts.org/images/products/000/112/010/96/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/112/010/96/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 11251085,
@@ -780,7 +868,7 @@
     "main_category_en": "Fish and meat and eggs",
     "image_url": "http://en.openfoodfacts.org/images/products/000/112/510/85/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/112/510/85/front.3.200.jpg",
-    "green": 0
+    "green": 10
   },
   {
     "code": 11281070,
@@ -805,7 +893,7 @@
     "main_category_en": "Fish and meat and eggs",
     "image_url": "http://en.openfoodfacts.org/images/products/000/112/810/70/front.8.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/112/810/70/front.8.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 11281076,
@@ -830,7 +918,7 @@
     "main_category_en": "Fish and meat and eggs",
     "image_url": "http://en.openfoodfacts.org/images/products/000/112/810/76/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/112/810/76/front.5.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 11501,
@@ -855,7 +943,7 @@
     "main_category_en": "Groceries",
     "image_url": "http://en.openfoodfacts.org/images/products/00011501/front.14.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00011501/front.14.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 11693,
@@ -880,7 +968,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/00011693/front.10.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00011693/front.10.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 11815,
@@ -905,7 +993,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/00011815/front.8.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00011815/front.8.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 19170,
@@ -930,7 +1018,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00019170/front.4.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00019170/front.4.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 24136,
@@ -955,7 +1043,7 @@
     "main_category_en": "",
     "image_url": "http://en.openfoodfacts.org/images/products/00024136/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00024136/front.3.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 25157,
@@ -980,7 +1068,7 @@
     "main_category_en": "Meals",
     "image_url": "http://en.openfoodfacts.org/images/products/00025157/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00025157/front.6.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 25751,
@@ -1005,7 +1093,7 @@
     "main_category_en": "Charcuteries",
     "image_url": "http://en.openfoodfacts.org/images/products/00025751/front.7.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00025751/front.7.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 31858,
@@ -1030,7 +1118,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00031858/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00031858/front.6.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 33046,
@@ -1055,7 +1143,7 @@
     "main_category_en": "Meats",
     "image_url": "http://en.openfoodfacts.org/images/products/00033046/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00033046/front.6.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 36559,
@@ -1080,7 +1168,7 @@
     "main_category_en": "Meals",
     "image_url": "http://en.openfoodfacts.org/images/products/00036559/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00036559/front.5.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 4394,
@@ -1105,7 +1193,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/0004394/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/0004394/front.6.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 53327,
@@ -1130,7 +1218,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00053327/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00053327/front.3.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 54379,
@@ -1155,7 +1243,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00054379/front.10.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00054379/front.10.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 64491,
@@ -1180,7 +1268,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00064491/front.9.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00064491/front.9.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 66020,
@@ -1205,7 +1293,7 @@
     "main_category_en": "",
     "image_url": "http://en.openfoodfacts.org/images/products/00066020/front.9.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00066020/front.9.200.jpg",
-    "green": 0
+    "green": 10
   },
   {
     "code": 68789,
@@ -1230,7 +1318,7 @@
     "main_category_en": "Harengs",
     "image_url": "http://en.openfoodfacts.org/images/products/00068789/front.8.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00068789/front.8.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 7200000021,
@@ -1255,7 +1343,7 @@
     "main_category_en": "Groceries",
     "image_url": "http://en.openfoodfacts.org/images/products/000/720/000/0021/front.3.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/720/000/0021/front.3.200.jpg",
-    "green": 0
+    "green": 10
   },
   {
     "code": 76630,
@@ -1280,7 +1368,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00076630/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00076630/front.5.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 79150,
@@ -1305,7 +1393,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00079150/front.8.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00079150/front.8.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 8295616241,
@@ -1330,7 +1418,7 @@
     "main_category_en": "it:Vinaigre-balsamique",
     "image_url": "http://en.openfoodfacts.org/images/products/000/829/561/6241/front.7.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/829/561/6241/front.7.200.jpg",
-    "green": 0
+    "green": 10
   },
   {
     "code": 88862,
@@ -1355,7 +1443,7 @@
     "main_category_en": "Plant-based foods and beverages",
     "image_url": "http://en.openfoodfacts.org/images/products/00088862/front.5.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00088862/front.5.200.jpg",
-    "green": 0
+    "green": 15
   },
   {
     "code": 90100,
@@ -1380,7 +1468,7 @@
     "main_category_en": "Meals",
     "image_url": "http://en.openfoodfacts.org/images/products/00090100/front.6.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/00090100/front.6.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 9138378043,
@@ -1405,7 +1493,7 @@
     "main_category_en": "Sugary snacks",
     "image_url": "http://en.openfoodfacts.org/images/products/000/913/837/8043/front.19.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/913/837/8043/front.19.200.jpg",
-    "green": 0
+    "green": 5
   },
   {
     "code": 9300003346,
@@ -1430,7 +1518,7 @@
     "main_category_en": "Pickles",
     "image_url": "http://en.openfoodfacts.org/images/products/000/930/000/3346/front.7.400.jpg",
     "image_small_url": "http://en.openfoodfacts.org/images/products/000/930/000/3346/front.7.200.jpg",
-    "green": 0
+    "green": 10
   }
 ]
 }

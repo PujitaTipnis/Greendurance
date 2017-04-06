@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -18,17 +19,17 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     
+    @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var rankingButton: UIButton!
     @IBOutlet weak var rankingLabel: UILabel!
-    @IBOutlet weak var activityButton: UIButton!
     @IBOutlet weak var activityLabel: UILabel!
-    @IBOutlet weak var challengeButton: UIButton!
     @IBOutlet weak var challengeLabel: UILabel!
     
     let resuseIdentifier = "cell"
     var items = ["groceriesBtn.png", "bicycle-rider.png", "trash-container-for-recycle.png", "medal.png", "open-book-top-view.png", "icon.png"]
     var titles = ["Shop Green", "Ride Clean", "Dispose", "Badges", "Facts & Tips", "Friends"]
-    var newUser = ""
+    //var newUser : Bool = false
+    var total : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +41,17 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         //welcomeLabel.text = "Welcome \(FIRAuth.auth()!.currentUser!.email!)"
         
         // Slider Menu code
-        if self.revealViewController() != nil {
+        
+        menuButton.target = self.revealViewController()
+        menuButton.action = Selector("revealToggle:")
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        /*if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        }*/
         
         // Decide what needs to be displayed for logout button
       /*  let currUser = FIRAuth.auth()?.currentUser
@@ -57,13 +64,14 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         //logoutButton.isEnabled = false
         
         let currUser = FIRAuth.auth()?.currentUser
-        print("Sender = \(newUser)")
+        //print("Total = \(total)"
+        //print("Sender = \(newUser)")
         //if (newUser == "false") {
         if currUser == nil {
             
             rankingButton.isHidden = false
-            activityButton.isHidden = false
-            challengeButton.isHidden = false
+
+            pointsLabel.isHidden = true
             
             rankingLabel.text = "Ranking"
             activityLabel.text = "Activities"
@@ -76,8 +84,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         } else {
             
             rankingButton.isHidden = true
-            activityButton.isHidden = true
-            challengeButton.isHidden = true
+            pointsLabel.isHidden = true
             
             rankingLabel.isHidden = true
             activityLabel.isHidden = true
@@ -102,12 +109,16 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
             try FIRAuth.auth()?.signOut()
             print("Signed out successfully")
             
-            //let controllerId = (FIRAuth.auth()?.currentUser != nil) ? "Menu" : "SignIn"
-            let controllerId = "Menu"
-            //let controllerId = LoginService.sharedInstance.isLoggedIn() ? "Welcome" : "SignIn";
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
-            self.present(initViewController, animated: true, completion: nil)
+            rankingButton.isHidden = true
+            pointsLabel.isHidden = true
+            
+            rankingLabel.isHidden = true
+            activityLabel.isHidden = true
+            challengeLabel.isHidden = true
+            
+            welcomeLabel.isHidden = false
+            welcomeDescLabel.isHidden = false
+            spiderImageView.isHidden = false
             
         } catch {}
         

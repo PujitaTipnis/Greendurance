@@ -79,8 +79,8 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     cell.imageView?.image = UIImage(data: data as Data)
                 }
             } */
-            cell.imageView?.image = UIImage(named: "\(badge.badgeURL)")
-            //cell.imageView?.image = UIImage(named: "sprout (1).png")
+            //cell.imageView?.image = UIImage(named: "\(badge.badgeURL)")
+            cell.imageView?.image = UIImage(named: "sprout (1).png")
         }
         
         return cell

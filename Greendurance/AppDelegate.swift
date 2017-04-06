@@ -20,14 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        //
-        let controllerId = "SignIn"
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId)
-        self.window?.rootViewController = initViewController
-        //
-        
         window?.tintColor = themeColor
         
         UINavigationBar.appearance().backgroundColor = themeColor

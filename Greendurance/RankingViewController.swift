@@ -10,10 +10,12 @@ import UIKit
 
 class RankingViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var points : [Points] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
 }

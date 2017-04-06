@@ -18,7 +18,7 @@ class Product {
     var packagingTags = ""
     var productName = ""
     var url = ""
-    var green: UInt32 = 0
+    var green: Int = 0
     var disposalCategory = ""
     
 }

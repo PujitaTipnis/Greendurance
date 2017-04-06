@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class SignInViewController: UIViewController {
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var newUser = ""
@@ -19,61 +19,77 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    @IBAction func signInTapped(_ sender: Any) {
-        FIRAuth.auth()?.signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
-            
-            if error != nil {
-                /*print("Hey we have an error:\(error)")
-                FIRAuth.auth()?.createUser(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
-                    print("We tried to create a user")
-                    if error != nil {
-                        print("Hey we have an error:\(error)")
-                    } else {
-                        print("User created successfully")
-                        self.newUser = "true"
-                        FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
-                        
-                        self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser)
-                    }
-                }) */
-                DispatchQueue.main.async(execute: { () -> Void in
-                    var alert = UIAlertController(title: "Why are you doing this to me?!?", message: error as! String?, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                })
-                
-            } else {
-                /*self.newUser = "false"
-                print("Signed in successfully")
-                self.performSegue(withIdentifier: "SignInSegue", sender: self.newUser) */
-                
-                DispatchQueue.main.async(execute: { () -> Void in
-                    //let controllerId = (FIRAuth.auth()?.currentUser != nil) ? "Welcome" : "Menu"
-                    let controllerId = "Menu"
-                    //let controllerId = LoginService.sharedInstance.isLoggedIn() ? "Welcome" : "SignIn";
-                    
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
-                    self.present(initViewController, animated: true, completion: nil)
-                })
-                
+        // 1
+        FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
+            // 2
+            if user != nil {
+                // 3
+                self.performSegue(withIdentifier: "SignInSegue", sender: nil)
             }
-        })
-        
-    }
-   
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "SignInSegue" {
-            let nextVC = segue.destination as! UINavigationController
-            //let homeVC = nextVC.topViewController as! HomePageViewController
-            let homeVC = nextVC.viewControllers.first as! HomePageViewController
-            homeVC.newUser = newUser
-            print("Preparing Segue : \(homeVC.newUser)")
         }
-    } */
+    }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        FIRAuth.auth()!.signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!)
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Register", message: "Register", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { action in
+            // 1
+            let fullNameField = alert.textFields![0]
+            let emailField = alert.textFields![1]
+            let passwordField = alert.textFields![2]
+            
+            // 2
+            FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: {(user, error) in
+                if error == nil {
+                    // 3
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("total").setValue(0)
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("name").setValue(fullNameField.text)
+                    
+                    FIRAuth.auth()!.signIn(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!)
+                }
+            })
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .default)
+        
+        alert.addTextField { textFullName in
+            textFullName.placeholder = "Enter your full name"
+        }
+        
+        alert.addTextField { textEmail in
+            textEmail.placeholder = "Enter your email"
+        }
+        
+        alert.addTextField { textPassword in
+            textPassword.isSecureTextEntry = true
+            textPassword.placeholder = "Enter your password"
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension SignInViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextField.becomeFirstResponder()
+        }
+        if textField == passwordTextField {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
 }
 

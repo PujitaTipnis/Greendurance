@@ -37,7 +37,7 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
                 product.imageURL = (rest.value! as AnyObject)["image_url"] as! String
                 product.productName = (rest.value! as AnyObject)["product_name"] as! String
                 product.packaging = (rest.value! as AnyObject)["packaging"] as! String
-                product.green = (rest.value! as AnyObject)["green"] as! UInt32
+                product.green = (rest.value! as AnyObject)["green"] as! Int
                 
                 self.products.append(product)
                 //print("Number of products = \(self.products.count)")
@@ -84,6 +84,7 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
 
         var cell = tableView.dequeueReusableCell(withIdentifier: "productID", for: indexPath)
     
+        // if i uncomment the below line, the rows display like they should. But clicking on a cell fails the pgm
         cell = UITableViewCell(style: .subtitle, reuseIdentifier: "productID")
         
         if products.count == 0 {
@@ -108,27 +109,35 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var total : Int = 0
+        let points = Points()
+        let totalRef = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid)
+        
         var product = Product()
         product = products[indexPath.row]
         
         if (product.packaging.contains("vegetable")) {
-            product.green += 15
+            //product.green += 15
             product.disposalCategory = "compost"
+            
         } else if (product.packaging.contains("glass")) {
-            product.green += 10
+            //product.green += 10
             product.disposalCategory = "trash"
+            
         } else if (product.packaging.contains("paper")) {
-            product.green += 15
+            //product.green += 15
             product.disposalCategory = "recycle"
+            
         } else if (product.packaging.contains("plastic")) {
-            product.green += 5
+            //product.green += 5
             product.disposalCategory = "recycle"
+            
         } else if (product.packaging.contains("can")) {
-            product.green += 5
+            //product.green += 5
             product.disposalCategory = "recycle"
+            
         }
-        
-        
         
         //print(productSelected)
         
@@ -141,18 +150,32 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         ref.setValue(productSelected)
         
+        totalRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            total = (snapshot.value! as AnyObject)["total"] as! Int
+            total += product.green as! Int
+            print ("Total: \(total)")
+            
+            let childUpdates = ["/total" : total]
+            print("Child Update: \(childUpdates)")
+            totalRef.updateChildValues(childUpdates)
+            
+            points.total = total
+            self.performSegue(withIdentifier: "productModalSegue", sender: points)
+        })
+        
         //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().setValue(product.disposalCategory, forKey: "disposalCategory")
         
         print(product.disposalCategory)
         
-        performSegue(withIdentifier: "productModalSegue", sender: product)
+        //performSegue(withIdentifier: "productModalSegue", sender: points)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "productModalSegue" {
             let nextVC = segue.destination as! GroceriesModalViewController
-            nextVC.product = sender as! Product
+            nextVC.points = sender as! Points
         }
     }
 

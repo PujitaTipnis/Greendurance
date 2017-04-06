@@ -10,4 +10,5 @@ import Foundation
 
 class Points {
     var total = 0
+    var user = ""
 }

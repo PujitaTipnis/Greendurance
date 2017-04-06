@@ -9,19 +9,17 @@
 import UIKit
 
 class GroceriesModalViewController: UIViewController {
-
-    
-    var product = Product()
     
     @IBOutlet weak var textLabel: UILabel!
     
     var info = ""
+    var points = Points()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        info = "Congrats ! You just earned \(product.green) more points for purchasing \(product.productName) !"
+        info = "Congrats ! You just earned a total of \(points.total) points !"
         textLabel.text = info
     }
 
