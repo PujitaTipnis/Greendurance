@@ -46,6 +46,10 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

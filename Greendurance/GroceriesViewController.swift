@@ -116,7 +116,6 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         //cell.imageView?.contentMode = .scaleAspectFill
             
         let productImageUrl = product.imageURL
-        print("Image url: \(productImageUrl)")
             
         cell.productImageView.loadImageUsingCacheWithUrlString(urlString: productImageUrl)
             
