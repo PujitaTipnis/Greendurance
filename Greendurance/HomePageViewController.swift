@@ -17,7 +17,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var spiderImageView: UIImageView!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var logoutButton: UIBarButtonItem!
     
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var rankingButton: UIButton!
@@ -101,29 +100,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     /*override func viewWillAppear(_ animated: Bool) {
         
     }*/
-
-    @IBAction func logoutTapped(_ sender: Any) {
-        // Dismiss the view controller (the first screen) that
-        // was presented modally by the view controller
-        do {
-            try FIRAuth.auth()?.signOut()
-            print("Signed out successfully")
-            
-            rankingButton.isHidden = true
-            pointsLabel.isHidden = true
-            
-            rankingLabel.isHidden = true
-            activityLabel.isHidden = true
-            challengeLabel.isHidden = true
-            
-            welcomeLabel.isHidden = false
-            welcomeDescLabel.isHidden = false
-            spiderImageView.isHidden = false
-            
-        } catch {}
-        
-        //dismiss(animated: true, completion: nil)
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.items.count

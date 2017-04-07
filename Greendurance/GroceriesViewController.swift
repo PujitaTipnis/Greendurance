@@ -12,19 +12,23 @@ import FirebaseAuth
 
 class GroceriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBox: UISearchBar!
     @IBOutlet weak var barcodeScanningButton: UIButton!
     
     var products : [Product] = []
     
+    let cellId = "productID"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.register(ProductCell.self, forCellReuseIdentifier: cellId)
         
         let ref = FIRDatabase.database().reference().child("products")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
@@ -42,28 +46,34 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.products.append(product)
                 //print("Number of products = \(self.products.count)")
                 
-                self.tableView.reloadData()
-
+                // NEW
+                DispatchQueue.main.async(execute: {
+                    self.tableView.reloadData()
+                })
+                //
+                
+                //self.tableView.reloadData()
+                
             }
         })
         
         /*let productsRef = FIRDatabase.database().reference().child("products")
-        print("Test= \(productsRef.child("0"))")
+         print("Test= \(productsRef.child("0"))")
          
-        productsRef.childByAutoId().observe(FIRDataEventType.childAdded, with: {(snapshot) in
-            print(snapshot)
-            
-            let product = Product()
-            product.imageURL = (snapshot.value! as AnyObject)["image_url"] as! String
-            product.productName = (snapshot.value! as AnyObject)["product_name"] as! String
-            product.packaging = (snapshot.value! as AnyObject)["packaging"] as! String
-            product.green = (snapshot.value! as AnyObject)["green"] as! UInt32
-            
-            self.products.append(product)
-            print("Number of products = \(self.products.count)")
-            
-            self.tableView.reloadData()
-        }) */
+         productsRef.childByAutoId().observe(FIRDataEventType.childAdded, with: {(snapshot) in
+         print(snapshot)
+         
+         let product = Product()
+         product.imageURL = (snapshot.value! as AnyObject)["image_url"] as! String
+         product.productName = (snapshot.value! as AnyObject)["product_name"] as! String
+         product.packaging = (snapshot.value! as AnyObject)["packaging"] as! String
+         product.green = (snapshot.value! as AnyObject)["green"] as! UInt32
+         
+         self.products.append(product)
+         print("Number of products = \(self.products.count)")
+         
+         self.tableView.reloadData()
+         }) */
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -81,30 +91,55 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //let cell = tableView.dequeueReusableCell(withIdentifier: "productID") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "productID")
-
-        var cell = tableView.dequeueReusableCell(withIdentifier: "productID", for: indexPath)
-    
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productID", for: indexPath) as! ProductCell
+        
         // if i uncomment the below line, the rows display like they should. But clicking on a cell fails the pgm
-        cell = UITableViewCell(style: .subtitle, reuseIdentifier: "productID")
+        //cell = UITableViewCell(style: .subtitle, reuseIdentifier: "productID")
         
         if products.count == 0 {
             cell.textLabel?.text = " "
         } else {
-            
-            let product = products[indexPath.row]
-            
-            cell.textLabel?.text = product.productName
-            cell.detailTextLabel?.text = "Earnable points: \(product.green) points"
-            //print(product.imageURL)
-            //cell.imageView?.sd_setImage(with: URL(string: product.imageURL))
-            if let url = NSURL(string: product.imageURL) {
-                if let data = NSData(contentsOf: url as URL) {
-                    cell.imageView?.image = UIImage(data: data as Data)
-                }
-            }
-            //cell.imageView?.image = UIImage(named: "medal.png")
-        }
+
+        let product = products[indexPath.row]
         
+        cell.textLabel?.text = product.productName
+        cell.detailTextLabel?.text = "Earnable points: \(product.green) points"
+        //print(product.imageURL)
+        //cell.imageView?.sd_setImage(with: URL(string: product.imageURL))
+       /* if let url = NSURL(string: product.imageURL) {
+            if let data = NSData(contentsOf: url as URL) {
+                cell.imageView?.image = UIImage(data: data as Data)
+            }
+        } */
+        //cell.imageView?.image = UIImage(named: "medal.png")
+        //cell.imageView?.contentMode = .scaleAspectFill
+            
+        let productImageUrl = product.imageURL
+        print("Image url: \(productImageUrl)")
+            
+        cell.productImageView.loadImageUsingCacheWithUrlString(urlString: productImageUrl)
+            
+            /*let url = NSURL(string: urlString)
+            var request = URLRequest(url:url! as URL);
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+                
+                //download hit an error so lets return out
+                if error != nil {
+                    print(error)
+                    return
+                }
+                
+                //download successful
+                DispatchQueue.main.async(execute: {
+                    self.image = UIImage(data: data!)
+                })
+                
+            }).resume()
+        } */
+  
+        }
         return cell
     }
     
@@ -178,8 +213,47 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
             nextVC.points = sender as! Points
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
+    
     @IBAction func barcodeScannerTapped(_ sender: Any) {
         print("Barcode button tapped")
+    }
+}
+
+class ProductCell : UITableViewCell {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        textLabel?.frame = CGRect(x: 64, y: textLabel!.frame.origin.y - 2, width: textLabel!.frame.width, height: textLabel!.frame.height)
+        
+        detailTextLabel?.frame = CGRect(x: 64, y: detailTextLabel!.frame.origin.y + 2, width: detailTextLabel!.frame.width, height: detailTextLabel!.frame.height)
+    }
+    
+    let productImageView: UIImageView = {
+        let imageView = UIImageView()
+        //imageView.image = UIImage(named: "medal.png")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 24
+        imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        
+        addSubview(productImageView)
+        productImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
+        productImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        productImageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
+        productImageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
