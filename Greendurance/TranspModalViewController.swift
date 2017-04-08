@@ -12,7 +12,7 @@ class TranspModalViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     
-    let help = "This section contains tasks related to eco-friendly transportation choices. Select a task for the day and on completion, you would get awarded the assigned points."
+    let help = "This section contains tasks related to eco-friendly transportation choices. If you performed any of thes mentioned tasks today, tap on it and win the assigned points."
     
     override func viewDidLoad() {
         super.viewDidLoad()

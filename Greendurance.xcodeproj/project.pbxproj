@@ -33,6 +33,10 @@
 		9F23CA531E8F074800E7650A /* train.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA521E8F074800E7650A /* train.png */; };
 		9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */; };
 		9F57AA921E974E3C00BCD6FA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AA911E974E3C00BCD6FA /* Extensions.swift */; };
+		9F57AA941E97F6F400BCD6FA /* GroceriesHelpModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AA931E97F6F400BCD6FA /* GroceriesHelpModalViewController.swift */; };
+		9F57AA961E97FA4000BCD6FA /* DisposalHelpModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AA951E97FA3F00BCD6FA /* DisposalHelpModalViewController.swift */; };
+		9F57AA981E98742D00BCD6FA /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AA971E98742D00BCD6FA /* AddFriendsViewController.swift */; };
+		9F57AA9A1E98B1BE00BCD6FA /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AA991E98B1BE00BCD6FA /* BarcodeViewController.swift */; };
 		9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830B71E8C88800030E696 /* SWRevealViewController.m */; };
 		9F5830BC1E8CC4430030E696 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5830BB1E8CC4430030E696 /* home.png */; };
 		9F5830C01E8DC1720030E696 /* GroceriesModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */; };
@@ -117,6 +121,10 @@
 		9F23CA521E8F074800E7650A /* train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = train.png; path = ../../../../Downloads/train.png; sourceTree = "<group>"; };
 		9F23CA541E8F1A2700E7650A /* TransportCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F57AA911E974E3C00BCD6FA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9F57AA931E97F6F400BCD6FA /* GroceriesHelpModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesHelpModalViewController.swift; sourceTree = "<group>"; };
+		9F57AA951E97FA3F00BCD6FA /* DisposalHelpModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalHelpModalViewController.swift; sourceTree = "<group>"; };
+		9F57AA971E98742D00BCD6FA /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
+		9F57AA991E98B1BE00BCD6FA /* BarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
 		9F5830B51E8C887F0030E696 /* Greendurance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greendurance-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F5830B61E8C88800030E696 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		9F5830B71E8C88800030E696 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
@@ -302,8 +310,10 @@
 				9F019E191E8B7D900073F556 /* RankingViewController.swift */,
 				9F019E1B1E8B7DB60073F556 /* ChallengesViewController.swift */,
 				9F019E1F1E8B7E270073F556 /* GroceriesViewController.swift */,
+				9F57AA931E97F6F400BCD6FA /* GroceriesHelpModalViewController.swift */,
 				9F5830BF1E8DC1710030E696 /* GroceriesModalViewController.swift */,
 				9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */,
+				9F57AA951E97FA3F00BCD6FA /* DisposalHelpModalViewController.swift */,
 				9F5A7AF01E9197FC00C6B097 /* DisposalModalViewController.swift */,
 				9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */,
 				9F019E1D1E8B7DE10073F556 /* FriendsViewController.swift */,
@@ -313,6 +323,8 @@
 				9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */,
 				9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */,
 				9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */,
+				9F57AA971E98742D00BCD6FA /* AddFriendsViewController.swift */,
+				9F57AA991E98B1BE00BCD6FA /* BarcodeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -537,6 +549,7 @@
 				9F019E201E8B7E270073F556 /* GroceriesViewController.swift in Sources */,
 				9F5A7AED1E91829300C6B097 /* TranspPointsModalViewController.swift in Sources */,
 				9F5A7B1B1E9208A700C6B097 /* Friend.swift in Sources */,
+				9F57AA981E98742D00BCD6FA /* AddFriendsViewController.swift in Sources */,
 				9FF9779A1E77D0A50038ABEE /* TranspModalViewController.swift in Sources */,
 				9F5A7B691E968EA400C6B097 /* TermsConditionsViewController.swift in Sources */,
 				9F57AA921E974E3C00BCD6FA /* Extensions.swift in Sources */,
@@ -544,6 +557,8 @@
 				9F5A7AF11E9197FC00C6B097 /* DisposalModalViewController.swift in Sources */,
 				9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */,
 				9F5A7B6D1E96EAF900C6B097 /* DisposalViewControllerOldold.swift in Sources */,
+				9F57AA961E97FA4000BCD6FA /* DisposalHelpModalViewController.swift in Sources */,
+				9F57AA941E97F6F400BCD6FA /* GroceriesHelpModalViewController.swift in Sources */,
 				9F5A7B321E9380EE00C6B097 /* User.swift in Sources */,
 				9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */,
 				9F5A7B651E95C80600C6B097 /* SettingsViewController.swift in Sources */,
@@ -554,6 +569,7 @@
 				9FF977801E778AD10038ABEE /* FactDescViewController.swift in Sources */,
 				9F5A7B671E968E5E00C6B097 /* CreditsViewController.swift in Sources */,
 				9F019E1A1E8B7D900073F556 /* RankingViewController.swift in Sources */,
+				9F57AA9A1E98B1BE00BCD6FA /* BarcodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -168,10 +168,6 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
             
             ref.removeValue()
-            recycleDisposal.remove(at: indexPath.row)
-            
-            //print("Index value: \(disposals[indexPath.row].productName)")
-            //ref.setValue(nil)
             self.attemptReloadOfTableView()
             
         } else {

@@ -219,6 +219,7 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func barcodeScannerTapped(_ sender: Any) {
         print("Barcode button tapped")
+        self.performSegue(withIdentifier: "barcodeSegue", sender: nil)
     }
 }
 

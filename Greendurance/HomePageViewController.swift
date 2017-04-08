@@ -45,61 +45,51 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         menuButton.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
-        /*if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }*/
-        
-        // Decide what needs to be displayed for logout button
-      /*  let currUser = FIRAuth.auth()?.currentUser
-        if currUser != nil {
-            // Customer is signed-in
-            
-        } */
-        
-        // Changeeeeee
-        //logoutButton.isEnabled = false
-        
-        let currUser = FIRAuth.auth()?.currentUser
-        //print("Total = \(total)"
-        //print("Sender = \(newUser)")
-        //if (newUser == "false") {
-        if currUser == nil {
-            
-            rankingButton.isHidden = false
-
-            pointsLabel.isHidden = true
-            
-            rankingLabel.text = "Ranking"
-            activityLabel.text = "Activities"
-            challengeLabel.text = "Challenges"
-            
-            welcomeLabel.isHidden = true
-            welcomeDescLabel.isHidden = true
-            spiderImageView.isHidden = true
-            
-        } else {
-            
-            rankingButton.isHidden = true
-            pointsLabel.isHidden = true
-            
-            rankingLabel.isHidden = true
-            activityLabel.isHidden = true
-            challengeLabel.isHidden = true
-            
-            welcomeLabel.isHidden = false
-            welcomeDescLabel.isHidden = false
-            spiderImageView.isHidden = false
-            
-        }
-        
     }
     
-    /*override func viewWillAppear(_ animated: Bool) {
-        
-    }*/
+    override func viewWillAppear(_ animated: Bool) {
+            //print("View appeared")
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let user = user {
+                // User is signed in.
+                
+                //print("login happened")
+                //print ("See here: \(String(describing: user.email))")
+                
+                let ref = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("total")
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    self.pointsLabel.isHidden = false
+                    self.pointsLabel.text = "\(NSString(format: "%@", snapshot.value as! CVarArg) as String) points"
+                })
+                
+                self.rankingButton.isHidden = false
+                
+                self.rankingLabel.text = "Ranking"
+                self.activityLabel.text = "Activities"
+                self.challengeLabel.text = "Challenges"
+                
+                self.welcomeLabel.isHidden = true
+                self.welcomeDescLabel.isHidden = true
+                self.spiderImageView.isHidden = true
+                
+            } else {
+                // No User is signed in.
+                
+                self.rankingButton.isHidden = true
+                self.pointsLabel.isHidden = true
+                
+                self.rankingLabel.isHidden = true
+                self.activityLabel.isHidden = true
+                self.challengeLabel.isHidden = true
+                
+                self.welcomeLabel.isHidden = false
+                self.welcomeDescLabel.isHidden = false
+                self.spiderImageView.isHidden = false
+                
+            }
+        }
+
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.items.count
