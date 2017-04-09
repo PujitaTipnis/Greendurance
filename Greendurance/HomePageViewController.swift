@@ -112,6 +112,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.25
+        
         //cell.layer.cornerRadius = 8
         
         //cell.iconButton.tag = indexPath.row;
