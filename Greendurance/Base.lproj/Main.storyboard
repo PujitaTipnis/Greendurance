@@ -561,6 +561,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="J8S-XO-ByF" kind="presentation" identifier="barcodeSuccessSegue" modalPresentationStyle="overCurrentContext" id="Df3-oA-PCc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvw-te-kuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2291,5 +2294,6 @@ E0w
     <inferredMetricsTieBreakers>
         <segue reference="gdd-6l-nnu"/>
         <segue reference="dz7-fT-IUc"/>
+        <segue reference="Df3-oA-PCc"/>
     </inferredMetricsTieBreakers>
 </document>
