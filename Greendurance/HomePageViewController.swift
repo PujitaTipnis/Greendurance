@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var welcomeDescLabel: UILabel!
     @IBOutlet weak var spiderImageView: UIImageView!
@@ -32,7 +32,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         //let currUser = FIRAuth.auth()?.currentUser
         
@@ -45,10 +45,21 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         menuButton.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        self.rankingButton.isHidden = true
+        self.pointsLabel.isHidden = true
+        
+        self.rankingLabel.isHidden = true
+        self.activityLabel.isHidden = true
+        self.challengeLabel.isHidden = true
+        
+        self.welcomeLabel.isHidden = true
+        self.welcomeDescLabel.isHidden = true
+        self.spiderImageView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-            //print("View appeared")
+        //print("View appeared")
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let user = user {
                 // User is signed in.
@@ -60,35 +71,39 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                 ref.observeSingleEvent(of: .value, with: { (snapshot) in
                     self.pointsLabel.isHidden = false
                     self.pointsLabel.text = "\(NSString(format: "%@", snapshot.value as! CVarArg) as String) points"
+                    
+                    if self.pointsLabel.text == "0 points" {
+                        // No points earned yet
+                        
+                        self.rankingButton.isHidden = true
+                        self.pointsLabel.isHidden = true
+                        
+                        self.rankingLabel.isHidden = true
+                        self.activityLabel.isHidden = true
+                        self.challengeLabel.isHidden = true
+                        
+                        self.welcomeLabel.isHidden = false
+                        self.welcomeDescLabel.isHidden = false
+                        self.spiderImageView.isHidden = false
+                        
+                    } else {
+                        // Earned more than zero points
+                        
+                        self.rankingButton.isHidden = false
+                        
+                        self.rankingLabel.text = "Ranking"
+                        self.activityLabel.text = "Activities"
+                        self.challengeLabel.text = "Challenges"
+                        
+                        self.welcomeLabel.isHidden = true
+                        self.welcomeDescLabel.isHidden = true
+                        self.spiderImageView.isHidden = true
+                    }
                 })
-                
-                self.rankingButton.isHidden = false
-                
-                self.rankingLabel.text = "Ranking"
-                self.activityLabel.text = "Activities"
-                self.challengeLabel.text = "Challenges"
-                
-                self.welcomeLabel.isHidden = true
-                self.welcomeDescLabel.isHidden = true
-                self.spiderImageView.isHidden = true
-                
-            } else {
-                // No User is signed in.
-                
-                self.rankingButton.isHidden = true
-                self.pointsLabel.isHidden = true
-                
-                self.rankingLabel.isHidden = true
-                self.activityLabel.isHidden = true
-                self.challengeLabel.isHidden = true
-                
-                self.welcomeLabel.isHidden = false
-                self.welcomeDescLabel.isHidden = false
-                self.spiderImageView.isHidden = false
                 
             }
         }
-
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -120,7 +135,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         return cell
         
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.item)!")
         let testValue = "Test"
@@ -156,12 +171,12 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "TransportPageSegue" {
-            let nextVC = segue.destination as! TransportationPageViewController
-            nextVC.testValue = (sender as? String)!
-        }
-    }*/
+     
+     if segue.identifier == "TransportPageSegue" {
+     let nextVC = segue.destination as! TransportationPageViewController
+     nextVC.testValue = (sender as? String)!
+     }
+     }*/
     
     @IBAction func rankingButtonTapped(_ sender: Any) {
         

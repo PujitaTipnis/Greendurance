@@ -31,6 +31,13 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.allowsMultipleSelectionDuringEditing = true
+        
+        self.tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         //set firebase reference to current user and pull disposal details
         
         let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products")
@@ -69,9 +76,6 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }
         })
-        
-        tableView.allowsMultipleSelectionDuringEditing = true
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -41,6 +41,12 @@ class FactDescViewController: UIViewController {
          imageView.backgroundColor = UIColor.clear
          descLabel.text = fact.desc */
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         let ref = FIRDatabase.database().reference().child("facts")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             //print(snapshot.childrenCount)
@@ -50,13 +56,19 @@ class FactDescViewController: UIViewController {
                 if (rest.value! as AnyObject)["category"] as! String == self.fact.category || (self.fact.category == "Local Food" && (rest.value! as AnyObject)["category"] as! String == "LocalFood") {
                     
                     self.categoryLabel?.text = (rest.value! as AnyObject)["category"] as? String
+                    
                     //print((rest.value! as AnyObject)["image"] as! String)
                     //self.imageView?.sd_setImage(with: URL(string: (rest.value! as AnyObject)["image"] as! String))
-                    let imageFireBaseURL1 : String = FIRStorage.storage().reference().child("images").fullPath as! String + "/"
-                    let imageFireBaseURL2 : String = (rest.value! as AnyObject)["image"] as! String
-                    let finalURL = imageFireBaseURL1 + imageFireBaseURL2
-                    print(imageFireBaseURL1 + imageFireBaseURL2)
-                    self.imageView?.sd_setImage(with: URL(string: finalURL as! String))
+                    //let imageFireBaseURL1 : String = FIRStorage.storage().reference().child("images").fullPath as! String + "/"
+                    //let imageFireBaseURL2 : String = (rest.value! as AnyObject)["image"] as! String
+                    //let finalURL = imageFireBaseURL1 + imageFireBaseURL2
+                    //print(imageFireBaseURL1 + imageFireBaseURL2)
+                    //self.imageView?.sd_setImage(with: URL(string: finalURL as! String))
+                    
+                    let imageURL = (rest.value! as AnyObject)["image"] as? String
+                    
+                    self.imageView.loadImageUsingCacheWithUrlString(urlString: imageURL!)
+                    
                     //self.imageView?.sd_setImage(with: URL(string: "gs://greendurance.appspot.com/images/chimney-324561_960_720.jpg"))
                     //self.imageView?.backgroundColor = UIColor.clear
                     self.descLabel?.text = (rest.value! as AnyObject)["desc"] as? String
@@ -65,7 +77,6 @@ class FactDescViewController: UIViewController {
                 
             }
         })
-        
     }
     
 }

@@ -15,6 +15,7 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     
     var badges : [Badge] = []
+    let cellId = "badgeID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.register(BadgeCell.self, forCellReuseIdentifier: cellId)
         
         let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("badges")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
@@ -35,6 +38,8 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 badge.badgeDesc = (rest.value! as AnyObject)["badgeDesc"] as! String
                 badge.key = (rest.value! as AnyObject)["key"] as! String
                 badge.badgeURL = (rest.value! as AnyObject)["badgeURL"] as! String
+                badge.badgeSmallURL = (rest.value! as AnyObject)["badgeSmallURL"] as! String
+                badge.points = (rest.value! as AnyObject)["points"] as! Int
                 //print("Trash key: \(disposal.key)")
                 
                 self.badges.append(badge)
@@ -43,7 +48,7 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
             }
         })
-        
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -64,18 +69,21 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "badgeID") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "badgeID")
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "badgeID") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "badgeID")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! BadgeCell
         
         //let cell = UITableViewCell()
         
         if badges.count == 0 {
-            cell.textLabel?.text = " "
+            cell.textLabel?.text = "No badges earned yet"
         } else {
             
             let badge = badges[indexPath.row]
             
             cell.textLabel?.text = badge.badgeName
             cell.detailTextLabel?.text = badge.badgeDesc
+            cell.detailTextLabel?.numberOfLines = 3
             //print(product.imageURL)
             //cell.imageView?.sd_setImage(with: URL(string: badge.badgeURL))
             /*if let url = NSURL(string: badge.badgeURL) {
@@ -84,10 +92,52 @@ class BadgesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             } */
             //cell.imageView?.image = UIImage(named: "\(badge.badgeURL)")
-            cell.imageView?.image = UIImage(named: "sprout (1).png")
+            //cell.imageView?.image = UIImage(named: badge.badgeURL)
+            if badge.badgeURL != nil {
+                cell.imageView?.image = UIImage(named: badge.badgeSmallURL)
+            } else {
+                cell.imageView?.image = UIImage(named: "sproutSmall.png")
+            }
         }
         
         return cell
     }
 
 }
+
+class BadgeCell : UITableViewCell {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        textLabel?.frame = CGRect(x: 64, y: textLabel!.frame.origin.y - 2, width: textLabel!.frame.width, height: textLabel!.frame.height)
+        
+        detailTextLabel?.frame = CGRect(x: 64, y: detailTextLabel!.frame.origin.y + 2, width: detailTextLabel!.frame.width, height: detailTextLabel!.frame.height)
+        
+    }
+    
+    let badgeImageView: UIImageView = {
+        let imageView = UIImageView()
+        //imageView.image = UIImage(named: "medal.png")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 24
+        imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        
+        addSubview(badgeImageView)
+        badgeImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
+        badgeImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        badgeImageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
+        badgeImageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+

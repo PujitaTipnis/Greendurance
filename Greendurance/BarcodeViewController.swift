@@ -8,6 +8,7 @@
 
 import AVFoundation
 import UIKit
+import FirebaseDatabase
 
 class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         var captureSession: AVCaptureSession!
@@ -93,6 +94,8 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         func found(code: String) {
             print(code)
+            
+            let ref = FIRDatabase.database().reference().child("products").childByAutoId()
         }
         
         override var prefersStatusBarHidden: Bool {

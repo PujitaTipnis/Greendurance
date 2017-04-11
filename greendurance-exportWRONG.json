@@ -2,7 +2,7 @@
   "badges" : {
     "badge1" : {
       "desc" : "Your very first badge!",
-      "image" : "sprout (1).png",
+      "image" : "sprout.png",
       "name" : "Green Newbie"
     },
     "badge2" : {
@@ -12,7 +12,7 @@
     },
     "badge3" : {
       "category" : "Going Pro",
-      "desc" : "A worthy badge on receiving 500 points or more",
+      "desc" : "A worthy badge on receiving 500 points",
       "image" : "shield2.png"
     },
     "badge4" : {
@@ -22,12 +22,12 @@
     },
     "badge5" : {
       "category" : "Disposing Right",
-      "desc" : "A good samaritan, on your way to disposing waste the right way",
+      "desc" : "A good samaritan, on your way to disposing the right way",
       "image" : "recycle.png"
     },
     "badge6" : {
       "category" : "A Complete Expert",
-      "desc" : "A commendable achievement on earning 2500 points or more",
+      "desc" : "A commendable achievement on earning 2500 points",
       "image" : "winner.png"
     }
   },
@@ -35,32 +35,32 @@
     "fact1" : {
       "category" : "Air",
       "desc" : "Inhaling air pollution takes away at least 1-2 years of a typical human life",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/greendurance.appspot.com/o/images%2Fchimney-324561_960_720.jpg?alt=media&token=00d6f8f6-9254-4cca-8c2d-5e070c3933a1"
+      "image" : "chimney-324561_960_720.jpg"
     },
     "fact2" : {
       "category" : "LocalFood",
       "desc" : "According to the Council on the Environment of New York City (CENYC), 'Transporting food long distances uses tremendous energy: it takes 435 fossil-fuel calories to fly a 5 calorie strawberry from California to New York.'",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/greendurance.appspot.com/o/images%2FEcologically_grown_vegetables.jpg?alt=media&token=49ab1d35-3779-425a-aaf1-cbad3adc2365"
+      "image" : "Ecologically_grown_vegetables.jpg"
     },
     "fact3" : {
       "category" : "Meat",
       "desc" : "Producing just one hamburger uses enough fossil fuel to drive a small car 20 miles. Of all raw materials and fossil fuels used in the U.S., more than one-third are devoted to raising animals for food",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/greendurance.appspot.com/o/images%2Fhamburger-895831_960_720.jpg?alt=media&token=510cc392-e2e6-406e-ba99-aca82c4fe841"
+      "image" : "hamburger-895831_960_720.jpg"
     },
     "fact4" : {
       "category" : "Plastic",
       "desc" : "Over the last ten years we have produced more plastic than during the whole of the last century.",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/greendurance.appspot.com/o/images%2FRecyclables.JPG?alt=media&token=f2bad1d9-893b-45fa-97f3-bedea0b46db5"
+      "image" : "Recyclables.JPG"
     },
     "fact5" : {
       "category" : "Water",
       "desc" : "About 6,800 gallons of water is required to grow a day’s food for a family of four",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/greendurance.appspot.com/o/images%2Fdrops-of-water-578897_960_720.jpg?alt=media&token=59bddabd-a70e-4e9d-82e6-bcf69c00f340"
+      "image" : "drops-of-water-578897_960_720.jpg"
     },
     "fact6" : {
       "category" : "Wildlife",
       "desc" : "Between 35,000 – 50,000 African Elephants are Poached a Year",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/greendurance.appspot.com/o/images%2FWorking_Elephant_Vietnam.jpg?alt=media&token=a812d6e9-2c98-498b-9f3e-d8267adfba8c"
+      "image" : "Working_Elephant_Vietnam.jpg"
     }
   },
   "products" : [ {
@@ -1306,264 +1306,353 @@
     }
   },
   "users" : {
-    "9x2Mo934j8gRtbyH1iiStuzSku43" : {
-      "badges" : {
-        "-KhPHUFKOPXXX92nvNHX" : {
-          "badgeDesc" : "Your very first badge!",
-          "badgeName" : "Green Newbie",
-          "badgeSmallURL" : "sproutSmall.png",
-          "badgeURL" : "sprout (1).png",
-          "key" : "-KhPHUFKOPXXX92nvNHX",
-          "points" : 5
+    "0iJpywnVcwUrwl7V58zQ3V8mII22" : {
+      "email" : "wassup@gmail.com",
+      "friends" : {
+        "-KhJsRH0mTUC0zePVKgs" : {
+          "friendEmail" : "abcdef@gmail.com",
+          "friendName" : "Abcdef",
+          "friendTotal" : 0,
+          "key" : "-KhJsRH0mTUC0zePVKgs"
         }
       },
+      "name" : "Wassup",
+      "total" : 0
+    },
+    "9x2Mo934j8gRtbyH1iiStuzSku43" : {
       "email" : "pujita.tipnis@gmail.com",
       "friends" : {
-        "-KhPHqoVX-ivT-Z9HOvh" : {
-          "friendEmail" : "akshaydeshpande07@gmail.com",
-          "friendName" : "Akshay Deshpande",
-          "friendTotal" : 0,
-          "key" : "-KhPHqoVX-ivT-Z9HOvh"
+        "-KhJoCcVp7Gt55avol2G" : {
+          "friendEmail" : "akshayd@gmail.com",
+          "friendName" : "Akshay D",
+          "friendTotal" : 20,
+          "key" : "-KhJoCcVp7Gt55avol2G"
         },
-        "-KhQCbtndOdyjpqdC91c" : {
-          "friendEmail" : "gclooney@gmail.com",
-          "friendName" : "George Clooney",
-          "friendTotal" : 5,
-          "key" : "-KhQCbtndOdyjpqdC91c"
+        "-KhJzJxO-pugYR58sgB6" : {
+          "friendEmail" : "mary.poppins@gmail.com",
+          "friendName" : "Mary Poppins",
+          "friendTotal" : 0,
+          "key" : "-KhJzJxO-pugYR58sgB6"
+        },
+        "-KhK05lNOr89y1GfLOxP" : {
+          "friendEmail" : "hello@gmail.com",
+          "friendName" : "Hello",
+          "friendTotal" : 0,
+          "key" : "-KhK05lNOr89y1GfLOxP"
         }
       },
       "name" : "Pujita Tipnis",
       "products" : {
-        "-KhPHzI7QNWp2QKGXEfO" : {
+        "-Kh3rG6mTi5EHbDxpXgv" : {
+          "disposalCategory" : "trash",
+          "key" : "-Kh3rG6mTi5EHbDxpXgv",
+          "packaging" : "glass",
+          "productName" : "Macarons ganache syrup"
+        },
+        "-Kh4J2-9iyv2_aLzxKH5" : {
           "disposalCategory" : "recycle",
-          "key" : "-KhPHzI7QNWp2QKGXEfO",
+          "key" : "-Kh4J2-9iyv2_aLzxKH5",
+          "packaging" : "can",
+          "productName" : "7Up"
+        },
+        "-Kh4J4X--LLxW2Ilxmij" : {
+          "disposalCategory" : "compost",
+          "key" : "-Kh4J4X--LLxW2Ilxmij",
+          "packaging" : "vegetable",
+          "productName" : "Broccoli"
+        },
+        "-Kh4nZkKmF0iIH1cktzT" : {
+          "disposalCategory" : "compost",
+          "key" : "-Kh4nZkKmF0iIH1cktzT",
+          "packaging" : "vegetable",
+          "productName" : "Spring Onions"
+        },
+        "-Kh4nbXFZECOlbsDKafO" : {
+          "disposalCategory" : "trash",
+          "key" : "-Kh4nbXFZECOlbsDKafO",
+          "packaging" : "glass",
+          "productName" : "Duck liver with figs"
+        },
+        "-KhB1YCDbBekB9HeKLX1" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhB1YCDbBekB9HeKLX1",
           "packaging" : "paper",
           "productName" : "St. Michel Biscuits"
         },
-        "-KhQCTIqxmF6mXYBPXqR" : {
+        "-KhELLhgUe8RdsKGHX29" : {
           "disposalCategory" : "recycle",
-          "key" : "-KhQCTIqxmF6mXYBPXqR",
+          "key" : "-KhELLhgUe8RdsKGHX29",
           "packaging" : "plastic",
           "productName" : "Flute"
         },
-        "-KhQE4wnO3VDzzeJtXrq" : {
-          "disposalCategory" : "compost",
-          "key" : "-KhQE4wnO3VDzzeJtXrq",
-          "packaging" : "vegetable",
-          "productName" : "Cauliflower"
+        "-KhELQHuvzV3P05iHhij" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhELQHuvzV3P05iHhij",
+          "packaging" : "can",
+          "productName" : "Orange Cinnamon Tea"
         },
-        "-KhQE71AvH7uZGmNQ9_H" : {
-          "disposalCategory" : "trash",
-          "key" : "-KhQE71AvH7uZGmNQ9_H",
-          "packaging" : "glass",
-          "productName" : "Macarons ganache syrup"
+        "-KhEO7ANhVfAgyMW6A82" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhEO7ANhVfAgyMW6A82",
+          "packaging" : "can",
+          "productName" : "Pepsi 15cl"
         }
       },
-      "total" : 110
+      "total" : 525,
+      "train" : 0,
+      "walk" : 0
     },
-    "FTR0Sf5rNXZJ50gzzX4qHj3Tp1P2" : {
-      "email" : "cdiaz@gmail.com",
-      "name" : "Cameron Diaz",
-      "total" : 0
-    },
-    "HMpC2gNSmWgxo57WnCmYrdTRQoH2" : {
+    "BM4lsGjWSbUFInZyZEF63vzSRo53" : {
       "badges" : {
-        "-KhPIs8vYYiSRLiDscXe" : {
+        "badge1" : {
           "badgeDesc" : "Your very first badge!",
           "badgeName" : "Green Newbie",
-          "badgeSmallURL" : "sproutSmall.png",
-          "badgeURL" : "sprout (1).png",
-          "key" : "-KhPIs8vYYiSRLiDscXe",
-          "points" : 5
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
         }
       },
-      "email" : "gclooney@gmail.com",
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "akshayd@gmail.com",
+      "name" : "Akshay D",
+      "total" : 20,
+      "train" : 0,
+      "walk" : 0
+    },
+    "Cc25T1byQlSSEWOYbCmEXZwf7L62" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "hello@gmail.com",
+      "name" : "Hello",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
+    },
+    "FGaiul0lyRbAM3vtbFpqCpzP1fD2" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "ptipnis@gmail.com",
+      "name" : "Ptipnis",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
+    },
+    "VbmlYTcymEgmKsxDQmeDY9BX3663" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "bill.kules@gmail.com",
+      "name" : "Bill Kules",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
+    },
+    "Vg7D8QddxedLkSAGOzIpgQiXxNl1" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "abcdef@gmail.com",
       "friends" : {
-        "-KhPIzMzkFHMoMTAf2YA" : {
-          "friendEmail" : "ldicaprio@gmail.com",
-          "friendName" : "Leonardo DiCaprio",
+        "-KhJqnrIH6LoZoTKwPrD" : {
+          "friendEmail" : "hello@gmail.com",
+          "friendName" : "Hello",
           "friendTotal" : 0,
-          "key" : "-KhPIzMzkFHMoMTAf2YA"
-        },
-        "-KhPJ0lKtf9s8qmVXAYl" : {
-          "friendEmail" : "akshaydeshpande07@gmail.com",
-          "friendName" : "Akshay Deshpande",
-          "friendTotal" : 0,
-          "key" : "-KhPJ0lKtf9s8qmVXAYl"
+          "key" : "-KhJqnrIH6LoZoTKwPrD"
         }
       },
-      "name" : "George Clooney",
-      "products" : {
-        "-KhPIs4d5zzc_1NHRewE" : {
-          "disposalCategory" : "recycle",
-          "key" : "-KhPIs4d5zzc_1NHRewE",
-          "packaging" : "plastic",
-          "productName" : "Green Lentilles"
-        }
-      },
-      "total" : 5
+      "name" : "Abcdef",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
     },
     "efhJzf5sLehfPbdqjWtffieWjR52" : {
       "badges" : {
-        "-KhPKPal7_x6RA9k6xyu" : {
+        "badge1" : {
           "badgeDesc" : "Your very first badge!",
           "badgeName" : "Green Newbie",
-          "badgeSmallURL" : "sproutSmall.png",
-          "badgeURL" : "sprout (1).png",
-          "key" : "-KhPKPal7_x6RA9k6xyu",
-          "points" : 10
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
         }
       },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
       "email" : "anushka.kher@gmail.com",
-      "friends" : {
-        "-KhPKadh6tj1DDn_HAT1" : {
-          "friendEmail" : "karishma.ghiya@gmail.com",
-          "friendName" : "Karishma Ghiya",
-          "friendTotal" : 0,
-          "key" : "-KhPKadh6tj1DDn_HAT1"
+      "name" : "Anushka Kher",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
+    },
+    "lXk8oqQNNGZ1MHB1PZcTJCfERqr2" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
         }
       },
-      "name" : "Anushka Kher",
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "akshaydeshpande07@gmail.com",
+      "name" : "Akshay Deshpande07",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
+    },
+    "n4pDPGtMeSNuieTOOa5EH2BqEdj1" : {
+      "badges" : {
+        "-KhKCgSHZfocWGrWIPZp" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "sprout (1).png",
+          "key" : "-KhKCgSHZfocWGrWIPZp"
+        }
+      },
+      "email" : "mary.poppins@gmail.com",
+      "name" : "Mary Poppins",
       "products" : {
-        "-KhPKPYZ5TgJV2ICwGgI" : {
-          "disposalCategory" : "trash",
-          "key" : "-KhPKPYZ5TgJV2ICwGgI",
-          "packaging" : "glass",
-          "productName" : "Macarons ganache syrup"
-        },
-        "-KhPKQl8k_l32ZSIjEl4" : {
+        "-KhKCgPctAtTFv1jafkO" : {
           "disposalCategory" : "recycle",
-          "key" : "-KhPKQl8k_l32ZSIjEl4",
+          "key" : "-KhKCgPctAtTFv1jafkO",
+          "packaging" : "plastic",
+          "productName" : "Flute"
+        },
+        "-KhKCqeSTdpQRjGlsbEY" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhKCqeSTdpQRjGlsbEY",
           "packaging" : "can",
           "productName" : "Orange Cinnamon Tea"
         }
       },
-      "total" : 50
+      "total" : 15
     },
-    "lXk8oqQNNGZ1MHB1PZcTJCfERqr2" : {
+    "pX4XBJ1QmJcuR9HleXFME6dQCQm1" : {
       "badges" : {
-        "-KhPKzgSBBuhA0vbCpw_" : {
+        "-KhKsCKxgxJCyHHrZFo9" : {
           "badgeDesc" : "Your very first badge!",
           "badgeName" : "Green Newbie",
           "badgeSmallURL" : "sproutSmall.png",
           "badgeURL" : "sprout (1).png",
-          "key" : "-KhPKzgSBBuhA0vbCpw_",
-          "points" : 10
-        }
-      },
-      "email" : "akshaydeshpande07@gmail.com",
-      "friends" : {
-        "-KhPKoJYVAs0b3r2UD65" : {
-          "friendEmail" : "pujita.tipnis@gmail.com",
-          "friendName" : "Pujita Tipnis",
-          "friendTotal" : 45,
-          "key" : "-KhPKoJYVAs0b3r2UD65"
+          "key" : "-KhKsCKxgxJCyHHrZFo9",
+          "points" : 15
         },
-        "-KhPKrdARFNiK_0Vd9Cg" : {
-          "friendEmail" : "gclooney@gmail.com",
-          "friendName" : "George Clooney",
-          "friendTotal" : 5,
-          "key" : "-KhPKrdARFNiK_0Vd9Cg"
-        }
-      },
-      "name" : "Akshay Deshpande",
-      "products" : {
-        "-KhPKzdE_AA_VV8EF3G9" : {
-          "disposalCategory" : "trash",
-          "key" : "-KhPKzdE_AA_VV8EF3G9",
-          "packaging" : "glass",
-          "productName" : "Macarons ganache syrup"
-        },
-        "-KhPm0A6d_EuQtO_wtIU" : {
-          "disposalCategory" : "recycle",
-          "key" : "-KhPm0A6d_EuQtO_wtIU",
-          "packaging" : "plastic",
-          "productName" : "Green Lentilles"
-        }
-      },
-      "total" : 55
-    },
-    "qPq2ywVDj3fq3OPhAdj7jOe6Drx2" : {
-      "badges" : {
-        "-KhPVbwu-_OaHsrdp9wo" : {
-          "badgeDesc" : "Your very first badge!",
-          "badgeName" : "Green Newbie",
-          "badgeSmallURL" : "sproutSmall.png",
-          "badgeURL" : "sprout (1).png",
-          "key" : "-KhPVbwu-_OaHsrdp9wo",
-          "points" : 5
-        }
-      },
-      "email" : "asmita.kumar@gmail.com",
-      "friends" : {
-        "-KhPWwV5jd6TYY4i5L3-" : {
-          "friendEmail" : "pujita.tipnis@gmail.com",
-          "friendName" : "Pujita Tipnis",
-          "friendTotal" : 45,
-          "key" : "-KhPWwV5jd6TYY4i5L3-"
-        },
-        "-KhPWzOwpU8ODfbot1Xo" : {
-          "friendEmail" : "karishma.ghiya@gmail.com",
-          "friendName" : "Karishma Ghiya",
-          "friendTotal" : 0,
-          "key" : "-KhPWzOwpU8ODfbot1Xo"
-        }
-      },
-      "name" : "Asmita Kumar",
-      "products" : {
-        "-KhPVbrpOgbjiGsC2Fj1" : {
-          "disposalCategory" : "recycle",
-          "key" : "-KhPVbrpOgbjiGsC2Fj1",
-          "packaging" : "can",
-          "productName" : "M&S Curiously Strong Mints"
-        }
-      },
-      "total" : 30
-    },
-    "upT8s0JojuPqjieit2dAcvYjdat1" : {
-      "badges" : {
-        "-KhPYK9d9-CZeyql0euM" : {
-          "badgeDesc" : "Your very first badge!",
-          "badgeName" : "Green Newbie",
-          "badgeSmallURL" : "sproutSmall.png",
-          "badgeURL" : "sprout (1).png",
-          "key" : "-KhPYK9d9-CZeyql0euM",
-          "points" : 5
-        },
-        "-KhPYppegCXgdkxvJGp7" : {
+        "-KhKt0INQ0BF7PIfnZWP" : {
           "badgeDesc" : "A worthy badge on receiving 500 points or more",
           "badgeName" : "Going Pro",
           "badgeSmallURL" : "shield2Small.png",
           "badgeURL" : "shield2.png",
-          "key" : "-KhPYppegCXgdkxvJGp7",
+          "key" : "-KhKt0INQ0BF7PIfnZWP",
           "points" : 510
         }
       },
-      "email" : "karishma.ghiya@gmail.com",
-      "friends" : {
-        "-KhPYUjNCiiNCjYluW7x" : {
-          "friendEmail" : "anushka.kher@gmail.com",
-          "friendName" : "Anushka Kher",
-          "friendTotal" : 50,
-          "key" : "-KhPYUjNCiiNCjYluW7x"
-        },
-        "-KhPYX77kENlg0XSlirc" : {
-          "friendEmail" : "gclooney@gmail.com",
-          "friendName" : "George Clooney",
-          "friendTotal" : 5,
-          "key" : "-KhPYX77kENlg0XSlirc"
-        }
-      },
-      "name" : "Karishma Ghiya",
+      "email" : "akshay.deshpande@gmail.com",
+      "name" : "Akshay Deshpande",
       "products" : {
-        "-KhPYplj-0tztlGGxTKM" : {
+        "-KhKsCHXee_L5rpbqord" : {
           "disposalCategory" : "recycle",
-          "key" : "-KhPYplj-0tztlGGxTKM",
+          "key" : "-KhKsCHXee_L5rpbqord",
           "packaging" : "paper",
           "productName" : "St. Michel Biscuits"
+        },
+        "-KhKsunskC2hrcmNxXlU" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhKsunskC2hrcmNxXlU",
+          "packaging" : "paper",
+          "productName" : "St. Michel Biscuits"
+        },
+        "-KhKsxOkJoZCRcxeA_r7" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhKsxOkJoZCRcxeA_r7",
+          "packaging" : "paper",
+          "productName" : "Vichy candy"
+        },
+        "-KhKsyNvtkie7QQz_hju" : {
+          "disposalCategory" : "compost",
+          "key" : "-KhKsyNvtkie7QQz_hju",
+          "packaging" : "vegetable",
+          "productName" : "Spring Onions"
+        },
+        "-KhKt0F2dUeDJUtmAgGz" : {
+          "disposalCategory" : "recycle",
+          "key" : "-KhKt0F2dUeDJUtmAgGz",
+          "packaging" : "paper",
+          "productName" : "Stem Ginger Dunkers"
         }
       },
       "total" : 510
+    },
+    "qPq2ywVDj3fq3OPhAdj7jOe6Drx2" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "asmita.kumar@gmail.com",
+      "name" : "Asmita Kumar",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
+    },
+    "upT8s0JojuPqjieit2dAcvYjdat1" : {
+      "badges" : {
+        "badge1" : {
+          "badgeDesc" : "Your very first badge!",
+          "badgeName" : "Green Newbie",
+          "badgeURL" : "\"sprout (1).png",
+          "key" : "badge1"
+        }
+      },
+      "bus" : 0,
+      "carpool" : 0,
+      "cycle" : 0,
+      "email" : "karishma.ghiya@gmail.com",
+      "name" : "Karishma Ghiya",
+      "total" : 0,
+      "train" : 0,
+      "walk" : 0
     }
   }
 }

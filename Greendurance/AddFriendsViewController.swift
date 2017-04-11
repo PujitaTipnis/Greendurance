@@ -29,6 +29,12 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         searchBar.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let currUsername = FIRAuth.auth()?.currentUser?.email
+        
         let ref = FIRDatabase.database().reference().child("users")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             print(snapshot.childrenCount)
@@ -36,14 +42,18 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
             while let rest = enumerator.nextObject() as? FIRDataSnapshot {
                 //print(rest.value!)
                 
-                var friend = ""
-                friend = (rest.value! as AnyObject)["name"] as! String
-                
-                self.friends.append(friend)
-                
-                DispatchQueue.main.async(execute: {
-                    self.tableView.reloadData()
-                })
+                var email = (rest.value! as AnyObject)["email"] as! String
+                if currUsername != email {
+                    
+                    var friend = ""
+                    friend = (rest.value! as AnyObject)["name"] as! String
+                    
+                    self.friends.append(friend)
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.tableView.reloadData()
+                    })
+                }
             }
         })
     }

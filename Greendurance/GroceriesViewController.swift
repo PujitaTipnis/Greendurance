@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class GroceriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GroceriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +18,12 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var barcodeScanningButton: UIButton!
     
     var products : [Product] = []
+    
+    // For the search bar
+    var searchActive : Bool = false
+    //var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var prodString : [String] = []
+    var filtered : [String] = []
     
     let cellId = "productID"
     
@@ -27,6 +33,8 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        searchBox.delegate = self
         
         tableView.register(ProductCell.self, forCellReuseIdentifier: cellId)
         
@@ -44,6 +52,7 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
                 product.green = (rest.value! as AnyObject)["green"] as! Int
                 
                 self.products.append(product)
+                self.prodString.append(product.productName)
                 //print("Number of products = \(self.products.count)")
                 
                 // NEW
@@ -76,11 +85,46 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
          }) */
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtered = prodString.filter({ (text) -> Bool in
+            let tmp: NSString = text as NSString
+            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            return range.location != NSNotFound
+        })
+        if(filtered.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.tableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive) {
+            return filtered.count
+        }
+        
         if products.count == 0 {
             return 1
         } else {
@@ -96,48 +140,51 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         // if i uncomment the below line, the rows display like they should. But clicking on a cell fails the pgm
         //cell = UITableViewCell(style: .subtitle, reuseIdentifier: "productID")
-        
-        if products.count == 0 {
-            cell.textLabel?.text = " "
+        if(searchActive){
+            cell.textLabel?.text = filtered[indexPath.row]
         } else {
-
-        let product = products[indexPath.row]
-        
-        cell.textLabel?.text = product.productName
-        cell.detailTextLabel?.text = "Earnable points: \(product.green) points"
-        //print(product.imageURL)
-        //cell.imageView?.sd_setImage(with: URL(string: product.imageURL))
-       /* if let url = NSURL(string: product.imageURL) {
-            if let data = NSData(contentsOf: url as URL) {
-                cell.imageView?.image = UIImage(data: data as Data)
+            if products.count == 0 {
+                cell.textLabel?.text = " "
+            } else {
+                
+                let product = products[indexPath.row]
+                
+                cell.textLabel?.text = product.productName
+                cell.detailTextLabel?.text = "Earnable points: \(product.green) points"
+                //print(product.imageURL)
+                //cell.imageView?.sd_setImage(with: URL(string: product.imageURL))
+                /* if let url = NSURL(string: product.imageURL) {
+                 if let data = NSData(contentsOf: url as URL) {
+                 cell.imageView?.image = UIImage(data: data as Data)
+                 }
+                 } */
+                //cell.imageView?.image = UIImage(named: "medal.png")
+                //cell.imageView?.contentMode = .scaleAspectFill
+                
+                let productImageUrl = product.imageURL
+                
+                cell.productImageView.loadImageUsingCacheWithUrlString(urlString: productImageUrl)
+                
+                /*let url = NSURL(string: urlString)
+                 var request = URLRequest(url:url! as URL);
+                 request.httpMethod = "GET"
+                 let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+                 
+                 //download hit an error so lets return out
+                 if error != nil {
+                 print(error)
+                 return
+                 }
+                 
+                 //download successful
+                 DispatchQueue.main.async(execute: {
+                 self.image = UIImage(data: data!)
+                 })
+                 
+                 }).resume()
+                 } */
+                
             }
-        } */
-        //cell.imageView?.image = UIImage(named: "medal.png")
-        //cell.imageView?.contentMode = .scaleAspectFill
-            
-        let productImageUrl = product.imageURL
-            
-        cell.productImageView.loadImageUsingCacheWithUrlString(urlString: productImageUrl)
-            
-            /*let url = NSURL(string: urlString)
-            var request = URLRequest(url:url! as URL);
-            request.httpMethod = "GET"
-            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
-                
-                //download hit an error so lets return out
-                if error != nil {
-                    print(error)
-                    return
-                }
-                
-                //download successful
-                DispatchQueue.main.async(execute: {
-                    self.image = UIImage(data: data!)
-                })
-                
-            }).resume()
-        } */
-  
         }
         return cell
     }

@@ -45,6 +45,7 @@ class AddSelectedFriendViewController: UIViewController {
             while let rest = enumerator.nextObject() as? FIRDataSnapshot {
                 if (rest.value! as AnyObject)["friendName"] as! String == self.friend.name {
                     self.friend.total = (rest.value! as AnyObject)["friendTotal"] as! Int
+                    self.friend.email = (rest.value! as AnyObject)["friendEmail"] as! String
                     self.friend.key = (rest.value! as AnyObject)["key"] as! String
                     self.followButton.setTitle("Unfollow", for: .normal)
                 }
@@ -64,6 +65,7 @@ class AddSelectedFriendViewController: UIViewController {
             
             let friendDetails = ["friendName" : friend.name,
                                  "friendTotal" : self.friend.total,
+                                 "friendEmail" : self.friend.email,
                                  "key" : self.friend.key] as [String : Any]
             
             ref.setValue(friendDetails)
@@ -75,6 +77,7 @@ class AddSelectedFriendViewController: UIViewController {
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("friends").child(self.friend.key)
             
             ref.removeValue()
+            followButton.setTitle("Follow", for: .normal)
         }
         
     }
@@ -91,6 +94,7 @@ class AddSelectedFriendViewController: UIViewController {
                     
                     //self.friendPoints = (rest.value! as AnyObject)["total"] as! Int
                     self.friend.total = (rest.value! as AnyObject)["total"] as! Int
+                    self.friend.email = (rest.value! as AnyObject)["email"] as! String
                     
                     //self.updatedPoints = self.friendPoints
                     //print(self.friend.total)

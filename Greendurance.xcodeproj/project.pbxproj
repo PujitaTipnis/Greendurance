@@ -76,6 +76,13 @@
 		9F5A7B691E968EA400C6B097 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */; };
 		9F5A7B6B1E968EBD00C6B097 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */; };
 		9F5A7B6D1E96EAF900C6B097 /* DisposalViewControllerOldold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */; };
+		9F6DD9331E9AFDBF007BB7C5 /* NewbieModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DD9321E9AFDBF007BB7C5 /* NewbieModalViewController.swift */; };
+		9F6DD93A1E9B3FC7007BB7C5 /* electric-carSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9341E9B3FC7007BB7C5 /* electric-carSmall.png */; };
+		9F6DD93B1E9B3FC7007BB7C5 /* groceriesSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9351E9B3FC7007BB7C5 /* groceriesSmall.png */; };
+		9F6DD93C1E9B3FC7007BB7C5 /* recycleSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9361E9B3FC7007BB7C5 /* recycleSmall.png */; };
+		9F6DD93D1E9B3FC7007BB7C5 /* shield2Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9371E9B3FC7007BB7C5 /* shield2Small.png */; };
+		9F6DD93E1E9B3FC7007BB7C5 /* sproutSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9381E9B3FC7007BB7C5 /* sproutSmall.png */; };
+		9F6DD93F1E9B3FC7007BB7C5 /* winnerSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9391E9B3FC7007BB7C5 /* winnerSmall.png */; };
 		9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7169991E906BEB00F2B2BB /* Disposal.swift */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
@@ -173,6 +180,13 @@
 		9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalViewControllerOldold.swift; sourceTree = "<group>"; };
+		9F6DD9321E9AFDBF007BB7C5 /* NewbieModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewbieModalViewController.swift; sourceTree = "<group>"; };
+		9F6DD9341E9B3FC7007BB7C5 /* electric-carSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "electric-carSmall.png"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/electric-carSmall.png"; sourceTree = "<group>"; };
+		9F6DD9351E9B3FC7007BB7C5 /* groceriesSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groceriesSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/groceriesSmall.png"; sourceTree = "<group>"; };
+		9F6DD9361E9B3FC7007BB7C5 /* recycleSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recycleSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/recycleSmall.png"; sourceTree = "<group>"; };
+		9F6DD9371E9B3FC7007BB7C5 /* shield2Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shield2Small.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/shield2Small.png"; sourceTree = "<group>"; };
+		9F6DD9381E9B3FC7007BB7C5 /* sproutSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sproutSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/sproutSmall.png"; sourceTree = "<group>"; };
+		9F6DD9391E9B3FC7007BB7C5 /* winnerSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winnerSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/winnerSmall.png"; sourceTree = "<group>"; };
 		9F7169991E906BEB00F2B2BB /* Disposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposal.swift; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
@@ -265,6 +279,12 @@
 		9F5A7AEB1E91753200C6B097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9F6DD9341E9B3FC7007BB7C5 /* electric-carSmall.png */,
+				9F6DD9351E9B3FC7007BB7C5 /* groceriesSmall.png */,
+				9F6DD9361E9B3FC7007BB7C5 /* recycleSmall.png */,
+				9F6DD9371E9B3FC7007BB7C5 /* shield2Small.png */,
+				9F6DD9381E9B3FC7007BB7C5 /* sproutSmall.png */,
+				9F6DD9391E9B3FC7007BB7C5 /* winnerSmall.png */,
 				9F57AA9D1E997DC800BCD6FA /* recycleInfoCard.png */,
 				9F57AA9F1E997DCF00BCD6FA /* compostInfoCard.png */,
 				9F57AAA11E997DD400BCD6FA /* trashInfoCard.png */,
@@ -342,6 +362,7 @@
 				9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */,
 				9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */,
 				9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */,
+				9F6DD9321E9AFDBF007BB7C5 /* NewbieModalViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -450,17 +471,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F23CA4D1E8F073100E7650A /* car.png in Resources */,
+				9F6DD93B1E9B3FC7007BB7C5 /* groceriesSmall.png in Resources */,
 				9F23CA4B1E8F072300E7650A /* bus.png in Resources */,
 				9F5A7B071E91A65200C6B097 /* water-drop.png in Resources */,
 				9F5A7B061E91A65200C6B097 /* meat.png in Resources */,
 				9F23CA531E8F074800E7650A /* train.png in Resources */,
 				9F5A7B0F1E91FAE000C6B097 /* recycle.png in Resources */,
 				9F5A7B2E1E93536200C6B097 /* padlock.png in Resources */,
+				9F6DD93C1E9B3FC7007BB7C5 /* recycleSmall.png in Resources */,
 				9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */,
 				9F5A7B2D1E93536200C6B097 /* logout.png in Resources */,
 				9F019E161E8B261A0073F556 /* winner.png in Resources */,
 				9F5A7B081E91A65200C6B097 /* water.png in Resources */,
 				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
+				9F6DD93F1E9B3FC7007BB7C5 /* winnerSmall.png in Resources */,
 				9FF9778C1E77B4120038ABEE /* bicycle-rider.png in Resources */,
 				9FF9778E1E77B4170038ABEE /* icon.png in Resources */,
 				9F5A7B171E92062700C6B097 /* sprout (1).png in Resources */,
@@ -490,9 +514,12 @@
 				9FF9778A1E77B34C0038ABEE /* groceriesBtn.png in Resources */,
 				9F5A7B2F1E93536200C6B097 /* settings.png in Resources */,
 				9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */,
+				9F6DD93E1E9B3FC7007BB7C5 /* sproutSmall.png in Resources */,
 				9F06722F1E772A0E00286C6F /* GoogleService-Info.plist in Resources */,
 				9FF977961E77B95C0038ABEE /* spider.png in Resources */,
+				9F6DD93D1E9B3FC7007BB7C5 /* shield2Small.png in Resources */,
 				9F5A7B091E91A65200C6B097 /* zebra.png in Resources */,
+				9F6DD93A1E9B3FC7007BB7C5 /* electric-carSmall.png in Resources */,
 				9FF977901E77B41C0038ABEE /* medal.png in Resources */,
 				9F57AAA01E997DCF00BCD6FA /* compostInfoCard.png in Resources */,
 			);
@@ -565,6 +592,7 @@
 				9F019E181E8B7CD60073F556 /* ActivitiesViewController.swift in Sources */,
 				9F019E1E1E8B7DE10073F556 /* FriendsViewController.swift in Sources */,
 				9F5A7B631E95C5BB00C6B097 /* MenuViewController.swift in Sources */,
+				9F6DD9331E9AFDBF007BB7C5 /* NewbieModalViewController.swift in Sources */,
 				9F019E241E8B7E6D0073F556 /* BadgesViewController.swift in Sources */,
 				9F019E221E8B7E4A0073F556 /* DisposalViewController.swift in Sources */,
 				9F5A7B6B1E968EBD00C6B097 /* PrivacyPolicyViewController.swift in Sources */,

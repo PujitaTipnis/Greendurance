@@ -14,4 +14,6 @@ class Badge {
     var key = ""
     var badgeDesc = ""
     var badgeURL = ""
+    var badgeSmallURL = ""
+    var points : Int = 0
 }
