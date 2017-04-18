@@ -41,7 +41,7 @@
 		9F57AA9E1E997DC800BCD6FA /* recycleInfoCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F57AA9D1E997DC800BCD6FA /* recycleInfoCard.png */; };
 		9F57AAA01E997DCF00BCD6FA /* compostInfoCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F57AA9F1E997DCF00BCD6FA /* compostInfoCard.png */; };
 		9F57AAA21E997DD400BCD6FA /* trashInfoCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F57AAA11E997DD400BCD6FA /* trashInfoCard.png */; };
-		9F57AAA41E9983AA00BCD6FA /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AAA31E9983AA00BCD6FA /* CosmosDistrib.swift */; };
+		9F57AAA41E9983AA00BCD6FA /* CosmosDistribOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AAA31E9983AA00BCD6FA /* CosmosDistribOld.swift */; };
 		9F57AAA61E9A02EF00BCD6FA /* AddSelectedFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57AAA51E9A02EF00BCD6FA /* AddSelectedFriendViewController.swift */; };
 		9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5830B71E8C88800030E696 /* SWRevealViewController.m */; };
 		9F5830BC1E8CC4430030E696 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5830BB1E8CC4430030E696 /* home.png */; };
@@ -75,8 +75,6 @@
 		9F5A7B671E968E5E00C6B097 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B661E968E5E00C6B097 /* CreditsViewController.swift */; };
 		9F5A7B691E968EA400C6B097 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */; };
 		9F5A7B6B1E968EBD00C6B097 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */; };
-		9F5A7B6D1E96EAF900C6B097 /* DisposalViewControllerOldold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */; };
-		9F6DD9331E9AFDBF007BB7C5 /* NewbieModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DD9321E9AFDBF007BB7C5 /* NewbieModalViewController.swift */; };
 		9F6DD93A1E9B3FC7007BB7C5 /* electric-carSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9341E9B3FC7007BB7C5 /* electric-carSmall.png */; };
 		9F6DD93B1E9B3FC7007BB7C5 /* groceriesSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9351E9B3FC7007BB7C5 /* groceriesSmall.png */; };
 		9F6DD93C1E9B3FC7007BB7C5 /* recycleSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9361E9B3FC7007BB7C5 /* recycleSmall.png */; };
@@ -142,7 +140,7 @@
 		9F57AA9D1E997DC800BCD6FA /* recycleInfoCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recycleInfoCard.png; path = ../../../../Desktop/recycleInfoCard.png; sourceTree = "<group>"; };
 		9F57AA9F1E997DCF00BCD6FA /* compostInfoCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compostInfoCard.png; path = ../../../../Desktop/compostInfoCard.png; sourceTree = "<group>"; };
 		9F57AAA11E997DD400BCD6FA /* trashInfoCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trashInfoCard.png; path = ../../../../Desktop/trashInfoCard.png; sourceTree = "<group>"; };
-		9F57AAA31E9983AA00BCD6FA /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		9F57AAA31E9983AA00BCD6FA /* CosmosDistribOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistribOld.swift; sourceTree = "<group>"; };
 		9F57AAA51E9A02EF00BCD6FA /* AddSelectedFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSelectedFriendViewController.swift; sourceTree = "<group>"; };
 		9F5830B51E8C887F0030E696 /* Greendurance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greendurance-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F5830B61E8C88800030E696 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -179,8 +177,6 @@
 		9F5A7B661E968E5E00C6B097 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
-		9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalViewControllerOldold.swift; sourceTree = "<group>"; };
-		9F6DD9321E9AFDBF007BB7C5 /* NewbieModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewbieModalViewController.swift; sourceTree = "<group>"; };
 		9F6DD9341E9B3FC7007BB7C5 /* electric-carSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "electric-carSmall.png"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/electric-carSmall.png"; sourceTree = "<group>"; };
 		9F6DD9351E9B3FC7007BB7C5 /* groceriesSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groceriesSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/groceriesSmall.png"; sourceTree = "<group>"; };
 		9F6DD9361E9B3FC7007BB7C5 /* recycleSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recycleSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/recycleSmall.png"; sourceTree = "<group>"; };
@@ -361,8 +357,6 @@
 				9F5A7B661E968E5E00C6B097 /* CreditsViewController.swift */,
 				9F5A7B681E968EA400C6B097 /* TermsConditionsViewController.swift */,
 				9F5A7B6A1E968EBD00C6B097 /* PrivacyPolicyViewController.swift */,
-				9F5A7B6C1E96EAF900C6B097 /* DisposalViewControllerOldold.swift */,
-				9F6DD9321E9AFDBF007BB7C5 /* NewbieModalViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -379,7 +373,7 @@
 				9F5A7B0A1E91F78500C6B097 /* Badge.swift */,
 				9F5A7B1A1E9208A700C6B097 /* Friend.swift */,
 				9F5A7B311E9380EE00C6B097 /* User.swift */,
-				9F57AAA31E9983AA00BCD6FA /* CosmosDistrib.swift */,
+				9F57AAA31E9983AA00BCD6FA /* CosmosDistribOld.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -584,7 +578,7 @@
 				9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */,
 				9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */,
 				9F57AAA61E9A02EF00BCD6FA /* AddSelectedFriendViewController.swift in Sources */,
-				9F57AAA41E9983AA00BCD6FA /* CosmosDistrib.swift in Sources */,
+				9F57AAA41E9983AA00BCD6FA /* CosmosDistribOld.swift in Sources */,
 				9F019E021E88838F0073F556 /* IconCollectionViewCell.swift in Sources */,
 				9F5A7AEF1E918FBC00C6B097 /* Points.swift in Sources */,
 				9FF9777C1E775B880038ABEE /* FactsPageViewController.swift in Sources */,
@@ -592,7 +586,6 @@
 				9F019E181E8B7CD60073F556 /* ActivitiesViewController.swift in Sources */,
 				9F019E1E1E8B7DE10073F556 /* FriendsViewController.swift in Sources */,
 				9F5A7B631E95C5BB00C6B097 /* MenuViewController.swift in Sources */,
-				9F6DD9331E9AFDBF007BB7C5 /* NewbieModalViewController.swift in Sources */,
 				9F019E241E8B7E6D0073F556 /* BadgesViewController.swift in Sources */,
 				9F019E221E8B7E4A0073F556 /* DisposalViewController.swift in Sources */,
 				9F5A7B6B1E968EBD00C6B097 /* PrivacyPolicyViewController.swift in Sources */,
@@ -608,7 +601,6 @@
 				9FF9777E1E7767050038ABEE /* Fact.swift in Sources */,
 				9F5A7AF11E9197FC00C6B097 /* DisposalModalViewController.swift in Sources */,
 				9F23CA551E8F1A2700E7650A /* TransportCollectionViewCell.swift in Sources */,
-				9F5A7B6D1E96EAF900C6B097 /* DisposalViewControllerOldold.swift in Sources */,
 				9F57AA961E97FA4000BCD6FA /* DisposalHelpModalViewController.swift in Sources */,
 				9F57AA941E97F6F400BCD6FA /* GroceriesHelpModalViewController.swift in Sources */,
 				9F5A7B321E9380EE00C6B097 /* User.swift in Sources */,

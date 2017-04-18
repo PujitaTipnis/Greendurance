@@ -20,5 +20,7 @@ class Product {
     var url = ""
     var green: Int = 0
     var disposalCategory = ""
+    var totalRating = 0.0
+    var totalCount = 0
     
 }

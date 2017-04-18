@@ -172,6 +172,9 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                             self.performSegue(withIdentifier: "barcodeSuccessSegue", sender: self.points)
                         })
                         
+                    } else {
+                        // barcode not found
+                        self.navigationController?.popViewController(animated: true)
                     }
                     
                 }

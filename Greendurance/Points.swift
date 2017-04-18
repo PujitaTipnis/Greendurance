@@ -11,4 +11,7 @@ import Foundation
 class Points {
     var total = 0
     var user = ""
+    var receivedFor = ""
+    var totalRating = 0.0
+    var totalCount = 0
 }

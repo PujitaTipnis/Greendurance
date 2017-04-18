@@ -29,10 +29,6 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         searchBar.delegate = self
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
         let currUsername = FIRAuth.auth()?.currentUser?.email
         
         let ref = FIRDatabase.database().reference().child("users")
@@ -42,7 +38,7 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
             while let rest = enumerator.nextObject() as? FIRDataSnapshot {
                 //print(rest.value!)
                 
-                var email = (rest.value! as AnyObject)["email"] as! String
+                let email = (rest.value! as AnyObject)["email"] as! String
                 if currUsername != email {
                     
                     var friend = ""
@@ -56,6 +52,15 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         })
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+        })
+        
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

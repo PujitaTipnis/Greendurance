@@ -50,6 +50,8 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
                 product.productName = (rest.value! as AnyObject)["product_name"] as! String
                 product.packaging = (rest.value! as AnyObject)["packaging"] as! String
                 product.green = (rest.value! as AnyObject)["green"] as! Int
+                product.totalCount = (rest.value! as AnyObject)["totalCount"] as! Int
+                product.totalRating = (rest.value! as AnyObject)["totalRating"] as! Double
                 
                 self.products.append(product)
                 self.prodString.append(product.productName)
@@ -234,7 +236,7 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
         totalRef.observeSingleEvent(of: .value, with: { (snapshot) in
             
             total = (snapshot.value! as AnyObject)["total"] as! Int
-            total += product.green as! Int
+            total += product.green
             print ("Total: \(total)")
             
             let childUpdates = ["/total" : total]
@@ -242,6 +244,9 @@ class GroceriesViewController: UIViewController, UITableViewDelegate, UITableVie
             totalRef.updateChildValues(childUpdates)
             
             points.total = total
+            points.receivedFor = product.productName
+            points.totalCount = product.totalCount
+            points.totalRating = product.totalRating
             self.performSegue(withIdentifier: "productModalSegue", sender: points)
         })
         

@@ -27,10 +27,12 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.register(FriendCell.self, forCellReuseIdentifier: cellId)
         
-        self.tableView.reloadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        self.friends.removeAll()
         
         let ref = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("friends")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
@@ -48,8 +50,8 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.friends.append(friend)
                 
                 /*DispatchQueue.main.async(execute: {
-                    self.tableView.reloadData()
-                })*/
+                 self.tableView.reloadData()
+                 })*/
                 self.tableView.reloadData()
             }
         })

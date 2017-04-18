@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class DisposalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var disposals : [Disposal] = []
@@ -26,23 +26,35 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.allowsMultipleSelectionDuringEditing = true
         
+        
+        
         self.tableView.reloadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         //set firebase reference to current user and pull disposal details
         
+        self.disposals.removeAll()
+        self.trashDisposal.removeAll()
+        self.recycleDisposal.removeAll()
+        self.compostDisposal.removeAll()
+        self.trashCount = 0
+        self.recycleCount = 0
+        self.compostCount = 0
+        
         let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             print("Disposal items count: \(snapshot.childrenCount)")
+            
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? FIRDataSnapshot {
                 //print(rest.value!)
@@ -76,6 +88,8 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }
         })
+
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -147,6 +161,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(trashDisposal[indexPath.row].key)
             
             ref.removeValue()
+            //trashDisposal.remove(at: indexPath.row)
             self.attemptReloadOfTableView()
             
             
@@ -170,6 +185,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             print("Delete: \(recycleDisposal[indexPath.row].productName) has key \(recycleDisposal[indexPath.row].key)")
             
             let ref = FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").child(recycleDisposal[indexPath.row].key)
+            
             
             ref.removeValue()
             self.attemptReloadOfTableView()
@@ -199,7 +215,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             self.attemptReloadOfTableView()
             
         }
-
+        
         //FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("products").childByAutoId().child(disposals[indexPath.row].productName) .removeValue()
         
     }
