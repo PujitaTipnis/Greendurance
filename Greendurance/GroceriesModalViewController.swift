@@ -16,6 +16,7 @@ class GroceriesModalViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var ratingTextLabel: UILabel!
+    @IBOutlet weak var okButton: UIButton!
     
     var info = ""
     var points = Points()
@@ -29,9 +30,8 @@ class GroceriesModalViewController: UIViewController {
         self.cosmosView.didTouchCosmos = didTouchCosmos
         self.cosmosView.didFinishTouchingCosmos = didFinishTouchingCosmos
         self.cosmosView.settings.fillMode = .half
-            
-        self.cosmosView.rating = self.points.totalRating
-        print ("Existing rating is \(self.points.totalRating)")
+        
+        self.okButton.isEnabled = true
         
         let ref = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!)
         
@@ -94,11 +94,19 @@ class GroceriesModalViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.cosmosView.rating = self.points.totalRating
+        print ("Existing rating is \(self.points.totalRating)")
+    }
+    
     @IBAction func okButtonTapped(_ sender: Any) {
         updateRating()
+        
+        self.okButton.isEnabled = false
+        
         // Dismiss the view controller (the first screen) that
         // was presented modally by the view controller
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
     private func updateRating() {
@@ -115,6 +123,7 @@ class GroceriesModalViewController: UIViewController {
                 
                 let product = Product()
                 product.productName = (rest.value! as AnyObject)["product_name"] as! String
+                product.green = (rest.value! as AnyObject)["green"] as! Int
                 product.totalCount = (rest.value! as AnyObject)["totalCount"] as! Int
                 product.totalRating = (rest.value! as AnyObject)["totalRating"] as! Double
                 
@@ -128,7 +137,16 @@ class GroceriesModalViewController: UIViewController {
                     if (self.userRating != nil) {
                         let count = product.totalCount + 1
                         let total = (product.totalRating + self.userRating) / Double(count)
-                        let childUpdates = ["/\(idx-1)/totalRating" : total, "/\(idx-1)/totalCount" : count] as [String : Any]
+                        var green = 0
+                        if (product.green <= 1) {
+                            green = 5
+                        } else if (product.green <= 3) {
+                            green = 10
+                        } else {
+                            green = 15
+                        }
+                        
+                        let childUpdates = ["/\(idx-1)/totalRating" : total, "/\(idx-1)/totalCount" : count, "/\(idx-1)/green" : green] as [String : Any]
                         
                         print("Child Update: \(childUpdates)")
                         totalRef.updateChildValues(childUpdates)

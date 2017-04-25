@@ -14,6 +14,7 @@ class TranspPointsModalViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var badgeTextLabel: UILabel!
     
     var info = ""
     var points = Points()
@@ -36,6 +37,7 @@ class TranspPointsModalViewController: UIViewController {
                 self.info = "Congrats! You just earned a total of \(self.points.total) points and your very first badge!"
                 self.textLabel.text = self.info
                 self.imageView.image = UIImage(named: "sprout (1).png")
+                self.badgeTextLabel.text = "Green Newbie Badge"
                 
                 let badgesDetails = ["badgeName" : "Green Newbie",
                                      "badgeDesc" : "Your very first badge!",
@@ -52,6 +54,7 @@ class TranspPointsModalViewController: UIViewController {
                     self.info = "Congrats! You have become a complete expert! You just won the ultimate badge and have earned a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
                     self.imageView.image = UIImage(named: "winner.png")
+                    self.badgeTextLabel.text = "A Complete Expert Badge"
                     
                     let badgesDetails = ["badgeName" : "A Complete Expert",
                                          "badgeDesc" : "A commendable achievement on earning 2500 points or more",
@@ -67,6 +70,7 @@ class TranspPointsModalViewController: UIViewController {
                     self.info = "Congrats! You just made an achievement on travelling green! You just won the 'Travel Clean' badge by earning a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
                     self.imageView.image = UIImage(named: "electric-car.png")
+                    self.badgeTextLabel.text = "Travel Clean Badge"
                     
                     let badgesDetails = ["badgeName" : "Travel Clean",
                                          "badgeDesc" : "An achievement on traveling green",
@@ -81,6 +85,7 @@ class TranspPointsModalViewController: UIViewController {
                     self.info = "Congrats! You just earned a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
                     self.imageView.isHidden = true
+                    self.badgeTextLabel.isHidden = true
                 }
             }
         })

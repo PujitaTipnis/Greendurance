@@ -47,7 +47,8 @@ class MenuViewController: UITableViewController {
             do {
                 try FIRAuth.auth()?.signOut()
                 print("Signed out successfully")
-            } catch {}
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)}
         }
     }
 }

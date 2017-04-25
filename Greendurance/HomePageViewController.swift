@@ -16,6 +16,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var welcomeDescLabel: UILabel!
     @IBOutlet weak var spiderImageView: UIImageView!
     
+    @IBOutlet weak var leafImageView: UIImageView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var pointsLabel: UILabel!
@@ -48,6 +49,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         
         self.rankingButton.isHidden = true
         self.pointsLabel.isHidden = true
+        self.leafImageView.isHidden = true
         
         self.rankingLabel.isHidden = true
         self.activityLabel.isHidden = true
@@ -70,13 +72,17 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                 let ref = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("total")
                 ref.observeSingleEvent(of: .value, with: { (snapshot) in
                     self.pointsLabel.isHidden = false
-                    self.pointsLabel.text = "\(NSString(format: "%@", snapshot.value as! CVarArg) as String) points"
+                    self.leafImageView.isHidden = false
                     
-                    if self.pointsLabel.text == "0 points" {
+                    self.pointsLabel.text = "\(NSString(format: "%@", snapshot.value as! CVarArg) as String) \n points"
+                    //self.pointsLabel.backgroundColor = UIColor(patternImage: UIImage(named: "leaf.png")!)
+                    
+                    if self.pointsLabel.text == "0 \n points" {
                         // No points earned yet
                         
                         self.rankingButton.isHidden = true
                         self.pointsLabel.isHidden = true
+                        self.leafImageView.isHidden = true
                         
                         self.rankingLabel.isHidden = true
                         self.activityLabel.isHidden = true

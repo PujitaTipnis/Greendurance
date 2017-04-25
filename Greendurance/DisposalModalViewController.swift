@@ -15,6 +15,7 @@ class DisposalModalViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var celebrationImageView: UIImageView!
     var info = ""
     var points = Points()
     
@@ -32,7 +33,7 @@ class DisposalModalViewController: UIViewController {
             
             let badgeRef = ref.child("badges").childByAutoId()
             
-            if !(snapshot.hasChild("badges")) {
+            /*if !(snapshot.hasChild("badges")) {
                 self.info = "Congrats! You just earned a total of \(self.points.total) points and your very first badge!"
                 self.textLabel.text = self.info
                 self.imageView.image = UIImage(named: "sprout (1).png")
@@ -46,7 +47,7 @@ class DisposalModalViewController: UIViewController {
                 
                 badgeRef.setValue(badgesDetails)
                 
-            } else {
+            } else { */
                 if self.points.total >= 1500 {
                     
                     self.info = "Congrats! You sure are a good samaritan, on your way to disposing waste the right way! You just won the 'Disposing Right' badge by earning a total of \(self.points.total) points!"
@@ -67,14 +68,14 @@ class DisposalModalViewController: UIViewController {
                     self.textLabel.text = self.info
                     self.imageView.isHidden = true
                 }
-            }
+            //}
         })
     }
 
-    @IBAction func closeTapped(_ sender: Any) {
+    /*@IBAction func closeTapped(_ sender: Any) {
         // Dismiss the view controller (the first screen) that
         // was presented modally by the view controller
         dismiss(animated: true, completion: nil)
-    }
+    } */
     
 }

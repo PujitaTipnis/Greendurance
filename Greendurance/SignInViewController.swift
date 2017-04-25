@@ -14,26 +14,53 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
     var newUser = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view, typically from a nib.
-        // 1
-        FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
-            // 2
-            if user != nil {
-                // 3
-                self.performSegue(withIdentifier: "SignInSegue", sender: nil)
+        
+        if self.userNameTextField.text == "" || self.passwordTextField.text == "" {
+            logInButton.isEnabled = false
+        } else {
+            logInButton.isEnabled = true
+            // 1
+            FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
+                // 2
+                if user != nil {
+                    // 3
+                    self.performSegue(withIdentifier: "SignInSegue", sender: nil)
+                }
             }
+        }
+    }
+    @IBAction func userNameValueChanged(_ sender: Any) {
+        print ("Username value changed")
+        if self.passwordTextField.text == "" {
+            logInButton.isEnabled = false
+        } else {
+            logInButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func passwordValueChanged(_ sender: Any) {
+        print ("Password value changed")
+        if self.userNameTextField.text == "" {
+            logInButton.isEnabled = false
+        } else {
+            logInButton.isEnabled = true
         }
     }
     
     @IBAction func signInTapped(_ sender: Any) {
+        
         FIRAuth.auth()!.signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!)
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
+        
         let alert = UIAlertController(title: "Register", message: "Register", preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { action in
@@ -47,10 +74,13 @@ class SignInViewController: UIViewController {
                 if error == nil {
                     // 3
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("password").setValue(passwordField.text)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("total").setValue(0)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("name").setValue(fullNameField.text)
                     
-                    FIRAuth.auth()!.signIn(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!)
+                    //FIRAuth.auth()!.signIn(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!)so
+                    FIRAuth.auth()!.signIn(withEmail: user!.email!, password: passwordField.text!)
+                    self.performSegue(withIdentifier: "SignInSegue", sender: nil)
                 }
             })
             
@@ -62,16 +92,16 @@ class SignInViewController: UIViewController {
                                          style: .default)
         
         alert.addTextField { textFullName in
-            textFullName.placeholder = "Enter your full name"
+            textFullName.placeholder = "Full name"
         }
         
         alert.addTextField { textEmail in
-            textEmail.placeholder = "Enter your email"
+            textEmail.placeholder = "Email"
         }
         
         alert.addTextField { textPassword in
             textPassword.isSecureTextEntry = true
-            textPassword.placeholder = "Enter your password"
+            textPassword.placeholder = "Password"
         }
         
         alert.addAction(saveAction)

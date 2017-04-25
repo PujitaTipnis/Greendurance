@@ -33,8 +33,6 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.allowsMultipleSelectionDuringEditing = true
         
-        
-        
         self.tableView.reloadData()
         
     }
@@ -88,7 +86,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }
         })
-
+        
         
     }
     
@@ -162,6 +160,7 @@ class DisposalViewController: UIViewController, UITableViewDataSource, UITableVi
             
             ref.removeValue()
             //trashDisposal.remove(at: indexPath.row)
+            print (indexPath.row)
             self.attemptReloadOfTableView()
             
             

@@ -82,6 +82,15 @@
 		9F6DD93E1E9B3FC7007BB7C5 /* sproutSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9381E9B3FC7007BB7C5 /* sproutSmall.png */; };
 		9F6DD93F1E9B3FC7007BB7C5 /* winnerSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DD9391E9B3FC7007BB7C5 /* winnerSmall.png */; };
 		9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7169991E906BEB00F2B2BB /* Disposal.swift */; };
+		9F7DEF871EAC37840083D0F4 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF861EAC37840083D0F4 /* confetti.png */; };
+		9F7DEF8D1EAC56710083D0F4 /* fireworks.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF8C1EAC56710083D0F4 /* fireworks.png */; };
+		9F7DEF8F1EAC59840083D0F4 /* cheers.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF8E1EAC59840083D0F4 /* cheers.png */; };
+		9F7DEF911EAC5F100083D0F4 /* leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF901EAC5F100083D0F4 /* leaf.png */; };
+		9F7DEF931EAC67E10083D0F4 /* rankingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF921EAC67E10083D0F4 /* rankingButton.png */; };
+		9F7DEF951EAC6B5E0083D0F4 /* rankingBtnBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF941EAC6B5E0083D0F4 /* rankingBtnBlue.png */; };
+		9F7DEF971EAC777C0083D0F4 /* close-cross-circular-interface-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */; };
+		9F7DEF991EAC79720083D0F4 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF981EAC79720083D0F4 /* loginButton.png */; };
+		9F7DEF9B1EAC79790083D0F4 /* signupButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9A1EAC79790083D0F4 /* signupButton.png */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
 		9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23F701E8C562000D5CAB9 /* Product.swift */; };
@@ -184,6 +193,15 @@
 		9F6DD9381E9B3FC7007BB7C5 /* sproutSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sproutSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/sproutSmall.png"; sourceTree = "<group>"; };
 		9F6DD9391E9B3FC7007BB7C5 /* winnerSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winnerSmall.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/winnerSmall.png"; sourceTree = "<group>"; };
 		9F7169991E906BEB00F2B2BB /* Disposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposal.swift; sourceTree = "<group>"; };
+		9F7DEF861EAC37840083D0F4 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = confetti.png; path = ../../../../Downloads/confetti.png; sourceTree = "<group>"; };
+		9F7DEF8C1EAC56710083D0F4 /* fireworks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fireworks.png; path = ../../../../Downloads/fireworks.png; sourceTree = "<group>"; };
+		9F7DEF8E1EAC59840083D0F4 /* cheers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cheers.png; path = ../../../../Downloads/cheers.png; sourceTree = "<group>"; };
+		9F7DEF901EAC5F100083D0F4 /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leaf.png; path = ../../../../Downloads/leaf.png; sourceTree = "<group>"; };
+		9F7DEF921EAC67E10083D0F4 /* rankingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rankingButton.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/rankingButton.png"; sourceTree = "<group>"; };
+		9F7DEF941EAC6B5E0083D0F4 /* rankingBtnBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rankingBtnBlue.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/rankingBtnBlue.png"; sourceTree = "<group>"; };
+		9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "close-cross-circular-interface-button.png"; path = "../../../../Downloads/close-cross-circular-interface-button.png"; sourceTree = "<group>"; };
+		9F7DEF981EAC79720083D0F4 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginButton.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/loginButton.png"; sourceTree = "<group>"; };
+		9F7DEF9A1EAC79790083D0F4 /* signupButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupButton.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/signupButton.png"; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
 		9FA23F701E8C562000D5CAB9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -275,6 +293,15 @@
 		9F5A7AEB1E91753200C6B097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DEF981EAC79720083D0F4 /* loginButton.png */,
+				9F7DEF9A1EAC79790083D0F4 /* signupButton.png */,
+				9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */,
+				9F7DEF941EAC6B5E0083D0F4 /* rankingBtnBlue.png */,
+				9F7DEF921EAC67E10083D0F4 /* rankingButton.png */,
+				9F7DEF901EAC5F100083D0F4 /* leaf.png */,
+				9F7DEF8E1EAC59840083D0F4 /* cheers.png */,
+				9F7DEF8C1EAC56710083D0F4 /* fireworks.png */,
+				9F7DEF861EAC37840083D0F4 /* confetti.png */,
 				9F6DD9341E9B3FC7007BB7C5 /* electric-carSmall.png */,
 				9F6DD9351E9B3FC7007BB7C5 /* groceriesSmall.png */,
 				9F6DD9361E9B3FC7007BB7C5 /* recycleSmall.png */,
@@ -467,6 +494,7 @@
 				9F23CA4D1E8F073100E7650A /* car.png in Resources */,
 				9F6DD93B1E9B3FC7007BB7C5 /* groceriesSmall.png in Resources */,
 				9F23CA4B1E8F072300E7650A /* bus.png in Resources */,
+				9F7DEF911EAC5F100083D0F4 /* leaf.png in Resources */,
 				9F5A7B071E91A65200C6B097 /* water-drop.png in Resources */,
 				9F5A7B061E91A65200C6B097 /* meat.png in Resources */,
 				9F23CA531E8F074800E7650A /* train.png in Resources */,
@@ -474,19 +502,25 @@
 				9F5A7B2E1E93536200C6B097 /* padlock.png in Resources */,
 				9F6DD93C1E9B3FC7007BB7C5 /* recycleSmall.png in Resources */,
 				9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */,
+				9F7DEF871EAC37840083D0F4 /* confetti.png in Resources */,
 				9F5A7B2D1E93536200C6B097 /* logout.png in Resources */,
 				9F019E161E8B261A0073F556 /* winner.png in Resources */,
 				9F5A7B081E91A65200C6B097 /* water.png in Resources */,
+				9F7DEF971EAC777C0083D0F4 /* close-cross-circular-interface-button.png in Resources */,
 				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
 				9F6DD93F1E9B3FC7007BB7C5 /* winnerSmall.png in Resources */,
+				9F7DEF8D1EAC56710083D0F4 /* fireworks.png in Resources */,
 				9FF9778C1E77B4120038ABEE /* bicycle-rider.png in Resources */,
+				9F7DEF931EAC67E10083D0F4 /* rankingButton.png in Resources */,
 				9FF9778E1E77B4170038ABEE /* icon.png in Resources */,
 				9F5A7B171E92062700C6B097 /* sprout (1).png in Resources */,
 				9F5A7B151E9205F700C6B097 /* shield2.png in Resources */,
 				9F06722D1E7727A100286C6F /* Main.storyboard in Resources */,
 				9F57AA9C1E99755300BCD6FA /* information.png in Resources */,
+				9F7DEF9B1EAC79790083D0F4 /* signupButton.png in Resources */,
 				9F5A7AFF1E91A64100C6B097 /* air.png in Resources */,
 				9F57AA9E1E997DC800BCD6FA /* recycleInfoCard.png in Resources */,
+				9F7DEF8F1EAC59840083D0F4 /* cheers.png in Resources */,
 				9F019E081E8AAE550073F556 /* menu.png in Resources */,
 				9F019E121E8B21D40073F556 /* shield.png in Resources */,
 				9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */,
@@ -505,6 +539,7 @@
 				9FF977921E77B4260038ABEE /* open-book-top-view.png in Resources */,
 				9F5A7B131E9205EF00C6B097 /* groceries.png in Resources */,
 				9F5A7B2B1E93536200C6B097 /* file.png in Resources */,
+				9F7DEF991EAC79720083D0F4 /* loginButton.png in Resources */,
 				9FF9778A1E77B34C0038ABEE /* groceriesBtn.png in Resources */,
 				9F5A7B2F1E93536200C6B097 /* settings.png in Resources */,
 				9F06721F1E771DD600286C6F /* Assets.xcassets in Resources */,
@@ -516,6 +551,7 @@
 				9F6DD93A1E9B3FC7007BB7C5 /* electric-carSmall.png in Resources */,
 				9FF977901E77B41C0038ABEE /* medal.png in Resources */,
 				9F57AAA01E997DCF00BCD6FA /* compostInfoCard.png in Resources */,
+				9F7DEF951EAC6B5E0083D0F4 /* rankingBtnBlue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
