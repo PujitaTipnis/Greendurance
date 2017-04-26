@@ -11,6 +11,7 @@ import UIKit
 class PrivacyPolicyViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

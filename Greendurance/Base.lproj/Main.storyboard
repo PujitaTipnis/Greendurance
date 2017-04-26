@@ -550,7 +550,7 @@
             </objects>
             <point key="canvasLocation" x="5764" y="36"/>
         </scene>
-        <!--Barcode View Controller-->
+        <!-- -->
         <scene sceneID="15F-CF-9OO">
             <objects>
                 <viewController id="6Pf-fC-WW1" customClass="BarcodeViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
@@ -563,6 +563,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title=" " id="LaJ-re-6qo">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dwl-mT-sBu"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="J8S-XO-ByF" kind="presentation" identifier="barcodeSuccessSegue" modalPresentationStyle="overCurrentContext" id="Df3-oA-PCc"/>
                     </connections>
@@ -1113,7 +1116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-c0-BaK">
-                                <rect key="frame" x="30" y="179" width="315" height="309"/>
+                                <rect key="frame" x="30" y="135" width="315" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDG-7g-qDY">
                                         <rect key="frame" x="10" y="35" width="295" height="22"/>
@@ -1148,7 +1151,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Z-9e-AEz" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="91.5" y="358" width="191" height="20"/>
+                                <rect key="frame" x="91.5" y="314" width="191" height="20"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                         <real key="value" value="3"/>
@@ -1175,7 +1178,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-ul-P0J">
-                                <rect key="frame" x="153" y="388" width="70" height="30"/>
+                                <rect key="frame" x="153" y="344" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Tu7-is-2pg"/>
@@ -1189,7 +1192,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheers.png" translatesAutoresizingMaskIntoConstraints="NO" id="JkV-XZ-hJ3">
-                                <rect key="frame" x="138" y="74" width="100" height="100"/>
+                                <rect key="frame" x="138" y="30" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="OoC-a8-VUz"/>
                                     <constraint firstAttribute="width" constant="100" id="yAk-50-9iE"/>
@@ -1211,6 +1214,9 @@
                             <constraint firstItem="unQ-c0-BaK" firstAttribute="top" secondItem="JkV-XZ-hJ3" secondAttribute="bottom" constant="5" id="zwP-it-Yso"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title=" " id="AH1-Hm-Lub">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nbK-Pl-jlj"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cosmosView" destination="Y1Z-9e-AEz" id="31E-DJ-N9S"/>
                         <outlet property="imageView" destination="pZl-Xe-SGl" id="a4e-bO-qHw"/>
@@ -1952,30 +1958,79 @@
                         <viewControllerLayoutGuide type="bottom" id="2lx-cE-Q83"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cXZ-hk-eUK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBJ-8T-I1c">
-                                <rect key="frame" x="112" y="249" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojP-Do-PWf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-Qs-HB2">
+                                        <rect key="frame" x="0.0" y="-64" width="375" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greendurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-Mz-iuZ">
+                                                <rect key="frame" x="142" y="32" width="92" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-wk-2zS">
+                                                <rect key="frame" x="70" y="77.5" width="235" height="845"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="235" id="Nvd-dB-Dhv"/>
+                                                    <constraint firstAttribute="height" constant="845" id="wZH-yK-FcE"/>
+                                                </constraints>
+                                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rhoncus nunc. Mauris feugiat dui massa, a molestie arcu blandit ut. Donec nec ipsum diam.</mutableString>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="7Dj-wk-2zS" firstAttribute="centerX" secondItem="VqP-Qs-HB2" secondAttribute="centerX" id="JSz-va-GgC"/>
+                                            <constraint firstItem="Eeg-Mz-iuZ" firstAttribute="centerX" secondItem="VqP-Qs-HB2" secondAttribute="centerX" id="K34-Hb-Eri"/>
+                                            <constraint firstItem="7Dj-wk-2zS" firstAttribute="top" secondItem="Eeg-Mz-iuZ" secondAttribute="bottom" constant="10" id="j29-zr-deT"/>
+                                            <constraint firstItem="7Dj-wk-2zS" firstAttribute="centerY" secondItem="VqP-Qs-HB2" secondAttribute="centerY" id="miX-I1-qAz"/>
+                                            <constraint firstAttribute="height" constant="1000" id="uJ4-Ec-QoV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VqP-Qs-HB2" secondAttribute="bottom" id="2oR-1X-gzP"/>
+                                    <constraint firstItem="VqP-Qs-HB2" firstAttribute="leading" secondItem="ojP-Do-PWf" secondAttribute="leading" id="EN2-pD-ZYW"/>
+                                    <constraint firstItem="VqP-Qs-HB2" firstAttribute="top" secondItem="ojP-Do-PWf" secondAttribute="top" constant="-64" id="bgo-Wc-XlM"/>
+                                    <constraint firstAttribute="trailing" secondItem="VqP-Qs-HB2" secondAttribute="trailing" id="nPj-xf-9ms"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eeg-Mz-iuZ" firstAttribute="top" secondItem="cen-ar-SvC" secondAttribute="bottom" constant="-32" id="3bF-7S-W5f"/>
+                            <constraint firstItem="ojP-Do-PWf" firstAttribute="centerX" secondItem="cXZ-hk-eUK" secondAttribute="centerX" id="4r5-8I-9f8"/>
+                            <constraint firstItem="2lx-cE-Q83" firstAttribute="top" secondItem="ojP-Do-PWf" secondAttribute="bottom" id="62T-GE-sx7"/>
+                            <constraint firstItem="VqP-Qs-HB2" firstAttribute="width" secondItem="cXZ-hk-eUK" secondAttribute="width" id="6Vf-FS-imw"/>
+                            <constraint firstItem="ojP-Do-PWf" firstAttribute="leading" secondItem="cXZ-hk-eUK" secondAttribute="leading" id="HlA-5e-5yJ"/>
+                            <constraint firstItem="ojP-Do-PWf" firstAttribute="top" secondItem="cen-ar-SvC" secondAttribute="bottom" id="Izb-S5-u5M"/>
+                            <constraint firstAttribute="trailing" secondItem="ojP-Do-PWf" secondAttribute="trailing" id="jtw-gy-avx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Terms &amp; Conditions" id="e4n-Qg-x8K">
                         <barButtonItem key="backBarButtonItem" title="Back" id="uHb-xW-iVX"/>
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Gl6-LK-0rp"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="backButton" destination="Gl6-LK-0rp" id="02T-94-Oni"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4j-SK-08Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="-2316"/>
+            <point key="canvasLocation" x="1337" y="-2729"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="t1U-cn-U5b">
@@ -1986,45 +2041,84 @@
                         <viewControllerLayoutGuide type="bottom" id="AO5-a3-nJ0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fAA-78-EtQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73i-I2-zUP">
-                                <rect key="frame" x="20" y="104" width="335" height="543"/>
-                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greendurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAM-NQ-rZC">
-                                <rect key="frame" x="142" y="72" width="91.5" height="19.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="14"/>
-                                <color key="textColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPT-hD-fhg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlg-B7-AuN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-mM-tKA">
+                                                <rect key="frame" x="142" y="30" width="91.5" height="19.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greendurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAM-NQ-rZC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="14"/>
+                                                        <color key="textColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73i-I2-zUP">
+                                                <rect key="frame" x="70" y="67" width="235" height="845"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="235" id="Cao-hP-cSh"/>
+                                                    <constraint firstAttribute="height" constant="845" id="cLQ-XZ-gzH"/>
+                                                </constraints>
+                                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rhoncus nunc. Mauris feugiat dui massa, a molestie arcu blandit ut. Donec nec ipsum diam.</mutableString>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="73i-I2-zUP" firstAttribute="centerX" secondItem="xlg-B7-AuN" secondAttribute="centerX" id="FD4-b1-Bse"/>
+                                            <constraint firstItem="73i-I2-zUP" firstAttribute="top" secondItem="DAM-NQ-rZC" secondAttribute="bottom" constant="17.5" id="Kqy-Wb-pQV"/>
+                                            <constraint firstItem="nrk-mM-tKA" firstAttribute="centerX" secondItem="xlg-B7-AuN" secondAttribute="centerX" id="pHx-NZ-k2y"/>
+                                            <constraint firstAttribute="height" constant="1000" id="vHu-cE-CQr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xlg-B7-AuN" secondAttribute="trailing" id="9GK-iK-g9K"/>
+                                    <constraint firstItem="xlg-B7-AuN" firstAttribute="leading" secondItem="hPT-hD-fhg" secondAttribute="leading" id="Af8-TN-l4C"/>
+                                    <constraint firstItem="nrk-mM-tKA" firstAttribute="top" secondItem="hPT-hD-fhg" secondAttribute="top" constant="30" id="Dpr-yw-hsl"/>
+                                    <constraint firstItem="xlg-B7-AuN" firstAttribute="top" secondItem="hPT-hD-fhg" secondAttribute="top" id="JqO-Lx-u1q"/>
+                                    <constraint firstAttribute="bottom" secondItem="xlg-B7-AuN" secondAttribute="bottom" id="MGc-3C-Tzg"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="73i-I2-zUP" secondAttribute="trailing" constant="20" id="R0T-b4-QcN"/>
-                            <constraint firstItem="AO5-a3-nJ0" firstAttribute="top" secondItem="73i-I2-zUP" secondAttribute="bottom" constant="20" id="czA-wB-hvu"/>
-                            <constraint firstItem="DAM-NQ-rZC" firstAttribute="centerX" secondItem="fAA-78-EtQ" secondAttribute="centerX" id="hL3-GP-av0"/>
-                            <constraint firstItem="DAM-NQ-rZC" firstAttribute="top" secondItem="VCK-gg-lSQ" secondAttribute="bottom" constant="8" id="j8h-TT-y2v"/>
-                            <constraint firstItem="73i-I2-zUP" firstAttribute="leading" secondItem="fAA-78-EtQ" secondAttribute="leading" constant="20" id="qq2-Si-tPb"/>
-                            <constraint firstItem="73i-I2-zUP" firstAttribute="top" secondItem="VCK-gg-lSQ" secondAttribute="bottom" constant="40" id="wax-wb-A6D"/>
+                            <constraint firstItem="hPT-hD-fhg" firstAttribute="centerY" secondItem="fAA-78-EtQ" secondAttribute="centerY" id="2ms-cr-klO"/>
+                            <constraint firstItem="AO5-a3-nJ0" firstAttribute="top" secondItem="hPT-hD-fhg" secondAttribute="bottom" id="8U1-wu-dWU"/>
+                            <constraint firstItem="hPT-hD-fhg" firstAttribute="centerX" secondItem="fAA-78-EtQ" secondAttribute="centerX" id="9Tl-us-aRd"/>
+                            <constraint firstItem="hPT-hD-fhg" firstAttribute="leading" secondItem="fAA-78-EtQ" secondAttribute="leading" id="Q7e-sk-7am"/>
+                            <constraint firstAttribute="trailing" secondItem="hPT-hD-fhg" secondAttribute="trailing" id="eMT-m8-bGm"/>
+                            <constraint firstItem="xlg-B7-AuN" firstAttribute="width" secondItem="fAA-78-EtQ" secondAttribute="width" id="nM7-my-F5t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Privacy Policy" id="WAJ-6I-xFF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="02x-GI-dAo"/>
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="5K1-jW-9PU"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="backButton" destination="5K1-jW-9PU" id="Spw-Bm-veb"/>
+                        <outlet property="scrollView" destination="hPT-hD-fhg" id="xXB-cu-Fhe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqS-nO-eUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="-2316"/>
+            <point key="canvasLocation" x="2221.5999999999999" y="-2579.0104947526238"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="fRX-ZY-hgJ">
@@ -2281,7 +2375,7 @@ E0w
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gdd-6l-nnu"/>
-        <segue reference="wCY-3Y-FpL"/>
         <segue reference="YrB-gp-t3h"/>
+        <segue reference="Df3-oA-PCc"/>
     </inferredMetricsTieBreakers>
 </document>
