@@ -550,29 +550,29 @@
             </objects>
             <point key="canvasLocation" x="5764" y="36"/>
         </scene>
-        <!-- -->
-        <scene sceneID="15F-CF-9OO">
+        <!--Barcode Scan-->
+        <scene sceneID="0KK-RE-jxm">
             <objects>
-                <viewController id="6Pf-fC-WW1" customClass="BarcodeViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QZs-pQ-vWj" customClass="BarcodeViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hYa-8c-G6h"/>
-                        <viewControllerLayoutGuide type="bottom" id="87d-7w-9Ug"/>
+                        <viewControllerLayoutGuide type="top" id="aPm-SB-PfM"/>
+                        <viewControllerLayoutGuide type="bottom" id="EXJ-FB-GhJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="N4e-kv-oOZ">
+                    <view key="view" contentMode="scaleToFill" id="StD-fI-fog">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title=" " id="LaJ-re-6qo">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="dwl-mT-sBu"/>
+                    <navigationItem key="navigationItem" title="Barcode Scan" id="h0e-v0-5Xo">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YZm-Eh-RF9"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="J8S-XO-ByF" kind="presentation" identifier="barcodeSuccessSegue" modalPresentationStyle="overCurrentContext" id="Df3-oA-PCc"/>
+                        <segue destination="J8S-XO-ByF" kind="show" identifier="barcodeSuccessSegue" id="U9v-yd-8bM"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvw-te-kuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rU2-Fd-rc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="858"/>
+            <point key="canvasLocation" x="689" y="858"/>
         </scene>
         <!--Shop Green-->
         <scene sceneID="SC1-CP-VE8">
@@ -598,7 +598,7 @@
                                 <state key="normal" title="Button" image="barcode.png"/>
                                 <connections>
                                     <action selector="barcodeScannerTapped:" destination="wyQ-SK-rHo" eventType="touchUpInside" id="ScY-qk-9dP"/>
-                                    <segue destination="6Pf-fC-WW1" kind="show" identifier="barcodeSegue" id="Gi7-tc-exb"/>
+                                    <segue destination="OlE-G1-zNa" kind="presentation" identifier="barcodeSegue" id="7oB-z7-6VU"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GNf-ss-hbo">
@@ -648,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0V-0O-Blz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445.5999999999999" y="857.72113943028489"/>
+            <point key="canvasLocation" x="2384.8000000000002" y="857.72113943028489"/>
         </scene>
         <!--Transportation-->
         <scene sceneID="Fei-y9-tnm">
@@ -851,7 +851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBb-kb-lp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280.8000000000002" y="857.72113943028489"/>
+            <point key="canvasLocation" x="3220" y="857.72113943028489"/>
         </scene>
         <!--Facts-->
         <scene sceneID="zYT-3S-TbT">
@@ -919,7 +919,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sts-km-5kl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098" y="858"/>
+            <point key="canvasLocation" x="4036" y="857.72113943028489"/>
         </scene>
         <!--Disposal-->
         <scene sceneID="Nlm-8P-lpE">
@@ -997,7 +997,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzZ-EN-Gje" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3873" y="858"/>
+            <point key="canvasLocation" x="4812" y="857.72113943028489"/>
         </scene>
         <!--Badges-->
         <scene sceneID="ljP-NU-9T6">
@@ -1051,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7e-Hf-G9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4668" y="858"/>
+            <point key="canvasLocation" x="5607.1999999999998" y="857.72113943028489"/>
         </scene>
         <!--Waste Disposal Cards-->
         <scene sceneID="gL7-7F-QUI">
@@ -1116,7 +1116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-c0-BaK">
-                                <rect key="frame" x="30" y="135" width="315" height="397"/>
+                                <rect key="frame" x="30" y="179" width="315" height="309"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDG-7g-qDY">
                                         <rect key="frame" x="10" y="35" width="295" height="22"/>
@@ -1151,7 +1151,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Z-9e-AEz" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="91.5" y="314" width="191" height="20"/>
+                                <rect key="frame" x="91.5" y="358" width="191" height="20"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                         <real key="value" value="3"/>
@@ -1178,7 +1178,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-ul-P0J">
-                                <rect key="frame" x="153" y="344" width="70" height="30"/>
+                                <rect key="frame" x="153" y="388" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Tu7-is-2pg"/>
@@ -1192,7 +1192,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheers.png" translatesAutoresizingMaskIntoConstraints="NO" id="JkV-XZ-hJ3">
-                                <rect key="frame" x="138" y="30" width="100" height="100"/>
+                                <rect key="frame" x="138" y="74" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="OoC-a8-VUz"/>
                                     <constraint firstAttribute="width" constant="100" id="yAk-50-9iE"/>
@@ -2264,6 +2264,24 @@ Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rho
             </objects>
             <point key="canvasLocation" x="3097" y="-729"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hsG-a3-0xN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5Q-Kc-acR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OlE-G1-zNa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Es-Fm-XY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QZs-pQ-vWj" kind="relationship" relationship="rootViewController" id="NRC-06-Bfj"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1537" y="858"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barcode.png" width="24" height="24"/>
@@ -2376,6 +2394,6 @@ E0w
     <inferredMetricsTieBreakers>
         <segue reference="gdd-6l-nnu"/>
         <segue reference="YrB-gp-t3h"/>
-        <segue reference="Df3-oA-PCc"/>
+        <segue reference="U9v-yd-8bM"/>
     </inferredMetricsTieBreakers>
 </document>

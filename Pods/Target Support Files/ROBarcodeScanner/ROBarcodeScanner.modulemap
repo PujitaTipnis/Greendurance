@@ -1,0 +1,6 @@
+framework module ROBarcodeScanner {
+  umbrella header "ROBarcodeScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -61,7 +61,7 @@ class SignInViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Register", message: "Register", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Greendurance", message: "Sign Up", preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { action in
             // 1
