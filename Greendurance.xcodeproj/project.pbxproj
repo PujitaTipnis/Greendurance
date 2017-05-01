@@ -91,6 +91,8 @@
 		9F7DEF971EAC777C0083D0F4 /* close-cross-circular-interface-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */; };
 		9F7DEF991EAC79720083D0F4 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF981EAC79720083D0F4 /* loginButton.png */; };
 		9F7DEF9B1EAC79790083D0F4 /* signupButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9A1EAC79790083D0F4 /* signupButton.png */; };
+		9F7DEF9D1EB6F1AA0083D0F4 /* earth-day (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9C1EB6F1AA0083D0F4 /* earth-day (2).png */; };
+		9F7DEF9F1EB6F1B30083D0F4 /* racing-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9E1EB6F1B30083D0F4 /* racing-flag.png */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
 		9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23F701E8C562000D5CAB9 /* Product.swift */; };
@@ -202,6 +204,8 @@
 		9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "close-cross-circular-interface-button.png"; path = "../../../../Downloads/close-cross-circular-interface-button.png"; sourceTree = "<group>"; };
 		9F7DEF981EAC79720083D0F4 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginButton.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/loginButton.png"; sourceTree = "<group>"; };
 		9F7DEF9A1EAC79790083D0F4 /* signupButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupButton.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/signupButton.png"; sourceTree = "<group>"; };
+		9F7DEF9C1EB6F1AA0083D0F4 /* earth-day (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "earth-day (2).png"; path = "../../../../Downloads/earth-day (2).png"; sourceTree = "<group>"; };
+		9F7DEF9E1EB6F1B30083D0F4 /* racing-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "racing-flag.png"; path = "../../../../Downloads/racing-flag.png"; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
 		9FA23F701E8C562000D5CAB9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 		9F5A7AEB1E91753200C6B097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DEF9C1EB6F1AA0083D0F4 /* earth-day (2).png */,
+				9F7DEF9E1EB6F1B30083D0F4 /* racing-flag.png */,
 				9F7DEF981EAC79720083D0F4 /* loginButton.png */,
 				9F7DEF9A1EAC79790083D0F4 /* signupButton.png */,
 				9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */,
@@ -519,6 +525,7 @@
 				9F57AA9C1E99755300BCD6FA /* information.png in Resources */,
 				9F7DEF9B1EAC79790083D0F4 /* signupButton.png in Resources */,
 				9F5A7AFF1E91A64100C6B097 /* air.png in Resources */,
+				9F7DEF9D1EB6F1AA0083D0F4 /* earth-day (2).png in Resources */,
 				9F57AA9E1E997DC800BCD6FA /* recycleInfoCard.png in Resources */,
 				9F7DEF8F1EAC59840083D0F4 /* cheers.png in Resources */,
 				9F019E081E8AAE550073F556 /* menu.png in Resources */,
@@ -551,6 +558,7 @@
 				9F6DD93A1E9B3FC7007BB7C5 /* electric-carSmall.png in Resources */,
 				9FF977901E77B41C0038ABEE /* medal.png in Resources */,
 				9F57AAA01E997DCF00BCD6FA /* compostInfoCard.png in Resources */,
+				9F7DEF9F1EB6F1B30083D0F4 /* racing-flag.png in Resources */,
 				9F7DEF951EAC6B5E0083D0F4 /* rankingBtnBlue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

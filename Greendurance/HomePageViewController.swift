@@ -18,12 +18,12 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var leafImageView: UIImageView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet var progressView: UIView!
+    @IBOutlet weak var progressStatusLabel: UILabel!
     
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var rankingButton: UIButton!
     @IBOutlet weak var rankingLabel: UILabel!
-    @IBOutlet weak var activityLabel: UILabel!
-    @IBOutlet weak var challengeLabel: UILabel!
     
     let resuseIdentifier = "cell"
     var items = ["groceriesBtn.png", "bicycle-rider.png", "trash-container-for-recycle.png", "medal.png", "open-book-top-view.png", "icon.png"]
@@ -50,10 +50,10 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         self.rankingButton.isHidden = true
         self.pointsLabel.isHidden = true
         self.leafImageView.isHidden = true
+        //self.progressView.isHidden = true
+        //self.progressStatusLabel.isHidden = true
         
         self.rankingLabel.isHidden = true
-        self.activityLabel.isHidden = true
-        self.challengeLabel.isHidden = true
         
         self.welcomeLabel.isHidden = true
         self.welcomeDescLabel.isHidden = true
@@ -77,6 +77,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                     self.pointsLabel.text = "\(NSString(format: "%@", snapshot.value as! CVarArg) as String) \n points"
                     //self.pointsLabel.backgroundColor = UIColor(patternImage: UIImage(named: "leaf.png")!)
                     
+                    
                     if self.pointsLabel.text == "0 \n points" {
                         // No points earned yet
                         
@@ -84,9 +85,10 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                         self.pointsLabel.isHidden = true
                         self.leafImageView.isHidden = true
                         
+                        //self.progressView.isHidden = true
+                        //self.progressStatusLabel.isHidden = true
+                        
                         self.rankingLabel.isHidden = true
-                        self.activityLabel.isHidden = true
-                        self.challengeLabel.isHidden = true
                         
                         self.welcomeLabel.isHidden = false
                         self.welcomeDescLabel.isHidden = false
@@ -97,9 +99,10 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                         
                         self.rankingButton.isHidden = false
                         
+                        //self.progressView.isHidden = false
+                        //self.progressStatusLabel.isHidden = false
+                        
                         self.rankingLabel.text = "Ranking"
-                        self.activityLabel.text = "Activities"
-                        self.challengeLabel.text = "Challenges"
                         
                         self.welcomeLabel.isHidden = true
                         self.welcomeDescLabel.isHidden = true
