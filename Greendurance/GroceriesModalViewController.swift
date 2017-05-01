@@ -21,6 +21,7 @@ class GroceriesModalViewController: UIViewController {
     var info = ""
     var points = Points()
     var userRating : Double!
+    var totalBadges : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +39,14 @@ class GroceriesModalViewController: UIViewController {
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             let badgeRef = ref.child("badges").childByAutoId()
+                
+                self.totalBadges = (snapshot.value! as AnyObject)["totalGrocBadges"] as! Int
+                print ("Total Badges: \(self.totalBadges)")
             
             if !(snapshot.hasChild("badges")) {
+                
+                self.totalBadges += 1
+                
                 self.info = "Congrats! You just earned a total of \(self.points.total) points and your very first badge!"
                 self.textLabel.text = self.info
                 self.imageView.image = UIImage(named: "sprout (1).png")
@@ -53,8 +60,13 @@ class GroceriesModalViewController: UIViewController {
                 
                 badgeRef.setValue(badgesDetails)
                 
+                let childUpdates = ["/totalGrocBadges" : self.totalBadges, "/totalTransBadges" : self.totalBadges]
+                ref.updateChildValues(childUpdates)
+                
             } else {
-                if self.points.total >= 1500 {
+                if self.points.total >= 1500 && self.totalBadges == 2 {
+                    
+                    self.totalBadges += 1
                     
                     self.info = "Congrats! You have had an awesome streak of buying eco-friendly products! You just won the 'Shopping Green' badge by earning a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
@@ -69,7 +81,12 @@ class GroceriesModalViewController: UIViewController {
                     
                     badgeRef.setValue(badgesDetails)
                     
-                } else if self.points.total >= 500 {
+                    let childUpdates = ["/totalGrocBadges" : self.totalBadges]
+                    ref.updateChildValues(childUpdates)
+                    
+                } else if self.points.total >= 500 && self.totalBadges == 1 {
+                    
+                    self.totalBadges += 1
                     
                     self.info = "Congrats! You are going total pro! You just won the 'Going Pro' badge by earning a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
@@ -83,6 +100,9 @@ class GroceriesModalViewController: UIViewController {
                                          "key" : badgeRef.key] as [String : Any]
                     
                     badgeRef.setValue(badgesDetails)
+                    
+                    let childUpdates = ["/totalGrocBadges" : self.totalBadges]
+                    ref.updateChildValues(childUpdates)
                     
                 } else {
                     self.info = "Congrats! You just earned a total of \(self.points.total) points!"

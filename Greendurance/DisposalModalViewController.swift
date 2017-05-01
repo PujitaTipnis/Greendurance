@@ -18,6 +18,7 @@ class DisposalModalViewController: UIViewController {
     @IBOutlet weak var celebrationImageView: UIImageView!
     var info = ""
     var points = Points()
+    var totalBadges : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,9 @@ class DisposalModalViewController: UIViewController {
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             let badgeRef = ref.child("badges").childByAutoId()
+            
+            self.totalBadges = (snapshot.value! as AnyObject)["totalDispBadges"] as! Int
+            print ("Total Badges: \(self.totalBadges)")
             
             /*if !(snapshot.hasChild("badges")) {
                 self.info = "Congrats! You just earned a total of \(self.points.total) points and your very first badge!"
@@ -48,7 +52,9 @@ class DisposalModalViewController: UIViewController {
                 badgeRef.setValue(badgesDetails)
                 
             } else { */
-                if self.points.total >= 1500 {
+                if self.points.total >= 1500 && self.totalBadges == 0 {
+                    
+                    self.totalBadges += 1
                     
                     self.info = "Congrats! You sure are a good samaritan, on your way to disposing waste the right way! You just won the 'Disposing Right' badge by earning a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
@@ -62,6 +68,9 @@ class DisposalModalViewController: UIViewController {
                                          "key" : badgeRef.key] as [String : Any]
                     
                     badgeRef.setValue(badgesDetails)
+                    
+                    let childUpdates = ["/totalDispBadges" : self.totalBadges]
+                    ref.updateChildValues(childUpdates)
                     
                 } else {
                     self.info = "Congrats! You just earned a total of \(self.points.total) points!"

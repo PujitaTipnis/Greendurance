@@ -18,6 +18,7 @@ class TranspPointsModalViewController: UIViewController {
     
     var info = ""
     var points = Points()
+    var totalBadges : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,13 @@ class TranspPointsModalViewController: UIViewController {
             
             let badgeRef = ref.child("badges").childByAutoId()
             
+            self.totalBadges = (snapshot.value! as AnyObject)["totalTransBadges"] as! Int
+            print ("Total Badges: \(self.totalBadges)")
+            
             if !(snapshot.hasChild("badges")) {
+                
+                self.totalBadges += 1
+                
                 self.info = "Congrats! You just earned a total of \(self.points.total) points and your very first badge!"
                 self.textLabel.text = self.info
                 self.imageView.image = UIImage(named: "sprout (1).png")
@@ -48,8 +55,13 @@ class TranspPointsModalViewController: UIViewController {
                 
                 badgeRef.setValue(badgesDetails)
                 
+                let childUpdates = ["/totalTransBadges" : self.totalBadges]
+                ref.updateChildValues(childUpdates)
+                
             } else {
-                if self.points.total >= 2500 {
+                if self.points.total >= 2500 && self.totalBadges == 2 {
+                    
+                    self.totalBadges += 1
                     
                     self.info = "Congrats! You have become a complete expert! You just won the ultimate badge and have earned a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
@@ -65,7 +77,12 @@ class TranspPointsModalViewController: UIViewController {
                     
                     badgeRef.setValue(badgesDetails)
                     
-                } else if self.points.total >= 1500 {
+                    let childUpdates = ["/totalTransBadges" : self.totalBadges]
+                    ref.updateChildValues(childUpdates)
+                    
+                } else if self.points.total >= 1500 && self.totalBadges == 1 {
+                    
+                    self.totalBadges += 1
                     
                     self.info = "Congrats! You just made an achievement on travelling green! You just won the 'Travel Clean' badge by earning a total of \(self.points.total) points!"
                     self.textLabel.text = self.info
@@ -80,6 +97,9 @@ class TranspPointsModalViewController: UIViewController {
                                          "key" : badgeRef.key] as [String : Any]
                     
                     badgeRef.setValue(badgesDetails)
+                    
+                    let childUpdates = ["/totalTransBadges" : self.totalBadges]
+                    ref.updateChildValues(childUpdates)
                     
                 } else {
                     self.info = "Congrats! You just earned a total of \(self.points.total) points!"

@@ -76,6 +76,9 @@ class SignInViewController: UIViewController {
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("password").setValue(passwordField.text)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("total").setValue(0)
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("totalGrocBadges").setValue(0)
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("totalTransBadges").setValue(0)
+                    FIRDatabase.database().reference().child("users").child(user!.uid).child("totalDispBadges").setValue(0)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("name").setValue(fullNameField.text)
                     
                     //FIRAuth.auth()!.signIn(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!)so

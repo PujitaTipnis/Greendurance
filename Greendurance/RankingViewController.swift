@@ -33,7 +33,7 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? FIRDataSnapshot {
-                print(rest.value!)
+                //print(rest.value!)
                 
                 let friend = Friend()
                 

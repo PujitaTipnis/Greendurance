@@ -18,8 +18,11 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var leafImageView: UIImageView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet var progressView: UIView!
+    
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressStatusLabel: UILabel!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var rankingButton: UIButton!
@@ -30,6 +33,8 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     var titles = ["Shop Green", "Ride Clean", "Dispose", "Badges", "Facts & Tips", "Friends"]
     //var newUser : Bool = false
     var total : Int = 0
+    var statusTotal : Int = 0
+    var statusTotalPct : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +57,17 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         self.leafImageView.isHidden = true
         //self.progressView.isHidden = true
         //self.progressStatusLabel.isHidden = true
+        self.progressView.progress = 0
+        self.progressView.setProgress(0, animated: true)
         
         self.rankingLabel.isHidden = true
         
         self.welcomeLabel.isHidden = true
         self.welcomeDescLabel.isHidden = true
         self.spiderImageView.isHidden = true
+        
+        self.collectionView.isScrollEnabled = false
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,6 +84,8 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                     self.pointsLabel.isHidden = false
                     self.leafImageView.isHidden = false
                     
+                    self.statusTotal = snapshot.value as! Int
+                    
                     self.pointsLabel.text = "\(NSString(format: "%@", snapshot.value as! CVarArg) as String) \n points"
                     //self.pointsLabel.backgroundColor = UIColor(patternImage: UIImage(named: "leaf.png")!)
                     
@@ -86,7 +98,8 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                         self.leafImageView.isHidden = true
                         
                         //self.progressView.isHidden = true
-                        //self.progressStatusLabel.isHidden = true
+                        self.progressStatusLabel.isHidden = false
+                        self.progressStatusLabel.text = "0 %"
                         
                         self.rankingLabel.isHidden = true
                         
@@ -100,7 +113,13 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                         self.rankingButton.isHidden = false
                         
                         //self.progressView.isHidden = false
-                        //self.progressStatusLabel.isHidden = false
+                        self.progressStatusLabel.isHidden = false
+                        self.statusTotalPct = Int((Double(self.statusTotal) / 5000.00) * 100.00)
+                        self.progressStatusLabel.text = "\(String(describing: self.statusTotalPct)) %"
+                        
+                        //print (self.statusTotalPct)
+                        self.progressView.setProgress(Float(Double(self.statusTotalPct) / 100.00), animated: true)
+                        //self.progressView.progress = Float(self.statusTotalPct)
                         
                         self.rankingLabel.text = "Ranking"
                         
