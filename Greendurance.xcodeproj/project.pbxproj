@@ -93,6 +93,46 @@
 		9F7DEF9B1EAC79790083D0F4 /* signupButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9A1EAC79790083D0F4 /* signupButton.png */; };
 		9F7DEF9D1EB6F1AA0083D0F4 /* earth-day (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9C1EB6F1AA0083D0F4 /* earth-day (2).png */; };
 		9F7DEF9F1EB6F1B30083D0F4 /* racing-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEF9E1EB6F1B30083D0F4 /* racing-flag.png */; };
+		9F7DEFA91EB830370083D0F4 /* bananaBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA01EB830370083D0F4 /* bananaBig.png */; };
+		9F7DEFAA1EB830370083D0F4 /* cloudBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA11EB830370083D0F4 /* cloudBig.png */; };
+		9F7DEFAB1EB830370083D0F4 /* co2Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA21EB830370083D0F4 /* co2Big.png */; };
+		9F7DEFAC1EB830370083D0F4 /* ecology (1)Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA31EB830370083D0F4 /* ecology (1)Big.png */; };
+		9F7DEFAD1EB830370083D0F4 /* oilBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA41EB830370083D0F4 /* oilBig.png */; };
+		9F7DEFAE1EB830370083D0F4 /* renewable-energyBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA51EB830370083D0F4 /* renewable-energyBig.png */; };
+		9F7DEFAF1EB830370083D0F4 /* solar-panels (1)Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA61EB830370083D0F4 /* solar-panels (1)Big.png */; };
+		9F7DEFB01EB830370083D0F4 /* tagBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA71EB830370083D0F4 /* tagBig.png */; };
+		9F7DEFB11EB830370083D0F4 /* truckBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFA81EB830370083D0F4 /* truckBig.png */; };
+		9F7DEFB41EB837D60083D0F4 /* forestBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFB21EB837D60083D0F4 /* forestBig.png */; };
+		9F7DEFB51EB837D60083D0F4 /* riverBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFB31EB837D60083D0F4 /* riverBig.png */; };
+		9F7DEFB71EB83A370083D0F4 /* henBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFB61EB83A370083D0F4 /* henBig.png */; };
+		9F7DEFB91EB840D20083D0F4 /* co2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFB81EB840D20083D0F4 /* co2.png */; };
+		9F7DEFC51EB840E20083D0F4 /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFBA1EB840E20083D0F4 /* banana.png */; };
+		9F7DEFC61EB840E20083D0F4 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFBB1EB840E20083D0F4 /* cloud.png */; };
+		9F7DEFC71EB840E20083D0F4 /* ecology (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFBC1EB840E20083D0F4 /* ecology (1).png */; };
+		9F7DEFC81EB840E20083D0F4 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFBD1EB840E20083D0F4 /* forest.png */; };
+		9F7DEFC91EB840E20083D0F4 /* hen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFBE1EB840E20083D0F4 /* hen.png */; };
+		9F7DEFCA1EB840E20083D0F4 /* oil.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFBF1EB840E20083D0F4 /* oil.png */; };
+		9F7DEFCB1EB840E20083D0F4 /* renewable-energy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFC01EB840E20083D0F4 /* renewable-energy.png */; };
+		9F7DEFCC1EB840E20083D0F4 /* river.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFC11EB840E20083D0F4 /* river.png */; };
+		9F7DEFCD1EB840E20083D0F4 /* solar-panels (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFC21EB840E20083D0F4 /* solar-panels (1).png */; };
+		9F7DEFCE1EB840E20083D0F4 /* tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFC31EB840E20083D0F4 /* tag.png */; };
+		9F7DEFCF1EB840E20083D0F4 /* truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFC41EB840E20083D0F4 /* truck.png */; };
+		9F7DEFD11EB847380083D0F4 /* animal01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD01EB847380083D0F4 /* animal01.jpg */; };
+		9F7DEFD31EB856390083D0F4 /* climate01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD21EB856390083D0F4 /* climate01.jpg */; };
+		9F7DEFE21EB902410083D0F4 /* energy01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD41EB902410083D0F4 /* energy01.jpg */; };
+		9F7DEFE31EB902410083D0F4 /* foodwaste01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD51EB902410083D0F4 /* foodwaste01.jpg */; };
+		9F7DEFE41EB902410083D0F4 /* forest01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD61EB902410083D0F4 /* forest01.jpg */; };
+		9F7DEFE51EB902410083D0F4 /* grasslands01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD71EB902410083D0F4 /* grasslands01.jpg */; };
+		9F7DEFE61EB902410083D0F4 /* greenwashing01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD81EB902410083D0F4 /* greenwashing01.jpeg */; };
+		9F7DEFE71EB902410083D0F4 /* local01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFD91EB902410083D0F4 /* local01.png */; };
+		9F7DEFE81EB902410083D0F4 /* local02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFDA1EB902410083D0F4 /* local02.jpg */; };
+		9F7DEFE91EB902410083D0F4 /* plastic01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFDB1EB902410083D0F4 /* plastic01.jpg */; };
+		9F7DEFEA1EB902410083D0F4 /* plastic02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFDC1EB902410083D0F4 /* plastic02.jpg */; };
+		9F7DEFEB1EB902410083D0F4 /* pollution01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFDD1EB902410083D0F4 /* pollution01.jpg */; };
+		9F7DEFEC1EB902410083D0F4 /* relocate01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFDE1EB902410083D0F4 /* relocate01.jpg */; };
+		9F7DEFED1EB902410083D0F4 /* shopgreen01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFDF1EB902410083D0F4 /* shopgreen01.jpg */; };
+		9F7DEFEE1EB902410083D0F4 /* solarenergy01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFE01EB902410083D0F4 /* solarenergy01.png */; };
+		9F7DEFEF1EB902410083D0F4 /* sustainability01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DEFE11EB902410083D0F4 /* sustainability01.jpg */; };
 		9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */; };
 		9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */; };
 		9FA23F711E8C562000D5CAB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23F701E8C562000D5CAB9 /* Product.swift */; };
@@ -206,6 +246,46 @@
 		9F7DEF9A1EAC79790083D0F4 /* signupButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupButton.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/signupButton.png"; sourceTree = "<group>"; };
 		9F7DEF9C1EB6F1AA0083D0F4 /* earth-day (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "earth-day (2).png"; path = "../../../../Downloads/earth-day (2).png"; sourceTree = "<group>"; };
 		9F7DEF9E1EB6F1B30083D0F4 /* racing-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "racing-flag.png"; path = "../../../../Downloads/racing-flag.png"; sourceTree = "<group>"; };
+		9F7DEFA01EB830370083D0F4 /* bananaBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bananaBig.png; path = ../../../../Downloads/bananaBig.png; sourceTree = "<group>"; };
+		9F7DEFA11EB830370083D0F4 /* cloudBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cloudBig.png; path = ../../../../Downloads/cloudBig.png; sourceTree = "<group>"; };
+		9F7DEFA21EB830370083D0F4 /* co2Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = co2Big.png; path = ../../../../Downloads/co2Big.png; sourceTree = "<group>"; };
+		9F7DEFA31EB830370083D0F4 /* ecology (1)Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ecology (1)Big.png"; path = "../../../../Downloads/ecology (1)Big.png"; sourceTree = "<group>"; };
+		9F7DEFA41EB830370083D0F4 /* oilBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oilBig.png; path = ../../../../Downloads/oilBig.png; sourceTree = "<group>"; };
+		9F7DEFA51EB830370083D0F4 /* renewable-energyBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "renewable-energyBig.png"; path = "../../../../Downloads/renewable-energyBig.png"; sourceTree = "<group>"; };
+		9F7DEFA61EB830370083D0F4 /* solar-panels (1)Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solar-panels (1)Big.png"; path = "../../../../Downloads/solar-panels (1)Big.png"; sourceTree = "<group>"; };
+		9F7DEFA71EB830370083D0F4 /* tagBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tagBig.png; path = ../../../../Downloads/tagBig.png; sourceTree = "<group>"; };
+		9F7DEFA81EB830370083D0F4 /* truckBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truckBig.png; path = ../../../../Downloads/truckBig.png; sourceTree = "<group>"; };
+		9F7DEFB21EB837D60083D0F4 /* forestBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forestBig.png; path = ../../../../Downloads/forestBig.png; sourceTree = "<group>"; };
+		9F7DEFB31EB837D60083D0F4 /* riverBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = riverBig.png; path = ../../../../Downloads/riverBig.png; sourceTree = "<group>"; };
+		9F7DEFB61EB83A370083D0F4 /* henBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = henBig.png; path = ../../../../Downloads/henBig.png; sourceTree = "<group>"; };
+		9F7DEFB81EB840D20083D0F4 /* co2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = co2.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/co2.png"; sourceTree = "<group>"; };
+		9F7DEFBA1EB840E20083D0F4 /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banana.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/banana.png"; sourceTree = "<group>"; };
+		9F7DEFBB1EB840E20083D0F4 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cloud.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/cloud.png"; sourceTree = "<group>"; };
+		9F7DEFBC1EB840E20083D0F4 /* ecology (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ecology (1).png"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/ecology (1).png"; sourceTree = "<group>"; };
+		9F7DEFBD1EB840E20083D0F4 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forest.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/forest.png"; sourceTree = "<group>"; };
+		9F7DEFBE1EB840E20083D0F4 /* hen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hen.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/hen.png"; sourceTree = "<group>"; };
+		9F7DEFBF1EB840E20083D0F4 /* oil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oil.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/oil.png"; sourceTree = "<group>"; };
+		9F7DEFC01EB840E20083D0F4 /* renewable-energy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "renewable-energy.png"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/renewable-energy.png"; sourceTree = "<group>"; };
+		9F7DEFC11EB840E20083D0F4 /* river.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = river.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/river.png"; sourceTree = "<group>"; };
+		9F7DEFC21EB840E20083D0F4 /* solar-panels (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solar-panels (1).png"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/solar-panels (1).png"; sourceTree = "<group>"; };
+		9F7DEFC31EB840E20083D0F4 /* tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tag.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/tag.png"; sourceTree = "<group>"; };
+		9F7DEFC41EB840E20083D0F4 /* truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Capstone/INST776/Prototyping/High-Fidelity Prototype/icons/facts/truck.png"; sourceTree = "<group>"; };
+		9F7DEFD01EB847380083D0F4 /* animal01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = animal01.jpg; path = ../../../../Downloads/animal01.jpg; sourceTree = "<group>"; };
+		9F7DEFD21EB856390083D0F4 /* climate01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = climate01.jpg; path = ../../../../Downloads/climate01.jpg; sourceTree = "<group>"; };
+		9F7DEFD41EB902410083D0F4 /* energy01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = energy01.jpg; path = ../../../../Downloads/energy01.jpg; sourceTree = "<group>"; };
+		9F7DEFD51EB902410083D0F4 /* foodwaste01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = foodwaste01.jpg; path = ../../../../Downloads/foodwaste01.jpg; sourceTree = "<group>"; };
+		9F7DEFD61EB902410083D0F4 /* forest01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = forest01.jpg; path = ../../../../Downloads/forest01.jpg; sourceTree = "<group>"; };
+		9F7DEFD71EB902410083D0F4 /* grasslands01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = grasslands01.jpg; path = ../../../../Downloads/grasslands01.jpg; sourceTree = "<group>"; };
+		9F7DEFD81EB902410083D0F4 /* greenwashing01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = greenwashing01.jpeg; path = ../../../../Downloads/greenwashing01.jpeg; sourceTree = "<group>"; };
+		9F7DEFD91EB902410083D0F4 /* local01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = local01.png; path = ../../../../Downloads/local01.png; sourceTree = "<group>"; };
+		9F7DEFDA1EB902410083D0F4 /* local02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = local02.jpg; path = ../../../../Downloads/local02.jpg; sourceTree = "<group>"; };
+		9F7DEFDB1EB902410083D0F4 /* plastic01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = plastic01.jpg; path = ../../../../Downloads/plastic01.jpg; sourceTree = "<group>"; };
+		9F7DEFDC1EB902410083D0F4 /* plastic02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = plastic02.jpg; path = ../../../../Downloads/plastic02.jpg; sourceTree = "<group>"; };
+		9F7DEFDD1EB902410083D0F4 /* pollution01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pollution01.jpg; path = ../../../../Downloads/pollution01.jpg; sourceTree = "<group>"; };
+		9F7DEFDE1EB902410083D0F4 /* relocate01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = relocate01.jpg; path = ../../../../Downloads/relocate01.jpg; sourceTree = "<group>"; };
+		9F7DEFDF1EB902410083D0F4 /* shopgreen01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = shopgreen01.jpg; path = ../../../../Downloads/shopgreen01.jpg; sourceTree = "<group>"; };
+		9F7DEFE01EB902410083D0F4 /* solarenergy01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = solarenergy01.png; path = ../../../../Downloads/solarenergy01.png; sourceTree = "<group>"; };
+		9F7DEFE11EB902410083D0F4 /* sustainability01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sustainability01.jpg; path = ../../../../Downloads/sustainability01.jpg; sourceTree = "<group>"; };
 		9FA23F6C1E8C50DC00D5CAB9 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = ../../../../Downloads/barcode.png; sourceTree = "<group>"; };
 		9FA23F6E1E8C551C00D5CAB9 /* questions-circular-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questions-circular-button.png"; path = "../../../../Downloads/questions-circular-button.png"; sourceTree = "<group>"; };
 		9FA23F701E8C562000D5CAB9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -297,14 +377,60 @@
 		9F5A7AEB1E91753200C6B097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DEFD41EB902410083D0F4 /* energy01.jpg */,
+				9F7DEFD51EB902410083D0F4 /* foodwaste01.jpg */,
+				9F7DEFD61EB902410083D0F4 /* forest01.jpg */,
+				9F7DEFD71EB902410083D0F4 /* grasslands01.jpg */,
+				9F7DEFD81EB902410083D0F4 /* greenwashing01.jpeg */,
+				9F7DEFD91EB902410083D0F4 /* local01.png */,
+				9F7DEFDA1EB902410083D0F4 /* local02.jpg */,
+				9F7DEFDB1EB902410083D0F4 /* plastic01.jpg */,
+				9F7DEFDC1EB902410083D0F4 /* plastic02.jpg */,
+				9F7DEFDD1EB902410083D0F4 /* pollution01.jpg */,
+				9F7DEFDE1EB902410083D0F4 /* relocate01.jpg */,
+				9F7DEFDF1EB902410083D0F4 /* shopgreen01.jpg */,
+				9F7DEFE01EB902410083D0F4 /* solarenergy01.png */,
+				9F7DEFE11EB902410083D0F4 /* sustainability01.jpg */,
+				9F7DEFD21EB856390083D0F4 /* climate01.jpg */,
+				9F7DEFD01EB847380083D0F4 /* animal01.jpg */,
+				9F7DEFA21EB830370083D0F4 /* co2Big.png */,
+				9F7DEFB81EB840D20083D0F4 /* co2.png */,
+				9F7DEFBA1EB840E20083D0F4 /* banana.png */,
+				9F7DEFBB1EB840E20083D0F4 /* cloud.png */,
+				9F7DEFBC1EB840E20083D0F4 /* ecology (1).png */,
+				9F7DEFBD1EB840E20083D0F4 /* forest.png */,
+				9F7DEFBE1EB840E20083D0F4 /* hen.png */,
+				9F7DEFBF1EB840E20083D0F4 /* oil.png */,
+				9F7DEFC01EB840E20083D0F4 /* renewable-energy.png */,
+				9F7DEFC11EB840E20083D0F4 /* river.png */,
+				9F7DEFC21EB840E20083D0F4 /* solar-panels (1).png */,
+				9F7DEFC31EB840E20083D0F4 /* tag.png */,
+				9F7DEFC41EB840E20083D0F4 /* truck.png */,
+				9F5A7B041E91A65200C6B097 /* water.png */,
+				9F7DEFB31EB837D60083D0F4 /* riverBig.png */,
+				9F5A7B001E91A64700C6B097 /* lettuce.png */,
+				9F7DEFB61EB83A370083D0F4 /* henBig.png */,
+				9F7DEFB21EB837D60083D0F4 /* forestBig.png */,
+				9F7DEFA31EB830370083D0F4 /* ecology (1)Big.png */,
+				9F7DEFA11EB830370083D0F4 /* cloudBig.png */,
+				9F7DEFA71EB830370083D0F4 /* tagBig.png */,
+				9F7DEFA41EB830370083D0F4 /* oilBig.png */,
+				9F7DEFA81EB830370083D0F4 /* truckBig.png */,
+				9F7DEFA51EB830370083D0F4 /* renewable-energyBig.png */,
+				9F7DEFA01EB830370083D0F4 /* bananaBig.png */,
+				9F7DEFA61EB830370083D0F4 /* solar-panels (1)Big.png */,
 				9F7DEF9C1EB6F1AA0083D0F4 /* earth-day (2).png */,
+				9F5A7B031E91A65200C6B097 /* water-drop.png */,
 				9F7DEF9E1EB6F1B30083D0F4 /* racing-flag.png */,
 				9F7DEF981EAC79720083D0F4 /* loginButton.png */,
 				9F7DEF9A1EAC79790083D0F4 /* signupButton.png */,
 				9F7DEF961EAC777C0083D0F4 /* close-cross-circular-interface-button.png */,
+				9F5A7B051E91A65200C6B097 /* zebra.png */,
 				9F7DEF941EAC6B5E0083D0F4 /* rankingBtnBlue.png */,
 				9F7DEF921EAC67E10083D0F4 /* rankingButton.png */,
 				9F7DEF901EAC5F100083D0F4 /* leaf.png */,
+				9F5A7AFE1E91A64100C6B097 /* air.png */,
+				9F5A7B021E91A65200C6B097 /* meat.png */,
 				9F7DEF8E1EAC59840083D0F4 /* cheers.png */,
 				9F7DEF8C1EAC56710083D0F4 /* fireworks.png */,
 				9F7DEF861EAC37840083D0F4 /* confetti.png */,
@@ -331,12 +457,6 @@
 				9F5A7B121E9205EF00C6B097 /* groceries.png */,
 				9F5A7B141E9205F700C6B097 /* shield2.png */,
 				9F5A7B161E92062700C6B097 /* sprout (1).png */,
-				9F5A7AFE1E91A64100C6B097 /* air.png */,
-				9F5A7B001E91A64700C6B097 /* lettuce.png */,
-				9F5A7B021E91A65200C6B097 /* meat.png */,
-				9F5A7B031E91A65200C6B097 /* water-drop.png */,
-				9F5A7B041E91A65200C6B097 /* water.png */,
-				9F5A7B051E91A65200C6B097 /* zebra.png */,
 				9F019E131E8B260F0073F556 /* ecology.png */,
 				9F23CA4A1E8F072200E7650A /* bus.png */,
 				9F23CA4C1E8F073100E7650A /* car.png */,
@@ -497,25 +617,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7DEFCE1EB840E20083D0F4 /* tag.png in Resources */,
+				9F7DEFCC1EB840E20083D0F4 /* river.png in Resources */,
+				9F7DEFE21EB902410083D0F4 /* energy01.jpg in Resources */,
 				9F23CA4D1E8F073100E7650A /* car.png in Resources */,
+				9F7DEFAE1EB830370083D0F4 /* renewable-energyBig.png in Resources */,
+				9F7DEFB91EB840D20083D0F4 /* co2.png in Resources */,
+				9F7DEFE31EB902410083D0F4 /* foodwaste01.jpg in Resources */,
+				9F7DEFE81EB902410083D0F4 /* local02.jpg in Resources */,
+				9F7DEFC91EB840E20083D0F4 /* hen.png in Resources */,
+				9F7DEFAC1EB830370083D0F4 /* ecology (1)Big.png in Resources */,
+				9F7DEFB71EB83A370083D0F4 /* henBig.png in Resources */,
 				9F6DD93B1E9B3FC7007BB7C5 /* groceriesSmall.png in Resources */,
+				9F7DEFE41EB902410083D0F4 /* forest01.jpg in Resources */,
 				9F23CA4B1E8F072300E7650A /* bus.png in Resources */,
 				9F7DEF911EAC5F100083D0F4 /* leaf.png in Resources */,
 				9F5A7B071E91A65200C6B097 /* water-drop.png in Resources */,
 				9F5A7B061E91A65200C6B097 /* meat.png in Resources */,
 				9F23CA531E8F074800E7650A /* train.png in Resources */,
 				9F5A7B0F1E91FAE000C6B097 /* recycle.png in Resources */,
+				9F7DEFD31EB856390083D0F4 /* climate01.jpg in Resources */,
 				9F5A7B2E1E93536200C6B097 /* padlock.png in Resources */,
+				9F7DEFCA1EB840E20083D0F4 /* oil.png in Resources */,
 				9F6DD93C1E9B3FC7007BB7C5 /* recycleSmall.png in Resources */,
+				9F7DEFAA1EB830370083D0F4 /* cloudBig.png in Resources */,
 				9FA23F6F1E8C551C00D5CAB9 /* questions-circular-button.png in Resources */,
 				9F7DEF871EAC37840083D0F4 /* confetti.png in Resources */,
 				9F5A7B2D1E93536200C6B097 /* logout.png in Resources */,
 				9F019E161E8B261A0073F556 /* winner.png in Resources */,
 				9F5A7B081E91A65200C6B097 /* water.png in Resources */,
+				9F7DEFB51EB837D60083D0F4 /* riverBig.png in Resources */,
+				9F7DEFED1EB902410083D0F4 /* shopgreen01.jpg in Resources */,
+				9F7DEFAF1EB830370083D0F4 /* solar-panels (1)Big.png in Resources */,
 				9F7DEF971EAC777C0083D0F4 /* close-cross-circular-interface-button.png in Resources */,
 				9FF9779C1E78637C0038ABEE /* help-button.png in Resources */,
 				9F6DD93F1E9B3FC7007BB7C5 /* winnerSmall.png in Resources */,
+				9F7DEFB01EB830370083D0F4 /* tagBig.png in Resources */,
+				9F7DEFD11EB847380083D0F4 /* animal01.jpg in Resources */,
 				9F7DEF8D1EAC56710083D0F4 /* fireworks.png in Resources */,
+				9F7DEFB41EB837D60083D0F4 /* forestBig.png in Resources */,
 				9FF9778C1E77B4120038ABEE /* bicycle-rider.png in Resources */,
 				9F7DEF931EAC67E10083D0F4 /* rankingButton.png in Resources */,
 				9FF9778E1E77B4170038ABEE /* icon.png in Resources */,
@@ -527,24 +667,38 @@
 				9F5A7AFF1E91A64100C6B097 /* air.png in Resources */,
 				9F7DEF9D1EB6F1AA0083D0F4 /* earth-day (2).png in Resources */,
 				9F57AA9E1E997DC800BCD6FA /* recycleInfoCard.png in Resources */,
+				9F7DEFA91EB830370083D0F4 /* bananaBig.png in Resources */,
 				9F7DEF8F1EAC59840083D0F4 /* cheers.png in Resources */,
 				9F019E081E8AAE550073F556 /* menu.png in Resources */,
 				9F019E121E8B21D40073F556 /* shield.png in Resources */,
+				9F7DEFEE1EB902410083D0F4 /* solarenergy01.png in Resources */,
 				9F0672221E771DD600286C6F /* LaunchScreen.storyboard in Resources */,
+				9F7DEFAB1EB830370083D0F4 /* co2Big.png in Resources */,
 				9F019E141E8B260F0073F556 /* ecology.png in Resources */,
+				9F7DEFE51EB902410083D0F4 /* grasslands01.jpg in Resources */,
+				9F7DEFEC1EB902410083D0F4 /* relocate01.jpg in Resources */,
 				9F5A7B0D1E91FAB700C6B097 /* farm.png in Resources */,
 				9FA23F6D1E8C50DC00D5CAB9 /* barcode.png in Resources */,
+				9F7DEFC81EB840E20083D0F4 /* forest.png in Resources */,
 				9F23CA4F1E8F073A00E7650A /* cycling.png in Resources */,
+				9F7DEFCD1EB840E20083D0F4 /* solar-panels (1).png in Resources */,
 				9F5A7B011E91A64700C6B097 /* lettuce.png in Resources */,
 				9FF977941E77B42C0038ABEE /* trash-container-for-recycle.png in Resources */,
 				9F5A7B111E9205E900C6B097 /* electric-car.png in Resources */,
+				9F7DEFC71EB840E20083D0F4 /* ecology (1).png in Resources */,
 				9F5A7B191E92077500C6B097 /* user.png in Resources */,
+				9F7DEFC51EB840E20083D0F4 /* banana.png in Resources */,
 				9F23CA511E8F074200E7650A /* running.png in Resources */,
+				9F7DEFE61EB902410083D0F4 /* greenwashing01.jpeg in Resources */,
 				9F5830BC1E8CC4430030E696 /* home.png in Resources */,
 				9F5A7B2C1E93536200C6B097 /* gift.png in Resources */,
+				9F7DEFE71EB902410083D0F4 /* local01.png in Resources */,
+				9F7DEFEF1EB902410083D0F4 /* sustainability01.jpg in Resources */,
 				9F57AAA21E997DD400BCD6FA /* trashInfoCard.png in Resources */,
+				9F7DEFB11EB830370083D0F4 /* truckBig.png in Resources */,
 				9FF977921E77B4260038ABEE /* open-book-top-view.png in Resources */,
 				9F5A7B131E9205EF00C6B097 /* groceries.png in Resources */,
+				9F7DEFCB1EB840E20083D0F4 /* renewable-energy.png in Resources */,
 				9F5A7B2B1E93536200C6B097 /* file.png in Resources */,
 				9F7DEF991EAC79720083D0F4 /* loginButton.png in Resources */,
 				9FF9778A1E77B34C0038ABEE /* groceriesBtn.png in Resources */,
@@ -553,12 +707,18 @@
 				9F6DD93E1E9B3FC7007BB7C5 /* sproutSmall.png in Resources */,
 				9F06722F1E772A0E00286C6F /* GoogleService-Info.plist in Resources */,
 				9FF977961E77B95C0038ABEE /* spider.png in Resources */,
+				9F7DEFCF1EB840E20083D0F4 /* truck.png in Resources */,
 				9F6DD93D1E9B3FC7007BB7C5 /* shield2Small.png in Resources */,
+				9F7DEFE91EB902410083D0F4 /* plastic01.jpg in Resources */,
 				9F5A7B091E91A65200C6B097 /* zebra.png in Resources */,
 				9F6DD93A1E9B3FC7007BB7C5 /* electric-carSmall.png in Resources */,
 				9FF977901E77B41C0038ABEE /* medal.png in Resources */,
+				9F7DEFEA1EB902410083D0F4 /* plastic02.jpg in Resources */,
 				9F57AAA01E997DCF00BCD6FA /* compostInfoCard.png in Resources */,
 				9F7DEF9F1EB6F1B30083D0F4 /* racing-flag.png in Resources */,
+				9F7DEFEB1EB902410083D0F4 /* pollution01.jpg in Resources */,
+				9F7DEFC61EB840E20083D0F4 /* cloud.png in Resources */,
+				9F7DEFAD1EB830370083D0F4 /* oilBig.png in Resources */,
 				9F7DEF951EAC6B5E0083D0F4 /* rankingBtnBlue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

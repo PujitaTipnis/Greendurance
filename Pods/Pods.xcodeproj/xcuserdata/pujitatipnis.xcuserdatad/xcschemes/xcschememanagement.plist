@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ROBarcodeScanner.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06A409ABEA56C0C9FA5EA5949F2B68EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>19ABD7C66113A9EDBE8D26A2460F7415</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1F3CDFE7C07A3852135763CCF10A240A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B8ECFAF329E0B51E094B67AD708843C</key>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<key>CBF6970B549E9648711200B43F244F00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

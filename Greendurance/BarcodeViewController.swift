@@ -16,6 +16,8 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     let points = Points()
+    var barcodeFound : Bool = false
+    var barcodeNotFound : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +96,7 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: readableObject.stringValue);
+            
         }
         
         dismiss(animated: true)
@@ -167,15 +170,16 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                         totalRef.updateChildValues(childUpdates)
                         
                         self.points.total = total
-                        self.captureSession.stopRunning()
+                        
+                        //self.barcodeFound = true
+                        self.performSegue(withIdentifier: "barcodeSuccessSegue", sender: self.points)
+                        
                         //print("Total is \(self.points.total)")
                         //self.navigationController?.popViewController(animated: true)
-                        self.performSegue(withIdentifier: "barcodeSuccessSegue", sender: self.points)
+                        //self.performSegue(withIdentifier: "barcodeSuccessSegue", sender: self.points)
+                        //self.captureSession.stopRunning()
                     })
                     
-                } else {
-                    // barcode not found
-                    self.navigationController?.popViewController(animated: true)
                 }
                 
             }
@@ -183,15 +187,30 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print ("barcode success segue")
+        
         if segue.identifier == "barcodeSuccessSegue" {
+            print ("barcode success segue")
             let nextVC = segue.destination as! GroceriesModalViewController
             nextVC.points = sender as! Points
+        } else {
+            print("barcode not found")
+            
+            let alert = UIAlertController(title: "Oops", message: "Product not found", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK",
+                                         style: .default)
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        // changed to false
+        return false
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

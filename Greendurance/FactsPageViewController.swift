@@ -15,8 +15,12 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var factsButton: UIBarButtonItem!
     
     //var facts : [Fact] = []
-    var factImage : [String] = ["air.png", "water.png", "lettuce.png", "water-drop.png", "zebra.png", "meat.png"]
-    var facts : [String] = ["Air", "Plastic", "Local Food", "Water", "Wildlife", "Meat"]
+    var factImage : [String] = ["co2.png", "water.png", "river.png", "lettuce.png", "hen.png", "forest.png", "ecology (1).png", "cloud.png", "tag.png", "oil.png", "truck.png", "renewable-energy.png", "banana.png", "solar-panels (1).png", "water.png", "lettuce.png"]
+    
+    var facts : [String] = ["Pollution", "Plastic Bottles", "Why Grasslands are important", "Why shop local?", "The truth about Factory Farms", "Benefits of Urban Forests", "Sustainable Planet", "Attitudes toward Climate Change", "Think Green before you Shop", "Greenwashing", "Reuse, Reduce, and Relocate", "Energy Independence", "Food Waste and Hunger", "The Truth about Solar Energy", "Think before you Drink", "Why Buying Local is Worth Every Cent"]
+    
+    var factInfographic : [String] = ["pollution01.jpg", "plastic01.jpg", "grasslands01.jpg", "local01.png", "animal01.jpg", "forest01.jpg", "sustainability01.jpg", "climate01.jpg", "shopgreen01.jpg", "greenwashing01.jpeg", "relocate01.jpg", "energy01.jpg", "foodwaste01.jpg", "solarenergy01.png", "plastic02.jpg", "local02.jpg"]
+    
     //var imageURL = ""
     //var desc = ""
     //var category = ""
@@ -71,6 +75,7 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel?.text = facts[indexPath.row]
         cell.imageView?.sizeThatFits(CGSize(width: 32, height: 32))
         cell.imageView?.image = UIImage(named: factImage[indexPath.row])
+        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
         
         //var cell = tableView.dequeueReusableCell(withIdentifier: "factID", for: indexPath)
         
@@ -101,7 +106,7 @@ class FactsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let fact = Fact()
         //fact = facts[indexPath.row]
-        fact.category = facts[indexPath.row]
+        fact.imageURL = factInfographic[indexPath.row]
         
         performSegue(withIdentifier: "factDescSegue", sender: fact)
     }
