@@ -123,6 +123,7 @@ class GroceriesModalViewController: UIViewController {
         updateRating()
         
         self.okButton.isEnabled = false
+        self.okButton.backgroundColor = UIColor.lightGray
         
         // Dismiss the view controller (the first screen) that
         // was presented modally by the view controller

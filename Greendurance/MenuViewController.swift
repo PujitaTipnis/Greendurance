@@ -20,8 +20,8 @@ class MenuViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
         menuSegue = ["Home","Settings","Credits","TermsConditions","PrivacyPolicy","SignOut"]
-        menuArray = ["Home","Settings","Credits","Terms & Conditions","Privacy Policy","Sign Out"]
-        menuImages = ["home.png","settings.png","gift.png","file.png","padlock.png","logout.png"]
+        menuArray = ["Home","Farmer's Market","Credits","Terms & Conditions","Privacy Policy","Sign Out"]
+        menuImages = ["home.png","carrot-and-apple.png","gift.png","file.png","padlock.png","logout.png"]
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

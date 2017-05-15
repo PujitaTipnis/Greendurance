@@ -15,6 +15,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var welcomeDescLabel: UILabel!
     @IBOutlet weak var spiderImageView: UIImageView!
+    @IBOutlet weak var welcomeOldUserLabel: UILabel!
     
     @IBOutlet weak var leafImageView: UIImageView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -65,6 +66,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         self.welcomeLabel.isHidden = true
         self.welcomeDescLabel.isHidden = true
         self.spiderImageView.isHidden = true
+        self.welcomeOldUserLabel.isHidden = true
         
         self.collectionView.isScrollEnabled = false
         
@@ -79,8 +81,16 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                 //print("login happened")
                 //print ("See here: \(String(describing: user.email))")
                 
-                let ref = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("total")
-                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                let ref = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!)
+                
+                ref.child("name").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let userName = snapshot.value as! String
+                    self.welcomeLabel.text = "Welcome \(userName)"
+                    self.welcomeOldUserLabel.text = "Welcome \(userName)"
+                    print (userName)
+                })
+                
+                ref.child("total").observeSingleEvent(of: .value, with: { (snapshot) in
                     self.pointsLabel.isHidden = false
                     self.leafImageView.isHidden = false
                     
@@ -106,6 +116,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                         self.welcomeLabel.isHidden = false
                         self.welcomeDescLabel.isHidden = false
                         self.spiderImageView.isHidden = false
+                        self.welcomeOldUserLabel.isHidden = true
                         
                     } else {
                         // Earned more than zero points
@@ -126,6 +137,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                         self.welcomeLabel.isHidden = true
                         self.welcomeDescLabel.isHidden = true
                         self.spiderImageView.isHidden = true
+                        self.welcomeOldUserLabel.isHidden = false
                     }
                 })
                 

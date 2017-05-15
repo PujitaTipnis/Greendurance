@@ -61,7 +61,7 @@ class SignInViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Greendurance", message: "Sign Up", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Greendurance", message: "Sign Up! Password must be at least 6 characters long.", preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { action in
             // 1
@@ -72,6 +72,8 @@ class SignInViewController: UIViewController {
             // 2
             FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: {(user, error) in
                 if error == nil {
+                    
+                    print("signing up now...")
                     // 3
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("password").setValue(passwordField.text)
@@ -81,7 +83,7 @@ class SignInViewController: UIViewController {
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("totalDispBadges").setValue(0)
                     FIRDatabase.database().reference().child("users").child(user!.uid).child("name").setValue(fullNameField.text)
                     
-                    //FIRAuth.auth()!.signIn(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!)so
+                    //FIRAuth.auth()!.signIn(withEmail: self.userNameTextField.text!, password: self.passwordTextField.text!)
                     FIRAuth.auth()!.signIn(withEmail: user!.email!, password: passwordField.text!)
                     self.performSegue(withIdentifier: "SignInSegue", sender: nil)
                 }

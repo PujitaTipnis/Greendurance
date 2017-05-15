@@ -12,9 +12,10 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class FactDescViewController: UIViewController {
+class FactDescViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     //var fact = ""
     var fact = Fact()
@@ -23,6 +24,11 @@ class FactDescViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scrollView.maximumZoomScale = 6.0
+        self.scrollView.minimumZoomScale = 0.5
+        self.scrollView.contentSize = self.imageView.frame.size
+        self.scrollView.delegate = self
     }
     
     /*override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +55,14 @@ class FactDescViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.imageView.image = UIImage(named: fact.imageURL)
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.imageView
+    }
+    
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        
     }
     
 }
