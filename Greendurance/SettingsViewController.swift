@@ -42,10 +42,6 @@ class SettingsViewController: UIViewController, UISearchBarDelegate {
         mapView.addAnnotations(farmersMktArray)
     }
     
-    @IBAction func searchButtonTapped(_ sender: Any) {
-        
-    }
-    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)

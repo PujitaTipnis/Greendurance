@@ -30,6 +30,8 @@
 		9F0AEEC71ECA2CFE00919E32 /* SettingsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AEEC61ECA2CFE00919E32 /* SettingsMapView.swift */; };
 		9F0AEEC91ECA40FB00919E32 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AEEC81ECA40FB00919E32 /* JSON.swift */; };
 		9F0AEECD1ECA71A900919E32 /* farmersMarketCP.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F0AEECC1ECA71A900919E32 /* farmersMarketCP.json */; };
+		9F0AEECF1ECACCFB00919E32 /* DisposalCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AEECE1ECACCFB00919E32 /* DisposalCardViewController.swift */; };
+		9F0AEED11ECACFDB00919E32 /* disposalCards.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0AEED01ECACFDB00919E32 /* disposalCards.png */; };
 		9F23CA4B1E8F072300E7650A /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA4A1E8F072200E7650A /* bus.png */; };
 		9F23CA4D1E8F073100E7650A /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA4C1E8F073100E7650A /* car.png */; };
 		9F23CA4F1E8F073A00E7650A /* cycling.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F23CA4E1E8F073A00E7650A /* cycling.png */; };
@@ -186,6 +188,8 @@
 		9F0AEEC61ECA2CFE00919E32 /* SettingsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsMapView.swift; sourceTree = "<group>"; };
 		9F0AEEC81ECA40FB00919E32 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		9F0AEECC1ECA71A900919E32 /* farmersMarketCP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = farmersMarketCP.json; sourceTree = "<group>"; };
+		9F0AEECE1ECACCFB00919E32 /* DisposalCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposalCardViewController.swift; sourceTree = "<group>"; };
+		9F0AEED01ECACFDB00919E32 /* disposalCards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disposalCards.png; sourceTree = "<group>"; };
 		9F23CA4A1E8F072200E7650A /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus.png; path = ../../../../Downloads/bus.png; sourceTree = "<group>"; };
 		9F23CA4C1E8F073100E7650A /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car.png; path = ../../../../Downloads/car.png; sourceTree = "<group>"; };
 		9F23CA4E1E8F073A00E7650A /* cycling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cycling.png; path = ../../../../Downloads/cycling.png; sourceTree = "<group>"; };
@@ -389,6 +393,7 @@
 		9F5A7AEB1E91753200C6B097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9F0AEED01ECACFDB00919E32 /* disposalCards.png */,
 				9F7DEFF01EB911D30083D0F4 /* farmersmarketmap.png */,
 				9F7DEFD41EB902410083D0F4 /* energy01.jpg */,
 				9F7DEFD51EB902410083D0F4 /* foodwaste01.jpg */,
@@ -515,6 +520,7 @@
 				9F019E211E8B7E4A0073F556 /* DisposalViewController.swift */,
 				9F57AA951E97FA3F00BCD6FA /* DisposalHelpModalViewController.swift */,
 				9F5A7AF01E9197FC00C6B097 /* DisposalModalViewController.swift */,
+				9F0AEECE1ECACCFB00919E32 /* DisposalCardViewController.swift */,
 				9F019E231E8B7E6D0073F556 /* BadgesViewController.swift */,
 				9F019E1D1E8B7DE10073F556 /* FriendsViewController.swift */,
 				9F57AA971E98742D00BCD6FA /* AddFriendsViewController.swift */,
@@ -702,6 +708,7 @@
 				9F7DEFC81EB840E20083D0F4 /* forest.png in Resources */,
 				9F23CA4F1E8F073A00E7650A /* cycling.png in Resources */,
 				9F7DEFCD1EB840E20083D0F4 /* solar-panels (1).png in Resources */,
+				9F0AEED11ECACFDB00919E32 /* disposalCards.png in Resources */,
 				9F7DEFF11EB911D30083D0F4 /* farmersmarketmap.png in Resources */,
 				9F5A7B011E91A64700C6B097 /* lettuce.png in Resources */,
 				9FF977941E77B42C0038ABEE /* trash-container-for-recycle.png in Resources */,
@@ -801,6 +808,7 @@
 			files = (
 				9F06721A1E771DD600286C6F /* SignInViewController.swift in Sources */,
 				9F5830B81E8C88800030E696 /* SWRevealViewController.m in Sources */,
+				9F0AEECF1ECACCFB00919E32 /* DisposalCardViewController.swift in Sources */,
 				9F71699A1E906BEB00F2B2BB /* Disposal.swift in Sources */,
 				9F57AAA61E9A02EF00BCD6FA /* AddSelectedFriendViewController.swift in Sources */,
 				9F57AAA41E9983AA00BCD6FA /* CosmosDistribOld.swift in Sources */,

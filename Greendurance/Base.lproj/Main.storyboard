@@ -1100,7 +1100,7 @@
         <!--Waste Disposal Cards-->
         <scene sceneID="gL7-7F-QUI">
             <objects>
-                <viewController title="Waste Disposal Cards" automaticallyAdjustsScrollViewInsets="NO" id="eU6-HP-jbq" sceneMemberID="viewController">
+                <viewController title="Waste Disposal Cards" automaticallyAdjustsScrollViewInsets="NO" id="eU6-HP-jbq" customClass="DisposalCardViewController" customModule="Greendurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TxQ-VO-feU"/>
                         <viewControllerLayoutGuide type="bottom" id="fSY-IM-C1F"/>
@@ -1109,39 +1109,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recycleInfoCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="UV2-yR-LAQ">
-                                <rect key="frame" x="67" y="84" width="240" height="128"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUG-ZG-mtu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disposalCards.png" translatesAutoresizingMaskIntoConstraints="NO" id="QfL-wG-8SL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="FfE-33-oZb"/>
-                                    <constraint firstAttribute="height" constant="128" id="njh-pX-mU7"/>
+                                    <constraint firstItem="QfL-wG-8SL" firstAttribute="centerX" secondItem="QUG-ZG-mtu" secondAttribute="centerX" id="0Zf-4n-m24"/>
+                                    <constraint firstItem="QfL-wG-8SL" firstAttribute="top" secondItem="QUG-ZG-mtu" secondAttribute="top" id="ZuH-Dv-33Z"/>
+                                    <constraint firstItem="QfL-wG-8SL" firstAttribute="leading" secondItem="QUG-ZG-mtu" secondAttribute="leading" id="eJ5-0W-Eal"/>
+                                    <constraint firstItem="QfL-wG-8SL" firstAttribute="width" secondItem="QUG-ZG-mtu" secondAttribute="width" id="qbk-2N-AVo"/>
+                                    <constraint firstAttribute="trailing" secondItem="QfL-wG-8SL" secondAttribute="trailing" id="v2z-Js-A13"/>
+                                    <constraint firstAttribute="bottom" secondItem="QfL-wG-8SL" secondAttribute="bottom" id="zVd-Bc-WyR"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trashInfoCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="QfL-wG-8SL">
-                                <rect key="frame" x="67" y="232" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="d1o-E8-urr"/>
-                                    <constraint firstAttribute="height" constant="128" id="fPS-yi-xUg"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compostInfoCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="X9I-We-t03">
-                                <rect key="frame" x="67" y="380" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="p4h-gp-hGt"/>
-                                    <constraint firstAttribute="height" constant="128" id="z7i-A4-k3f"/>
-                                </constraints>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UV2-yR-LAQ" firstAttribute="top" secondItem="TxQ-VO-feU" secondAttribute="bottom" constant="20" id="4R7-h9-yHF"/>
-                            <constraint firstItem="UV2-yR-LAQ" firstAttribute="centerX" secondItem="XqZ-RM-ih7" secondAttribute="centerX" id="B38-bP-zy6"/>
-                            <constraint firstItem="QfL-wG-8SL" firstAttribute="centerX" secondItem="XqZ-RM-ih7" secondAttribute="centerX" id="Gt4-58-O0F"/>
-                            <constraint firstItem="QfL-wG-8SL" firstAttribute="top" secondItem="UV2-yR-LAQ" secondAttribute="bottom" constant="20" id="Xz4-2I-scE"/>
-                            <constraint firstItem="X9I-We-t03" firstAttribute="top" secondItem="QfL-wG-8SL" secondAttribute="bottom" constant="20" id="hGo-um-JRN"/>
-                            <constraint firstItem="X9I-We-t03" firstAttribute="centerX" secondItem="XqZ-RM-ih7" secondAttribute="centerX" id="okp-qq-ewq"/>
+                            <constraint firstAttribute="trailing" secondItem="QUG-ZG-mtu" secondAttribute="trailing" id="F63-Mr-JZb"/>
+                            <constraint firstItem="QfL-wG-8SL" firstAttribute="height" secondItem="XqZ-RM-ih7" secondAttribute="height" id="Ird-30-ggt"/>
+                            <constraint firstItem="QUG-ZG-mtu" firstAttribute="leading" secondItem="XqZ-RM-ih7" secondAttribute="leading" id="QM5-36-C57"/>
+                            <constraint firstItem="QUG-ZG-mtu" firstAttribute="top" secondItem="TxQ-VO-feU" secondAttribute="bottom" id="ToU-c8-buG"/>
+                            <constraint firstItem="fSY-IM-C1F" firstAttribute="top" secondItem="QUG-ZG-mtu" secondAttribute="bottom" id="ZRA-kN-rfu"/>
+                            <constraint firstItem="QfL-wG-8SL" firstAttribute="width" secondItem="XqZ-RM-ih7" secondAttribute="width" id="k0Q-Y3-EHH"/>
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="700"/>
+                    <connections>
+                        <outlet property="scrollView" destination="QUG-ZG-mtu" id="wgp-47-Xdv"/>
+                        <outlet property="trashImageView" destination="QfL-wG-8SL" id="ONF-cV-wCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nvi-rQ-Hn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1922,13 +1921,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sK-IF-DH8">
-                                <rect key="frame" x="0.0" y="-1" width="375" height="2452"/>
+                                <rect key="frame" x="0.0" y="48" width="375" height="2403"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UN-EL-X4p">
                                         <rect key="frame" x="0.0" y="-24" width="375" height="2500"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-dR-AAE">
-                                                <rect key="frame" x="70" y="40" width="235" height="2246"/>
+                                                <rect key="frame" x="70" y="127" width="235" height="2246"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="235" id="d5C-Nz-5lT"/>
                                                     <constraint firstAttribute="height" constant="2246" id="iiP-Hc-J8m"/>
@@ -2007,20 +2006,31 @@ Images by sustainability.umd.edu retrieved from https://sustainability.umd.edu/c
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ghA-QN-FqE">
+                                                <rect key="frame" x="161" y="45" width="53" height="77"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="            " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-HM-IaJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="77"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="AOB-dR-AAE" firstAttribute="centerY" secondItem="7UN-EL-X4p" secondAttribute="centerY" id="UeU-AJ-bhC"/>
+                                            <constraint firstItem="ghA-QN-FqE" firstAttribute="centerX" secondItem="7UN-EL-X4p" secondAttribute="centerX" id="eVA-za-kIH"/>
+                                            <constraint firstItem="AOB-dR-AAE" firstAttribute="top" secondItem="qEf-HM-IaJ" secondAttribute="bottom" constant="5" id="nP0-qg-vgC"/>
                                             <constraint firstAttribute="height" constant="2500" id="qRC-l5-urq"/>
                                             <constraint firstItem="AOB-dR-AAE" firstAttribute="centerX" secondItem="7UN-EL-X4p" secondAttribute="centerX" id="tTt-rt-rjz"/>
-                                            <constraint firstItem="AOB-dR-AAE" firstAttribute="top" secondItem="7UN-EL-X4p" secondAttribute="top" constant="40" id="wr7-O7-BwQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="7UN-EL-X4p" firstAttribute="top" secondItem="9sK-IF-DH8" secondAttribute="top" constant="-24" id="1g1-qc-JQL"/>
-                                    <constraint firstItem="7UN-EL-X4p" firstAttribute="centerX" secondItem="9sK-IF-DH8" secondAttribute="centerX" id="ELW-eJ-yfO"/>
                                     <constraint firstAttribute="trailing" secondItem="7UN-EL-X4p" secondAttribute="trailing" id="W4V-Ax-8Yu"/>
-                                    <constraint firstItem="7UN-EL-X4p" firstAttribute="centerY" secondItem="9sK-IF-DH8" secondAttribute="centerY" id="ZFk-yo-QTK"/>
                                     <constraint firstItem="7UN-EL-X4p" firstAttribute="leading" secondItem="9sK-IF-DH8" secondAttribute="leading" id="k39-K7-mo4"/>
                                     <constraint firstAttribute="bottom" secondItem="7UN-EL-X4p" secondAttribute="bottom" id="uAy-Bq-EIc"/>
                                 </constraints>
@@ -2028,8 +2038,11 @@ Images by sustainability.umd.edu retrieved from https://sustainability.umd.edu/c
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7UN-EL-X4p" firstAttribute="width" secondItem="r3z-lZ-arq" secondAttribute="width" id="5oO-6c-Fpq"/>
+                            <constraint firstItem="ghA-QN-FqE" firstAttribute="top" secondItem="6Zp-hm-3Yl" secondAttribute="bottom" constant="5" id="8Zw-bQ-bRV"/>
                             <constraint firstItem="9sK-IF-DH8" firstAttribute="centerX" secondItem="r3z-lZ-arq" secondAttribute="centerX" id="Qz9-2C-5pQ"/>
                             <constraint firstItem="3CX-em-sIQ" firstAttribute="top" secondItem="9sK-IF-DH8" secondAttribute="bottom" constant="49" id="bDq-um-BFe"/>
+                            <constraint firstItem="9sK-IF-DH8" firstAttribute="top" secondItem="r3z-lZ-arq" secondAttribute="top" constant="48" id="ewP-kI-laC"/>
                             <constraint firstAttribute="trailing" secondItem="9sK-IF-DH8" secondAttribute="trailing" id="n1k-QV-09b"/>
                             <constraint firstItem="9sK-IF-DH8" firstAttribute="leading" secondItem="r3z-lZ-arq" secondAttribute="leading" id="no5-GF-VVk"/>
                         </constraints>
@@ -2114,33 +2127,37 @@ Images by sustainability.umd.edu retrieved from https://sustainability.umd.edu/c
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-Qs-HB2">
                                         <rect key="frame" x="0.0" y="-64" width="375" height="1000"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greendurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-Mz-iuZ">
-                                                <rect key="frame" x="142" y="48" width="92" height="19.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="14"/>
-                                                <color key="textColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fPq-AH-VgB">
+                                                <rect key="frame" x="132" y="400" width="92" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-wk-2zS">
                                                 <rect key="frame" x="70" y="77.5" width="235" height="845"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="235" id="Nvd-dB-Dhv"/>
                                                     <constraint firstAttribute="height" constant="845" id="wZH-yK-FcE"/>
                                                 </constraints>
-                                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rhoncus nunc. Mauris feugiat dui massa, a molestie arcu blandit ut. Donec nec ipsum diam.</string>
+Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rhoncus nunc. Mauris feugiat dui massa, a molestie arcu blandit ut. Donec nec ipsum diam.</mutableString>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                 <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greendurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-Mz-iuZ">
+                                                <rect key="frame" x="142" y="32.5" width="92" height="20"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" red="0.3411764706" green="0.71764705880000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="7Dj-wk-2zS" firstAttribute="centerX" secondItem="VqP-Qs-HB2" secondAttribute="centerX" id="JSz-va-GgC"/>
-                                            <constraint firstItem="Eeg-Mz-iuZ" firstAttribute="centerX" secondItem="VqP-Qs-HB2" secondAttribute="centerX" id="K34-Hb-Eri"/>
-                                            <constraint firstItem="7Dj-wk-2zS" firstAttribute="top" secondItem="Eeg-Mz-iuZ" secondAttribute="bottom" constant="10" id="j29-zr-deT"/>
+                                            <constraint firstItem="7Dj-wk-2zS" firstAttribute="top" secondItem="Eeg-Mz-iuZ" secondAttribute="bottom" constant="25.5" id="QE9-wZ-jdw"/>
+                                            <constraint firstItem="Eeg-Mz-iuZ" firstAttribute="centerX" secondItem="7Dj-wk-2zS" secondAttribute="centerX" id="kaW-I5-9hW"/>
                                             <constraint firstItem="7Dj-wk-2zS" firstAttribute="centerY" secondItem="VqP-Qs-HB2" secondAttribute="centerY" id="miX-I1-qAz"/>
                                             <constraint firstAttribute="height" constant="1000" id="uJ4-Ec-QoV"/>
                                         </constraints>
@@ -2156,12 +2173,12 @@ Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rho
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Eeg-Mz-iuZ" firstAttribute="top" secondItem="cen-ar-SvC" secondAttribute="bottom" constant="-32" id="3bF-7S-W5f"/>
                             <constraint firstItem="ojP-Do-PWf" firstAttribute="centerX" secondItem="cXZ-hk-eUK" secondAttribute="centerX" id="4r5-8I-9f8"/>
                             <constraint firstItem="2lx-cE-Q83" firstAttribute="top" secondItem="ojP-Do-PWf" secondAttribute="bottom" id="62T-GE-sx7"/>
                             <constraint firstItem="VqP-Qs-HB2" firstAttribute="width" secondItem="cXZ-hk-eUK" secondAttribute="width" id="6Vf-FS-imw"/>
                             <constraint firstItem="ojP-Do-PWf" firstAttribute="leading" secondItem="cXZ-hk-eUK" secondAttribute="leading" id="HlA-5e-5yJ"/>
                             <constraint firstAttribute="trailing" secondItem="ojP-Do-PWf" secondAttribute="trailing" id="jtw-gy-avx"/>
+                            <constraint firstItem="ojP-Do-PWf" firstAttribute="top" secondItem="cXZ-hk-eUK" secondAttribute="topMargin" constant="48" id="pdK-KW-jVf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Terms &amp; Conditions" id="e4n-Qg-x8K">
@@ -2403,11 +2420,6 @@ Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rho
                     <navigationItem key="navigationItem" title="Farmer's Market" id="k9q-rt-2Hr">
                         <barButtonItem key="backBarButtonItem" title="Back" id="hEQ-TS-zoy"/>
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="OYr-LG-iXS"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="0R7-Lw-qrL">
-                            <connections>
-                                <action selector="searchButtonTapped:" destination="iGb-Dl-Lr6" id="evm-Dp-Lis"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="OYr-LG-iXS" id="wqv-ms-lhU"/>
@@ -2423,8 +2435,8 @@ Etiam sodales ornare sodales. Duis metus tellus, placerat id sem in, dapibus rho
         <image name="barcode.png" width="24" height="24"/>
         <image name="cheers.png" width="512" height="512"/>
         <image name="close-cross-circular-interface-button.png" width="24" height="24"/>
-        <image name="compostInfoCard.png" width="607" height="289"/>
         <image name="confetti.png" width="512" height="512"/>
+        <image name="disposalCards.png" width="515" height="740"/>
         <image name="earth-day (2).png" width="512" height="512"/>
         <image name="fireworks.png" width="512" height="512"/>
         <image name="forest01.jpg" width="900" height="6000"/>
@@ -2525,9 +2537,7 @@ E0w
         <image name="menu.png" width="24" height="24"/>
         <image name="racing-flag.png" width="512" height="512"/>
         <image name="rankingBtnBlue.png" width="120" height="36"/>
-        <image name="recycleInfoCard.png" width="606" height="285"/>
         <image name="spider.png" width="128" height="128"/>
-        <image name="trashInfoCard.png" width="606" height="277"/>
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
